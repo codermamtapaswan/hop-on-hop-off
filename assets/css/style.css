@@ -1,0 +1,446 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+
+:root {
+  --pc: #da0f10;
+  --sc: #DDEDF9;
+  --sub-font: 'Kaushan Script';
+  scroll-behavior: smooth;
+}
+
+
+/* # General
+    =================================================*/
+body {
+  background: #fff;
+}
+
+
+a {
+  transition: all 0.5s;
+  text-decoration: none;
+}
+
+
+p {
+  line-height: 2.0;
+}
+
+
+h6,
+.h6,
+h5,
+.h5,
+h4,
+.h4,
+h3,
+.h3,
+h2,
+.h2,
+h1,
+.h1 {
+  font-weight: 700;
+  line-height: 1.5;
+  text-transform: capitalize;
+}
+
+h1,
+.h1 {
+  font-size: clamp(1.5625rem, 0.6696rem + 2.381vw, 2.8125rem) !important;
+}
+
+h2,
+.h2 {
+  font-size: clamp(1.325rem, calc(1.325rem + 0.9vw), 2rem) !important;
+}
+
+h3,
+.h3 {
+  font-size: clamp(1.3rem, calc(1.3rem + 0.6vw), 1.75rem) !important;
+}
+
+h4,
+.h4 {
+  font-size: clamp(1.275rem, calc(1.275rem + 0.3vw), 1.5rem) !important;
+}
+
+h5,
+.h5 {
+  font-size: 1.25rem !important;
+}
+
+h6,
+.h6 {
+  font-size: 1rem !important;
+}
+
+.form-control:focus {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+
+/* # Common Class
+    =================================================*/
+
+.row-gap {
+  row-gap: 30px;
+}
+
+[class*="grid"] {
+  display: grid !important;
+  align-items: center;
+  gap: 20px;
+}
+
+.grid-30 {
+  grid-template-columns: 30% auto;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+/* # Common Components
+    =================================================*/
+.hoho-btn {
+  padding: 5px 20px;
+  display: block;
+  width: fit-content;
+  background: var(--pc);
+  color: #fff;
+}
+
+.hoho-tag-btn {
+  padding: 5px 20px;
+  border: 1px solid var(--sc);
+  color: #000;
+  display: block;
+  width: fit-content;
+  border-radius: 20px;
+}
+
+.hoho-tag-btn:hover {
+  background: var(--sc);
+  color: #000;
+}
+
+/* site card */
+[class*='card'] {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+}
+
+.hoho-card,
+.hoho-overlay-card {
+  position: relative;
+  height: 100%;
+}
+
+.hoho-card {
+  --color: #000;
+  --meta: #6D6D6D;
+}
+
+.hoho-overlay-card {
+  --color: #fff;
+  --meta: #fff;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+
+.hoho-overlay-card .img-placeholder::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  background: linear-gradient(to bottom,
+      rgb(0 0 0 / 0%) 0%,
+      rgb(0 0 0 / 6%) 27%,
+      rgb(0 0 0 / 91%) 90%);
+  transition: var(--transition);
+}
+
+.hoho-overlay-card :is(.img-placeholder, .img-placeholder a img) {
+  height: 410px;
+  width: 100%;
+  object-fit: cover;
+  -webkit-transition: .8s ease-in-out;
+  -o-transition: .8s ease-in-out;
+  transition: .8s ease-in-out
+}
+
+
+.hoho-overlay-card:hover .img-placeholder {
+  transition: all 0.5s;
+  transform: scale(1.5);
+}
+
+.hoho-overlay-card .hoho-card-content {
+  padding: 20px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+[class*='card'] svg {
+  fill: var(--meta)
+}
+
+.hoho-card-content>* {
+  margin-bottom: 0 !important;
+}
+
+.hoho-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+[class*="title"] {
+  display: -webkit-box !important;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  color: var(--color);
+  font-weight: 600;
+
+}
+
+a[class*="title"]:hover {
+  text-decoration: underline;
+  color: var(--color);
+}
+
+.hoho-big-title {
+  font-size: 22px;
+}
+
+.hoho-title {
+  font-size: 18px;
+}
+
+.description {
+  color: var(--meta);
+}
+
+[class*="hoho-cat"] {
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hoho-cat {
+  background: #fff;
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.hoho-meta,
+.tour-details>*,
+.hoho-meta>* {
+  font-size: 14px;
+  color: var(--meta)
+}
+
+.hoho-title,
+.hoho-sub-title {
+  -webkit-line-clamp: 2;
+}
+
+.hoho-big-title {
+  -webkit-line-clamp: 3;
+}
+
+
+
+/* # Navbar
+    =================================================*/
+.hoho-logo {
+  width: 80%;
+}
+
+/* # hero section
+    =================================================*/
+.hoho-hero {
+  background: url(../images/hero-bg.svg) no-repeat center;
+  background-size: cover;
+  height: 450px;
+}
+
+.hoho-hero [class*='heading'] {
+  color: #000;
+}
+
+.hoho-hero :is(.sub-heading, .main-heading span) {
+  font-family: var(--sub-font);
+}
+
+.hoho-hero .main-heading {
+  /* font-size: 45px; */
+  font-size: clamp(1.5625rem, 0.6696rem + 2.381vw, 2.8125rem);
+  font-weight: 600;
+}
+
+.hoho-hero .main-heading span::after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  bottom: -18px;
+  width: 250px;
+  height: 22px;
+  background: url("data:image/svg+xml,%3Csvg width='250' height='22.659' viewBox='0 0 250 22.659' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M172.816 0.435c-5.943 0.318 -18.697 0.674 -25.535 1.249S27.801 3.439 20.77 3.95C6.262 4.973 0.448 6.251 0.128 8.551c-0.32 2.174 2.137 2.716 11.567 0.959 11.311 -2.109 133.243 -5.241 154.845 -6.518 12.717 -0.702 37.909 -0.383 40.786 -0.255 1.086 0.064 6.711 0.191 12.59 0.255 5.816 0.128 19.503 -0.448 19.887 -0.255 0.384 0.255 -11.515 3.578 -15.925 6.391 -8.243 5.02 -15.21 10.324 -15.21 11.859 0 1.916 1.15 1.598 5.049 -1.534 7.028 -5.497 19.236 -11.859 24.285 -13.136 1.407 -0.383 4.665 -1.022 7.222 -1.407 2.492 -0.448 4.601 -0.959 4.601 -1.278 0 -0.257 -0.511 -1.15 -1.15 -1.917l-1.086 -1.408 -31.955 -0.191c-17.575 -0.128 -36.811 0.064 -42.818 0.318' fill='%23E20001'/%3E%3C/svg%3E") no-repeat;
+}
+
+.hoho-hero .hero-form {
+  gap: 20px;
+  padding: 10px 20px;
+  width: 80%;
+}
+
+
+.hoho-hero .form-label {
+  font-size: 14px;
+  color: #000;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.hoho-hero :is(.location, .date) {
+  width: 100%;
+}
+
+.hoho-hero .location {
+  border-right: 1px solid #ccc;
+  padding-right: 20px;
+}
+
+.hoho-hero .form-control::placeholder {
+  font-size: 14px;
+}
+
+.hoho-hero .form-search-btn {
+  width: 15%;
+  aspect-ratio: 1/1;
+  background: var(--pc);
+}
+
+@media(max-width:600px) {
+  .hoho-hero .hero-form {
+    width: 100%;
+  }
+}
+
+/* testimonial */
+.testi-box img {
+  width: 60px;
+  height: 60px;
+}
+
+.testi-box hr {
+  background: rgb(0 0 0 / 30%);
+  margin-block: 10px;
+}
+
+.cities-box .img-box {
+  width: 120px;
+  height: 120px;
+  background: var(--sc);
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+
+
+/* # Thank You || Search Not Found  || 404 Page
+    =================================================*/
+
+/* # Contact Page Templates
+    =================================================*/
+
+
+/* # Footer
+    =================================================*/
+
+footer {
+  border-top: 8px solid #ffe6e6;
+  background: #fff;
+  padding-block: 40px;
+}
+
+footer .list-unstyled li {
+  margin-bottom: 10px;
+}
+
+footer .list-unstyled li a {
+  color: rgba(0, 0, 0, .7);
+  font-size: 15px;
+}
+
+.footer .list-unstyled li:hover a {
+  color: var(--pc)
+}
+
+.footer-form {
+  border: 1px solid var(--pc);
+  padding: 10px;
+}
+
+.footer-form form {
+  background: #ECECEC;
+  border-radius: 5px;
+  width: 54%;
+
+}
+
+.footer-form form input {
+  background: transparent;
+}
+
+
+.copywrite {
+  background: #ECECEC;
+  font-size: 14px;
+}
+
+/* # Scroll top button
+    =================================================*/
+
+
+/* # Responsive Code
+    =================================================*/
