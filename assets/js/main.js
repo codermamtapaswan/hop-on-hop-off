@@ -95,6 +95,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
+
+  // JavaScript to initialize Flatpickr
+  flatpickr("#datePicker", {
+      enableTime: true, // Enable time selection
+      dateFormat: "Y-m-d H:i", // Format of the date
+      altInput: true, // Use an alternate input field
+      altFormat: "F j, Y", // Human-friendly format
+  });
+
+
 });
 
 

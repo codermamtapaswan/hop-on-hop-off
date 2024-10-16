@@ -143,6 +143,10 @@ h6,
   color:var(--pc) !important;
 }
 
+.form-control:disabled, .form-control[readonly]{
+  background: transparent !important;
+}
+
 
 
 
@@ -312,9 +316,9 @@ a[class*="title"]:hover {
 
 /* # Navbar
     =================================================*/
-.hoho-logo {
+/* .hoho-logo {
   width: 80%;
-}
+} */
 
 .cart a span{ 
   top:10px;
