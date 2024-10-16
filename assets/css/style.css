@@ -139,6 +139,9 @@ h6,
 .bg-theme{
   background: var(--pc) !important;
 }
+.gradient-theme{
+  background: linear-gradient(90deg, #E20001 0%, #CB2E2E 100%);
+}
 .txt-theme{
   color:var(--pc) !important;
 }
@@ -221,7 +224,7 @@ h6,
 }
 
 .hoho-overlay-card :is(.img-placeholder, .img-placeholder a img) {
-  height: 410px;
+  height: 476px;
   width: 100%;
   object-fit: cover;
   -webkit-transition: .8s ease-in-out;
@@ -316,10 +319,15 @@ a[class*="title"]:hover {
 
 /* # Navbar
     =================================================*/
-/* .hoho-logo {
-  width: 80%;
-} */
+.navbar-nav .nav-link{
+  color: #000;
+}
 
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow:none !important;
+}
 .cart a span{ 
   top:10px;
     width: 25px;
@@ -330,6 +338,89 @@ a[class*="title"]:hover {
     font-size: 14px;
 
 }
+/* card component */
+.cart-item-list {
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  position: relative;
+  -webkit-transition: -webkit-box-shadow 0.25s;
+  transition: -webkit-box-shadow 0.25s;
+  transition: box-shadow 0.25s;
+  transition: box-shadow 0.25s, -webkit-box-shadow 0.25s;
+}
+
+/* store item component */
+.store-item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.store-item .image-store {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.store-item .list-store p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 0.9;
+}
+
+.store-item .list-store .p-note {
+  font-size: 11px;
+  color: #828282;
+  transform: translatex(-25%);
+  margin-top: 5px;
+}
+
+.store-item .list-store .btn-list {
+  border: 1px solid #edebeb;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.store-item .list-store .btn-list:active {
+  border: 1px solid #757574;
+}
+
+.store-item .btn-quantity-container {
+  border: 1px solid #edebeb;
+  border-radius: 6px;
+  height: 35px;
+}
+
+.store-item .btn-quantity-container .btn-quantity {
+  font-size: 18px;
+  font-weight: 500;
+  height: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.store-item .p-total-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.store-item .p-total {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: right;
+}
+
+.bottom-line {
+  width: 100%;
+  border-bottom: 1px solid #edebeb;
+}
+.separator-p{
+  padding-top: 70px;
+  padding-bottom: 20px;
+}
+.mt-70{
+  margin-top: 70px;
+} 
+
 
 /* # Home Page
     =================================================*/
@@ -337,10 +428,10 @@ a[class*="title"]:hover {
 
 /* hero section */
 .hoho-hero {
-  background: url(../images/hero-bg.svg) no-repeat center;
+  background: url(../images/hero-bg.svg) no-repeat center bottom; 
   background-size: cover;
-  height: 450px;
 }
+
 
 .hoho-hero [class*='heading'] {
   color: #000;
@@ -435,7 +526,7 @@ a[class*="title"]:hover {
 
 /* hoho-con-popular-month */
 .hoho-con-handpicked .hoho-overlay-card .hoho-card-content {
-  bottom: -110px;
+  bottom: -128px;
 }
 
 .hoho-con-handpicked .hoho-overlay-card:hover .hoho-card-content {
@@ -528,18 +619,17 @@ footer .list-unstyled li a {
 }
 
 .footer-form {
-  border: 1px solid var(--pc);
-  padding: 10px;
+  border: 2px solid var(--pc);
+  padding: 15px;
 }
-
 .footer-form form {
   background: #ECECEC;
   border-radius: 5px;
-  width: 54%;
+  width: 50%;
 
 }
-
-.footer-form form input {
+.footer-form :is(form input,.form-control):focus,
+.footer-form :is(form input,.form-control) {
   background: transparent;
 }
 
