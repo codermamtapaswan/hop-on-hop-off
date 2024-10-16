@@ -551,7 +551,18 @@ footer .list-unstyled li a {
 
 /* # Scroll top button
     =================================================*/
-
+    #scroll_to_top {
+      background:var(--pc);
+      position: fixed;
+      bottom: 48px;
+      height: 45px;
+      width: 45px;
+      right: 21px;
+      z-index: 12;
+      border-radius: 50%;
+      border: unset;
+      cursor: pointer;
+  } 
 
 /* # Responsive Code
     =================================================*/

@@ -105,6 +105,27 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
+
+    // Scroll to top   ============ start =====>
+
+      let mybutton = document.getElementById("scroll_to_top");
+      window.onscroll = function () {
+          scrollFunction();
+      };
+  
+      function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              mybutton.classList.toggle('active');
+          }
+      }
+      function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+      }
+      mybutton.addEventListener("click", topFunction);
+  
+
+
 });
 
 
