@@ -118,11 +118,31 @@ h6,
   height: 100%;
   object-fit: cover;
 }
+.swiper-button-prev:after{
+  content: '';
+  width: 21px;
+  height: 15px;
+  background: url("data:image/svg+xml,%3Csvg width='21' height='15' viewBox='0 0 21 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.529 14.692c-.006-.761-.769-1.894-1.539-2.844-.991-1.224-2.17-2.29-3.522-3.1C2.457 8.14 1.23 7.56.247 7.568M8.417.297c.005.76-.74 1.905-1.495 2.867C5.95 4.403 4.787 5.488 3.45 6.32 2.447 6.942 1.23 7.542.247 7.55m0 .01 20.57-.271' stroke='%23E20001' stroke-width='2'/%3E%3C/svg%3E") no-repeat;
+}
+.swiper-button-next:after{
+  content: '';
+  width: 21px;
+  height: 15px;
+  background: url("data:image/svg+xml,%3Csvg width='21' height='15' viewBox='0 0 21 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.41.308c.005.761.768 1.894 1.538 2.844.991 1.224 2.171 2.29 3.522 3.1 1.012.607 2.24 1.188 3.222 1.18m-8.17 7.271c-.006-.76.74-1.905 1.494-2.867.972-1.239 2.135-2.324 3.473-3.155 1.002-.623 2.22-1.223 3.203-1.23m0-.01-20.57.271' stroke='%23E20001' stroke-width='2'/%3E%3C/svg%3E") no-repeat;
+}
 
 .swiper {
   margin-left: auto;
   margin-right: auto;
 }
+ 
+.bg-theme{
+  background: var(--pc) !important;
+}
+.txt-theme{
+  color:var(--pc) !important;
+}
+
 
 
 
@@ -133,6 +153,10 @@ h6,
   display: block;
   width: fit-content;
   background: var(--pc);
+  color: #fff !important;
+  border-radius: 25px;
+}
+.hoho-btn:hover{
   color: #fff;
 }
 
@@ -292,8 +316,22 @@ a[class*="title"]:hover {
   width: 80%;
 }
 
-/* # hero section
+.cart a span{ 
+  top:10px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+
+}
+
+/* # Home Page
     =================================================*/
+
+
+/* hero section */
 .hoho-hero {
   background: url(../images/hero-bg.svg) no-repeat center;
   background-size: cover;
@@ -309,7 +347,6 @@ a[class*="title"]:hover {
 }
 
 .hoho-hero .main-heading {
-  /* font-size: 45px; */
   font-size: clamp(1.5625rem, 0.6696rem + 2.381vw, 2.8125rem);
   font-weight: 600;
 }
@@ -363,6 +400,70 @@ a[class*="title"]:hover {
   }
 }
 
+
+/* hoho-con-popular-tour */
+
+.mySwiper :is(.swiper-button-prev,.swiper-button-next){
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.mySwiper .swiper-button-prev{
+  left: 140px;
+}
+.mySwiper .swiper-button-next{
+  right: 140px;
+} 
+
+
+.hoho-con-popular-tour :is(.swiper-slide:has(+ .swiper-slide.swiper-slide-prev), .swiper-slide.swiper-slide-next + .swiper-slide){
+  opacity: .3;
+}
+
+@media(max-width:768px){
+  .hoho-con-popular-tour :is(.swiper-slide:has(+ .swiper-slide.swiper-slide-active), .swiper-slide.swiper-slide-active + .swiper-slide){
+    opacity: .3;
+  }
+}
+
+/* hoho-con-popular-month */
+.hoho-con-handpicked .hoho-overlay-card .hoho-card-content {
+  bottom: -110px;
+}
+
+.hoho-con-handpicked .hoho-overlay-card:hover .hoho-card-content {
+  bottom: 0px;
+}
+
+.hoho-con-handpicked .hoho-overlay-card :is(.img-placeholder, .img-placeholder a img) {
+  height: 350px;
+}
+
+.hoho-con-handpicked :is(.swiper-button-prev, .swiper-button-next) {
+  top:15px !important; 
+}
+
+
+.hoho-con-handpicked :is(.swiper-button-next, .swiper-button-prev) {
+  top: 40px !important;
+  border: 1px solid #ccc;
+  height: 26px;
+  width: 55px;
+}
+
+.hoho-con-handpicked .swiper-button-prev {
+  left: calc(100% - 135px);
+  border-radius: 25px 0  0 25px;
+}
+
+.hoho-con-handpicked .swiper-button-next {
+  right: 25px !important;
+  border-radius:  0  25px 25px 0;
+}
+
 /* testimonial */
 .testi-box img {
   width: 60px;
@@ -372,6 +473,17 @@ a[class*="title"]:hover {
 .testi-box hr {
   background: rgb(0 0 0 / 30%);
   margin-block: 10px;
+}
+
+
+
+.testimonials .swiper-slide {
+  transition: all 200ms linear;
+  transform: scale(0.9);
+}
+
+.testimonials  .swiper-slide.swiper-slide-active {
+  transform: scale(1);
 }
 
 .cities-box .img-box {
@@ -387,11 +499,6 @@ a[class*="title"]:hover {
 }
 
 
-/* # Thank You || Search Not Found  || 404 Page
-    =================================================*/
-
-/* # Contact Page Templates
-    =================================================*/
 
 
 /* # Footer

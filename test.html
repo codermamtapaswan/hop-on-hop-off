@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,11 +46,6 @@
       height: 100%;
       object-fit: cover;
     }
-
-    .swiper {
-      margin-left: auto;
-      margin-right: auto;
-    }
   </style>
 </head>
 
@@ -67,25 +63,6 @@
       <div class="swiper-slide">Slide 8</div>
       <div class="swiper-slide">Slide 9</div>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
-  </div>
-
-  <div class="swiper mySwiper2">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
-      <div class="swiper-slide">Slide 5</div>
-      <div class="swiper-slide">Slide 6</div>
-      <div class="swiper-slide">Slide 7</div>
-      <div class="swiper-slide">Slide 8</div>
-      <div class="swiper-slide">Slide 9</div>
-    </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
     <div class="swiper-pagination"></div>
   </div>
 
@@ -95,24 +72,54 @@
   <!-- Initialize Swiper -->
   <script>
     var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      loop: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-    var swiper2 = new Swiper(".mySwiper2", {
+      autoplay:true,
       slidesPerView: 4,
+      loop:true,
+      centeredSlides: true,
       spaceBetween: 30,
-      loop: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+      grabCursor: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
       },
     });
   </script>
 </body>
 
 </html>
+
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+.swiper-container {
+  position: relative;
+  width: 90vw;
+  height: 300px;
+}
+.swiper-container > .swiper-slide__content {
+  position: absolute;
+  top: 0;
+}
+.swiper-slide {
+  height: 300px;
+  display: flex;
+  background: #eee;
+  align-items: center;
+  justify-content: center;
+  transition: all 200ms linear;
+  transform: scale(0.8);
+}
+
+.swiper-slide.swiper-slide-active {
+  transform: scale(1);
+  background: #fc0;
+}
+.swiper-slide__content {
+  height: 300px;
+}
+
