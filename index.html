@@ -108,22 +108,64 @@
       <a class="navbar-brand" href="#">
         <img src="assets/images/logo.svg" alt="Hop off Hop On logo" class="img-fluid hoho-logo">
       </a>
+      <div class="mobile-layout d-lg-none d-flex align-items-center gap-3">
+        <li class="nav-item dropdown btn gradient-theme btn-sm p-0">
+          <a class="nav-link dropdown-toggle text-white d-flex align-items-center gap-2 text-white" href="#"
+            id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" width="20" height="20" fill="#fff">
+              <path
+                d="M11.689 11.256a3.75 3.75 0 0 0-3.252-1.881H6.562a3.75 3.75 0 0 0-3.252 1.881c1.031 1.149 2.526 1.869 4.189 1.869s3.158-.723 4.189-1.869M0 7.5a7.5 7.5 0 1 1 15 0 7.5 7.5 0 1 1-15 0m7.5.469a2.109 2.109 0 1 0 0-4.219 2.109 2.109 0 1 0 0 4.219">
+              </path>
+            </svg>
+            <span class="d-lg-block d-none">Login or Create Account</span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
 
-      <button class="navbar-toggler p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <svg width="30" height="30" viewBox="0 0 30 30" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M28.846 7.212H1.154a1.154 1.154 0 0 1 0-2.308h27.692a1.154 1.154 0 0 1 0 2.308m0 8.942H1.154a1.154 1.154 0 0 1 0-2.308h27.692a1.154 1.154 0 0 1 0 2.308m0 8.942H1.154a1.154 1.154 0 0 1 0-2.308h27.692a1.154 1.154 0 0 1 0 2.308" />
-        </svg>
-      </button>
+        <li class="nav-item dropdown btn btn-light btn-sm p-0">
+          <a class="nav-link text-dark dropdown-toggle d-flex align-items-center gap-2" href="#"
+            id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            INR ($)
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
 
+        <li class="btn cart position-relative ps-2">
+          <a class="" href="javascript:void(0)" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight">
+            <img src="assets/images/cart.svg" alt="">
+            <span
+              class="position-absolute start-lg-100 text-white ratio ratio-1x text-center  translate-middle p-2 bg-theme rounded-circle">
+              10
+            </span>
+          </a>
+
+        </li>
+
+        <button class="navbar-toggler p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <svg width="20" height="20" viewBox="0 0 30 30" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M28.846 7.212H1.154a1.154 1.154 0 0 1 0-2.308h27.692a1.154 1.154 0 0 1 0 2.308m0 8.942H1.154a1.154 1.154 0 0 1 0-2.308h27.692a1.154 1.154 0 0 1 0 2.308m0 8.942H1.154a1.154 1.154 0 0 1 0-2.308h27.692a1.154 1.154 0 0 1 0 2.308" />
+          </svg>
+        </button>
+
+      </div>
       <div class="collapse navbar-collapse " id="navbarNavDropdown">
         <ul class="navbar-nav ms-auto gap-lg-3  gap-1 align-items-lg-center">
           <li class="nav-item">
             <a class="nav-link" href="#">About us</a>
           </li>
 
-          <li class="nav-item dropdown ">
+          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
               Our Destinations
@@ -139,46 +181,48 @@
             <a class="nav-link" href="#">Contact us</a>
           </li>
 
-          <li class="nav-item dropdown btn gradient-theme btn-sm p-lg-0 px-md-2">
-            <a class="nav-link dropdown-toggle text-white d-flex align-items-center gap-2 text-white" href="#"
-              id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" width="20" height="20" fill="#fff">
-                <path
-                  d="M11.689 11.256a3.75 3.75 0 0 0-3.252-1.881H6.562a3.75 3.75 0 0 0-3.252 1.881c1.031 1.149 2.526 1.869 4.189 1.869s3.158-.723 4.189-1.869M0 7.5a7.5 7.5 0 1 1 15 0 7.5 7.5 0 1 1-15 0m7.5.469a2.109 2.109 0 1 0 0-4.219 2.109 2.109 0 1 0 0 4.219">
-                </path>
-              </svg>
-              Login or Create Account
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
+          <div class="mobile-layout  d-lg-flex d-none align-items-center gap-lg-3 gap-1">
+            <li class="nav-item dropdown btn gradient-theme btn-sm p-0">
+              <a class="nav-link dropdown-toggle text-white d-flex align-items-center gap-2 text-white" href="#"
+                id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" width="20" height="20" fill="#fff">
+                  <path
+                    d="M11.689 11.256a3.75 3.75 0 0 0-3.252-1.881H6.562a3.75 3.75 0 0 0-3.252 1.881c1.031 1.149 2.526 1.869 4.189 1.869s3.158-.723 4.189-1.869M0 7.5a7.5 7.5 0 1 1 15 0 7.5 7.5 0 1 1-15 0m7.5.469a2.109 2.109 0 1 0 0-4.219 2.109 2.109 0 1 0 0 4.219">
+                  </path>
+                </svg>
+                <span class="d-lg-block d-none">Login or Create Account</span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
 
-          <li class="nav-item dropdown btn btn-light btn-sm p-0">
-            <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="#" id="navbarDropdownMenuLink"
-              role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              INR ($)
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
+            <li class="nav-item dropdown btn btn-light btn-sm p-0">
+              <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="#" id="navbarDropdownMenuLink"
+                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                INR ($)
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
 
-          <li class="nav-item cart position-relative ps-2">
-            <a class="nav-link" href="javascript:void(0)" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-              aria-controls="offcanvasRight">
-              <img src="assets/images/cart.svg" alt="">
-              <span
-                class="position-absolute start-lg-100 text-white ratio ratio-1x text-center  translate-middle p-2 bg-theme rounded-circle">
-                10
-              </span>
-            </a>
+            <li class="nav-item cart position-relative ps-2">
+              <a class="nav-link" href="javascript:void(0)" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight">
+                <img src="assets/images/cart.svg" alt="">
+                <span
+                  class="position-absolute start-lg-100 text-white ratio ratio-1x text-center  translate-middle p-2 bg-theme rounded-circle">
+                  10
+                </span>
+              </a>
 
-          </li>
+            </li>
+          </div>
 
         </ul>
       </div>
@@ -1428,7 +1472,7 @@
           <span class="d-block">E-mail support?</span>
           <a href="mailto:support@sightseeingo.com" class="text-dark fw-bold">support@sightseeingo.com</a>
         </div>
-        <div class="col-lg-3 col-md-12 text-lg-start  text-md-center">
+        <div class="col-lg-3 col-md-12 text-lg-start  text-center">
           <a class="footer-logo" href="#">
             <img src="assets/images/logo.svg" alt="Hop off Hop On logo" class="img-fluid ">
           </a>

@@ -20,11 +20,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
       },
       769: {
+        slidesPerView: 3,
+
+      },
+      991: {
         slidesPerView: 4,
       }
     }
   });
-
 
   var swiper1 = new Swiper(".mySwiper1", {
     slidesPerView: 4,
@@ -44,6 +47,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
       },
       769: {
+        slidesPerView: 3,
+
+      },
+      991: {
         slidesPerView: 4,
       }
     }
@@ -67,6 +74,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
       },
       769: {
+        slidesPerView: 3,
+
+      },
+      991: {
         slidesPerView: 4,
       }
     }
