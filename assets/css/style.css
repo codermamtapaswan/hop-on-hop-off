@@ -118,13 +118,15 @@ h6,
   height: 100%;
   object-fit: cover;
 }
-.swiper-button-prev:after{
+
+.swiper-button-prev:after {
   content: '';
   width: 21px;
   height: 15px;
   background: url("data:image/svg+xml,%3Csvg width='21' height='15' viewBox='0 0 21 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.529 14.692c-.006-.761-.769-1.894-1.539-2.844-.991-1.224-2.17-2.29-3.522-3.1C2.457 8.14 1.23 7.56.247 7.568M8.417.297c.005.76-.74 1.905-1.495 2.867C5.95 4.403 4.787 5.488 3.45 6.32 2.447 6.942 1.23 7.542.247 7.55m0 .01 20.57-.271' stroke='%23E20001' stroke-width='2'/%3E%3C/svg%3E") no-repeat;
 }
-.swiper-button-next:after{
+
+.swiper-button-next:after {
   content: '';
   width: 21px;
   height: 15px;
@@ -135,18 +137,21 @@ h6,
   margin-left: auto;
   margin-right: auto;
 }
- 
-.bg-theme{
+
+.bg-theme {
   background: var(--pc) !important;
 }
-.gradient-theme{
+
+.gradient-theme {
   background: linear-gradient(90deg, #E20001 0%, #CB2E2E 100%);
 }
-.txt-theme{
-  color:var(--pc) !important;
+
+.txt-theme {
+  color: var(--pc) !important;
 }
 
-.form-control:disabled, .form-control[readonly]{
+.form-control:disabled,
+.form-control[readonly] {
   background: transparent !important;
 }
 
@@ -159,13 +164,19 @@ h6,
   padding: 5px 20px;
   display: block;
   width: fit-content;
-  background: var(--pc);
   color: #fff !important;
   border-radius: 25px;
+  transition: all 0.35s;
+  background-image: linear-gradient(to right, #da0f10 0%, #f05c5d 51%, #da0f10 100%);
+  background-size: 200% auto;
+  background-position: left top;
+  border-color: transparent;
 }
-.hoho-btn:hover{
-  color: #fff;
+
+.hoho-btn:hover {
+  background-position: right bottom;
 }
+
 
 .hoho-tag-btn {
   padding: 5px 20px;
@@ -319,25 +330,27 @@ a[class*="title"]:hover {
 
 /* # Navbar
     =================================================*/
-.navbar-nav .nav-link{
+.navbar-nav .nav-link {
   color: #000;
 }
 
 .navbar-toggler:focus {
   text-decoration: none;
   outline: 0;
-  box-shadow:none !important;
+  box-shadow: none !important;
 }
-.cart a span{ 
-  top:10px;
-    width: 25px;
-    height: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
+
+.cart a span {
+  top: 10px;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
 
 }
+
 /* card component */
 .cart-item-list {
   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
@@ -413,13 +426,15 @@ a[class*="title"]:hover {
   width: 100%;
   border-bottom: 1px solid #edebeb;
 }
-.separator-p{
+
+.separator-p {
   padding-top: 70px;
   padding-bottom: 20px;
 }
-.mt-70{
+
+.mt-70 {
   margin-top: 70px;
-} 
+}
 
 
 /* # Home Page
@@ -428,7 +443,7 @@ a[class*="title"]:hover {
 
 /* hero section */
 .hoho-hero {
-  background: url(../images/hero-bg.svg) no-repeat center bottom; 
+  background: url(../images/hero-bg.svg) no-repeat center bottom;
   background-size: cover;
 }
 
@@ -498,7 +513,7 @@ a[class*="title"]:hover {
 
 /* hoho-con-popular-tour */
 
-.mySwiper :is(.swiper-button-prev,.swiper-button-next){
+.mySwiper :is(.swiper-button-prev, .swiper-button-next) {
   width: 30px;
   height: 30px;
   background: #fff;
@@ -506,20 +521,21 @@ a[class*="title"]:hover {
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
 }
 
-.mySwiper .swiper-button-prev{
+.mySwiper .swiper-button-prev {
   left: 140px;
 }
-.mySwiper .swiper-button-next{
+
+.mySwiper .swiper-button-next {
   right: 140px;
-} 
+}
 
 
-.hoho-con-popular-tour :is(.swiper-slide:has(+ .swiper-slide.swiper-slide-prev), .swiper-slide.swiper-slide-next + .swiper-slide){
+.hoho-con-popular-tour :is(.swiper-slide:has(+ .swiper-slide.swiper-slide-prev), .swiper-slide.swiper-slide-next + .swiper-slide) {
   opacity: .3;
 }
 
-@media(max-width:768px){
-  .hoho-con-popular-tour :is(.swiper-slide:has(+ .swiper-slide.swiper-slide-active), .swiper-slide.swiper-slide-active + .swiper-slide){
+@media(max-width:768px) {
+  .hoho-con-popular-tour :is(.swiper-slide:has(+ .swiper-slide.swiper-slide-active), .swiper-slide.swiper-slide-active + .swiper-slide) {
     opacity: .3;
   }
 }
@@ -538,7 +554,7 @@ a[class*="title"]:hover {
 }
 
 .hoho-con-handpicked :is(.swiper-button-prev, .swiper-button-next) {
-  top:15px !important; 
+  top: 15px !important;
 }
 
 
@@ -551,12 +567,12 @@ a[class*="title"]:hover {
 
 .hoho-con-handpicked .swiper-button-prev {
   left: calc(100% - 135px);
-  border-radius: 25px 0  0 25px;
+  border-radius: 25px 0 0 25px;
 }
 
 .hoho-con-handpicked .swiper-button-next {
   right: 25px !important;
-  border-radius:  0  25px 25px 0;
+  border-radius: 0 25px 25px 0;
 }
 
 /* testimonial */
@@ -571,20 +587,21 @@ a[class*="title"]:hover {
 }
 
 
-
+.cities-box .img-box,
 .testimonials .swiper-slide {
   transition: all 200ms linear;
   transform: scale(0.9);
 }
 
-.testimonials  .swiper-slide.swiper-slide-active {
+.cities-box:hover .img-box,
+.testimonials .swiper-slide.swiper-slide-active {
   transform: scale(1);
 }
 
 .cities-box .img-box {
   width: 120px;
   height: 120px;
-  background: var(--sc);
+  background: #F0F8FE;
   margin: 0 auto;
   margin-bottom: 20px;
   display: flex;
@@ -592,6 +609,29 @@ a[class*="title"]:hover {
   justify-content: center;
   padding: 25px;
 }
+
+.city-name:hover {
+  color: var(--pc) !important;
+}
+
+.cities-box {
+  border: 1px solid #fff;
+}
+
+.cities-box:hover {
+  border: 1px solid var(--sc);
+}
+
+.cities-box .badage {
+  top: 10px !important;
+}
+
+.flatpickr-day.selected:hover,
+.flatpickr-day.selected {
+  background: var(--pc);
+  border: 1px solid var(--pc);
+}
+
 
 
 
@@ -614,7 +654,7 @@ footer .list-unstyled li a {
   font-size: 15px;
 }
 
-.footer .list-unstyled li:hover a {
+.footer .list-unstyled a:hover {
   color: var(--pc)
 }
 
@@ -622,37 +662,38 @@ footer .list-unstyled li a {
   border: 2px solid var(--pc);
   padding: 15px;
 }
+
 .footer-form form {
   background: #ECECEC;
   border-radius: 5px;
   width: 50%;
 
 }
-.footer-form :is(form input,.form-control):focus,
-.footer-form :is(form input,.form-control) {
+
+.footer-form :is(form input, .form-control):focus,
+.footer-form :is(form input, .form-control) {
   background: transparent;
 }
 
 
 .copywrite {
   background: #ECECEC;
-  font-size: 14px;
 }
 
 /* # Scroll top button
     =================================================*/
-    #scroll_to_top {
-      background:var(--pc);
-      position: fixed;
-      bottom: 48px;
-      height: 45px;
-      width: 45px;
-      right: 21px;
-      z-index: 12;
-      border-radius: 50%;
-      border: unset;
-      cursor: pointer;
-  } 
+#scroll_to_top {
+  background: var(--pc);
+  position: fixed;
+  bottom: 48px;
+  height: 45px;
+  width: 45px;
+  right: 21px;
+  z-index: 12;
+  border-radius: 50%;
+  border: unset;
+  cursor: pointer;
+}
 
 /* # Responsive Code
     =================================================*/
