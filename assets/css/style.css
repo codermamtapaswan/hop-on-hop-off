@@ -338,10 +338,53 @@ a[class*="title"]:hover {
     =================================================*/
 
 
-@media(max-width:600px) {
+@media(max-width:540px) {
+  .navbar-brand {
+    width: 35%;
+    margin-right: 0 !important;
+  }
+
+  .mobile-layout {
+    gap: 10px !important;
+  }
+
+  .mobile-layout .nav-link {
+    padding: 5px 10px;
+  }
 
 
 }
+
+@media(max-width:360px) {
+  .navbar-brand {
+    width: 35%;
+    margin-right: 0 !important;
+  }
+
+  .mobile-layout {
+    gap: 10px !important;
+  }
+
+  .mobile-layout .btn {
+    padding: 0 !important;
+  }
+
+  .mobile-layout .nav-link {
+    padding: 3px 5px;
+  }
+
+  .mobile-layout .gradient-theme .dropdown-toggle::after {
+    display: none !important;
+  }
+
+  .mobile-layout .gradient-theme svg {
+    width: 15px;
+    height: 15px;
+  }
+
+}
+
+
 
 .navbar-nav .nav-link {
   color: #000;
