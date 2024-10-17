@@ -396,6 +396,19 @@ a[class*="title"]:hover {
   box-shadow: none !important;
 }
 
+.dropdown-menu {
+  border: none !important;
+  box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover,
+.dropdown-item.active,
+.dropdown-item:active {
+  color: var(--pc);
+  background-color: transparent !important;
+}
+
 .cart a span {
   top: 5px;
   right: -15px;
@@ -588,6 +601,7 @@ a[class*="title"]:hover {
     width: 25%;
   }
 }
+
 
 
 /* hoho-con-popular-tour */
