@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var swiper = new Swiper(".mySwiper", {
     spaceBetween: 20,
-    loop:true,
-    autoplay:true,
+    loop: true,
+    autoplay: true,
     centeredSlides: true,
     grabCursor: true,
     navigation: {
@@ -13,11 +13,11 @@ document.addEventListener("DOMContentLoaded", function () {
     breakpoints: {
       320: {
         slidesPerView: 1,
-      
+
       },
       480: {
         slidesPerView: 2,
-      
+
       },
       769: {
         slidesPerView: 4,
@@ -37,18 +37,18 @@ document.addEventListener("DOMContentLoaded", function () {
     breakpoints: {
       320: {
         slidesPerView: 1,
-      
+
       },
       480: {
         slidesPerView: 2,
-      
+
       },
       769: {
         slidesPerView: 4,
       }
     }
   });
-  
+
   var swiper2 = new Swiper(".mySwiper2", {
     slidesPerView: 4,
     spaceBetween: 30,
@@ -60,11 +60,11 @@ document.addEventListener("DOMContentLoaded", function () {
     breakpoints: {
       320: {
         slidesPerView: 1,
-      
+
       },
       480: {
         slidesPerView: 2,
-      
+
       },
       769: {
         slidesPerView: 4,
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var swiper3 = new Swiper(".mySwiper3", {
     slidesPerView: 3,
-    autoplay:true,
+    autoplay: true,
     spaceBetween: 30,
     loop: true,
     centeredSlides: true,
@@ -82,11 +82,11 @@ document.addEventListener("DOMContentLoaded", function () {
     breakpoints: {
       320: {
         slidesPerView: 1,
-      
+
       },
       480: {
         slidesPerView: 2,
-      
+
       },
       769: {
         slidesPerView: 3,
@@ -98,34 +98,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // JavaScript to initialize Flatpickr
   flatpickr("#datePicker", {
-      enableTime: true, // Enable time selection
-      dateFormat: "Y-m-d H:i", // Format of the date
-      altInput: true, // Use an alternate input field
-      altFormat: "F j, Y", // Human-friendly format
+    enableTime: true, // Enable time selection
+    dateFormat: "Y-m-d H:i", // Format of the date
+    altInput: true, // Use an alternate input field
+    altFormat: "F j, Y", // Human-friendly format
+    disableMobile: "true"
   });
 
 
 
-    // Scroll to top   ============ start =====>
+  // Scroll to top   ============ start =====>
 
-      let mybutton = document.getElementById("scroll_to_top");
-      window.onscroll = function () {
-          scrollFunction();
-      };
-  
-      function scrollFunction() {
-          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-              mybutton.classList.toggle('active');
-          }
-      }
-      function topFunction() {
-          document.body.scrollTop = 0;
-          document.documentElement.scrollTop = 0;
-      }
-      mybutton.addEventListener("click", topFunction);
-  
+  let mybutton = document.getElementById("scroll_to_top");
+  window.onscroll = function () {
+    scrollFunction();
+  };
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.classList.toggle('active');
+    }
+  }
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  mybutton.addEventListener("click", topFunction);
+
 
 
 });
+
+
+
+
+
+
+
+
 
 

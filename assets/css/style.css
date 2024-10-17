@@ -243,6 +243,12 @@ h6,
   transition: .8s ease-in-out
 }
 
+@media(max-width:768px) {
+  .hoho-overlay-card :is(.img-placeholder, .img-placeholder a img) {
+    height: auto;
+  }
+}
+
 
 .hoho-overlay-card:hover .img-placeholder {
   transition: all 0.5s;
@@ -443,8 +449,15 @@ a[class*="title"]:hover {
 
 /* hero section */
 .hoho-hero {
-  background: url(../images/hero-bg.svg) no-repeat center bottom;
+  background: #ddedf94a url(../images/hero-bg.svg) no-repeat bottom;
   background-size: cover;
+  height: 400px;
+}
+
+@media(max-width:768px) {
+  .hoho-hero {
+    height: 300px;
+  }
 }
 
 
@@ -473,7 +486,7 @@ a[class*="title"]:hover {
 
 .hoho-hero .hero-form {
   gap: 20px;
-  padding: 10px 20px;
+  padding: 10px 20px 10px 30px;
   width: 80%;
 }
 
@@ -507,6 +520,10 @@ a[class*="title"]:hover {
 @media(max-width:600px) {
   .hoho-hero .hero-form {
     width: 100%;
+  }
+
+  .hoho-hero .form-search-btn {
+    width: 25%;
   }
 }
 
@@ -565,6 +582,12 @@ a[class*="title"]:hover {
   width: 55px;
 }
 
+@media(max-width:768px) {
+  .hoho-con-handpicked :is(.swiper-button-next, .swiper-button-prev) {
+    top: 53px !important;
+  }
+}
+
 .hoho-con-handpicked .swiper-button-prev {
   left: calc(100% - 135px);
   border-radius: 25px 0 0 25px;
@@ -573,6 +596,21 @@ a[class*="title"]:hover {
 .hoho-con-handpicked .swiper-button-next {
   right: 25px !important;
   border-radius: 0 25px 25px 0;
+}
+
+@media(max-width:600px) {
+  .hoho-con-handpicked :is(.swiper-button-next, .swiper-button-prev) {
+    top: 90px !important;
+  }
+
+  .month :is(.swiper-button-next, .swiper-button-prev) {
+    top: 50px !important;
+    width: 35px;
+  }
+
+  .month .swiper-button-prev {
+    left: calc(100% - 95px);
+  }
 }
 
 /* testimonial */
@@ -667,7 +705,12 @@ footer .list-unstyled li a {
   background: #ECECEC;
   border-radius: 5px;
   width: 50%;
+}
 
+@media(max-width:768px) {
+  .footer-form form {
+    width: 100%;
+  }
 }
 
 .footer-form :is(form input, .form-control):focus,
