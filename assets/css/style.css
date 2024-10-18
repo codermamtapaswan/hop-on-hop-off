@@ -749,6 +749,24 @@ a[class*="title"]:hover {
 
 /* # Country Page
 =================================================*/
+.page-header{
+  padding-top: 30px;
+  padding-bottom: 100px;
+  background: linear-gradient(0deg, rgb(226, 234, 244) 4.5%, rgba(247, 242, 237, 0) 102.5%);
+  position: relative;
+}
+
+.page-header::before{
+  content: '';
+  width: 143px;
+  height: 143px;
+  bottom: 0;
+  left: -30px;
+  position: absolute;
+  background: url("data:image/svg+xml,%3Csvg width='143' height='151' viewBox='0 0 143 151' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_11_99)'%3E%3Cpath d='M53.4941 0V75.496H124.99L53.4941 0Z' fill='url(%23paint0_linear_11_99)'/%3E%3Cpath d='M53.4951 0L17.7397 37.7557L53.4951 75.496V0Z' fill='%23FDD0F6'/%3E%3Cpath d='M53.4941 75.496L89.235 113.252L124.99 75.496H53.4941Z' fill='%23FDD0F6'/%3E%3Cpath d='M-18.002 75.496L17.7394 113.252L53.4948 75.496H-18.002Z' fill='%23DA0F10' fill-opacity='0.8'/%3E%3Cpath d='M53.4948 75.4989L17.7394 37.7579L-18.002 75.4989H53.4948Z' fill='%23FDD0F6'/%3E%3Cpath d='M124.977 150.991L89.228 113.242L53.478 150.991L89.228 188.741L124.977 150.991Z' fill='url(%23paint1_linear_11_99)'/%3E%3Cpath d='M89.2484 113.253L53.4984 75.504L17.7495 113.253L53.499 151.003L89.2484 113.253Z' fill='%23DF3D3E'/%3E%3C/g%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_11_99' x1='53.4941' y1='75.496' x2='91.0624' y2='39.9181' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.24' stop-color='%23DF3D3E'/%3E%3Cstop offset='1' stop-color='%23EDB1B2' stop-opacity='0.49'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear_11_99' x1='124.993' y1='150.998' x2='53.4925' y2='150.998' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.370031' stop-color='%23DF3D3E'/%3E%3Cstop offset='1' stop-color='%23DF3D3E' stop-opacity='0.07'/%3E%3C/linearGradient%3E%3CclipPath id='clip0_11_99'%3E%3Crect width='143' height='151' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E") no-repeat;
+  background-size: cover;
+}
+
 .tour-packages .hoho-tag-btn{
   padding: 5px 10px !important;
 }
