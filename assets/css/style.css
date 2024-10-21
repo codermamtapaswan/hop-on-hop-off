@@ -833,6 +833,9 @@ a[class*="title"]:hover {
   transition: transform .2s ease-in-out;
   margin-right:10px;
 }
+.tour-packages .hoho-card{
+box-shadow:   0 3px 4px 0 rgba(0, 0, 0, 0.2);
+}
 
 .tour-packages .hoho-card :is(.img-placeholder, .img-placeholder a img) {
   height:100%;
@@ -885,6 +888,7 @@ a[class*="title"]:hover {
 .grid-r-10{  
   align-items:unset;
   grid-template-columns: auto 10%;
+
 }
 
 
