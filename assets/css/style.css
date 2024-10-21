@@ -24,7 +24,7 @@ a {
 }
 
 p {
-  line-height: 2;
+  line-height: 1.8;
 }
 
 h6,
@@ -86,9 +86,9 @@ h6,
   padding-top: 70px;
   padding-bottom: 20px;
 }
-.pb-70{
+.pb-70 {
   padding-bottom: 70px !important;
- }
+}
 
 .mt-70 {
   margin-top: 70px !important;
@@ -106,6 +106,14 @@ h6,
 
 .grid-30 {
   grid-template-columns: 30% auto;
+}
+
+.grid-40 {
+  grid-template-columns: 40% auto;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .bg-theme {
@@ -130,9 +138,9 @@ h6,
     padding-top: 40px;
     padding-bottom: 10px;
   }
-   .pb-70{
+  .pb-70 {
     padding-bottom: 40px;
-   }
+  }
   .mt-70 {
     margin-top: 40px;
   }
@@ -140,6 +148,41 @@ h6,
 
 /* # Common Components
 =================================================*/
+
+/*+++++++++++ Pagination +++++++++++++*/
+.pagination{
+  background: #fdfdfd;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3);
+}
+.pagination .page-link{
+  border: solid 1px #d7d7d7 !important;
+    border-radius: 0.2rem;
+    color: #7d7d7d;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    padding: 0.5rem 0.9rem;
+    margin:10px;
+}
+
+.page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color: var(--pc);
+  border-color: var(--pc);
+}
+.page-link:focus {
+  color: var(--pc);
+  background:#da0f1012 !important;
+  box-shadow:none !important;
+}
+.page-link:hover {
+  color: var(--pc);
+  background:#da0f1012 !important;
+}
 
 /*+++++++++++ Hoho Button +++++++++++++*/
 .hoho-btn {
@@ -167,7 +210,7 @@ h6,
 .hoho-tag-btn {
   padding: 5px 20px;
   border: 1px solid var(--sc) !important;
-  color: #000 ; 
+  color: #000;
   display: block;
   width: fit-content;
   border-radius: 20px;
@@ -749,27 +792,101 @@ a[class*="title"]:hover {
 
 /* # Country Page
 =================================================*/
-.page-header{
-  padding-top: 30px;
-  padding-bottom: 100px;
-  background: linear-gradient(0deg, rgb(226, 234, 244) 4.5%, rgba(247, 242, 237, 0) 102.5%);
-  position: relative;
+.page-header {
+  padding-block: 30px;
 }
 
-.page-header::before{
-  content: '';
-  width: 143px;
-  height: 143px;
-  bottom: 0;
-  left: -30px;
+.faq .accordion-button {
+  font-weight: 700;
+}
+.faq .accordion-button:focus {
+  border-color: var(--pc) !important;
+  box-shadow: none !important;
+}
+
+.faq .accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+}
+
+
+
+.faq .accordion-button:not(.collapsed) {
+  color: var(--pc) !important;
+  background: #fff !important;
+}
+
+.faq .accordion-item:not(:first-of-type) {
+  border-top: 1px solid rgb(218 15 16 / 12%)  !important;
+  margin-top: 15px;
+}
+.faq .accordion-item {
+  border: 1px solid rgb(218 15 16 / 12%) !important;
+}
+
+.faq .accordion-button::before {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='-1.162 -1.162 6.076 6.076' fill='none' xmlns='http://www.w3.org/2000/svg' stroke='%23000' stroke-width='0'%3E%3Cpath fill='%23da0f100f' d='M1.876-1.162a3.04 3.04 0 0 1 3.036 3.038 3.04 3.04 0 0 1-3.036 3.036 3.04 3.04 0 0 1-3.038-3.036 3.04 3.04 0 0 1 3.038-3.038' stroke='none'/%3E%3Cg stroke-linecap='round' stroke-linejoin='round' stroke='%23CCC' stroke-width='.048'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.718 2.87c.052.068.076.29-.278.25a1.6 1.6 0 0 1-.424-.098 2 2 0 0 1-.304-.156 1.4 1.4 0 0 1-.444.1 1.18 1.18 0 0 1-.94.472 1.2 1.2 0 0 1-.362-.058 1.6 1.6 0 0 1-.658.21 1 1 0 0 1-.16-.002.16.16 0 0 1-.136-.098.16.16 0 0 1 .02-.152 2 2 0 0 0 .11-.168 1 1 0 0 0 .15-.362A1.173 1.173 0 0 1 .83 1.204a1.406 1.406 0 1 1 2.632.958c-.03.27.106.496.26.708ZM1.094 1.562a1.094 1.094 0 1 1 2.074.486l-.014.048a1.07 1.07 0 0 0 .142.686 1.4 1.4 0 0 1-.474-.22.16.16 0 0 0-.16-.014 1.093 1.093 0 0 1-1.568-.986m-.312.04a1.4 1.4 0 0 0 1.088 1.33.86.86 0 0 1-.542.194.8.8 0 0 1-.322-.062.16.16 0 0 0-.144.014 2 2 0 0 1-.242.124l-.166.052a1.2 1.2 0 0 0 .128-.314l.022-.152a.2.2 0 0 0-.02-.088.86.86 0 0 1-.116-.434c0-.268.122-.507.314-.665' fill='%23da0f10' stroke='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  transition: transform .2s ease-in-out;
+  margin-right:10px;
+}
+
+.tour-packages .hoho-card :is(.img-placeholder, .img-placeholder a img) {
+  height:100%;
+  width: 100%;
+  object-fit: cover;
+  -webkit-transition: 0.8s ease-in-out;
+  -o-transition: 0.8s ease-in-out;
+  transition: 0.8s ease-in-out;
+}
+
+.hoho-card > .rating {
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 15px;
   position: absolute;
-  background: url("data:image/svg+xml,%3Csvg width='143' height='151' viewBox='0 0 143 151' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_11_99)'%3E%3Cpath d='M53.4941 0V75.496H124.99L53.4941 0Z' fill='url(%23paint0_linear_11_99)'/%3E%3Cpath d='M53.4951 0L17.7397 37.7557L53.4951 75.496V0Z' fill='%23FDD0F6'/%3E%3Cpath d='M53.4941 75.496L89.235 113.252L124.99 75.496H53.4941Z' fill='%23FDD0F6'/%3E%3Cpath d='M-18.002 75.496L17.7394 113.252L53.4948 75.496H-18.002Z' fill='%23DA0F10' fill-opacity='0.8'/%3E%3Cpath d='M53.4948 75.4989L17.7394 37.7579L-18.002 75.4989H53.4948Z' fill='%23FDD0F6'/%3E%3Cpath d='M124.977 150.991L89.228 113.242L53.478 150.991L89.228 188.741L124.977 150.991Z' fill='url(%23paint1_linear_11_99)'/%3E%3Cpath d='M89.2484 113.253L53.4984 75.504L17.7495 113.253L53.499 151.003L89.2484 113.253Z' fill='%23DF3D3E'/%3E%3C/g%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_11_99' x1='53.4941' y1='75.496' x2='91.0624' y2='39.9181' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.24' stop-color='%23DF3D3E'/%3E%3Cstop offset='1' stop-color='%23EDB1B2' stop-opacity='0.49'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear_11_99' x1='124.993' y1='150.998' x2='53.4925' y2='150.998' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.370031' stop-color='%23DF3D3E'/%3E%3Cstop offset='1' stop-color='%23DF3D3E' stop-opacity='0.07'/%3E%3C/linearGradient%3E%3CclipPath id='clip0_11_99'%3E%3Crect width='143' height='151' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E") no-repeat;
-  background-size: cover;
+  left: -8px;
+  top: 20px;
+  background: var(--pc);
+  color: #fff;
 }
 
-.tour-packages .hoho-tag-btn{
-  padding: 5px 10px !important;
+.rating::before,
+.rating::after {
+  content: "";
+  position: absolute;
 }
+
+.hoho-card > .rating:before {
+  height: 0;
+  width: 0;
+  top: -8.5px;
+  left: 0.1px;
+  border-bottom: 9px solid var(--pc);
+  border-left: 9px solid transparent;
+}
+.hoho-card > .rating:after {
+  height: 0;
+  width: 0;
+  right: -14.5px;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 15px solid var(--pc);
+}
+
+.package-details svg{
+  fill:#000;
+}
+
+.grid-r-10{  
+  align-items:unset;
+  grid-template-columns: auto 10%;
+}
+
 
 /* # Footer
 =================================================*/
