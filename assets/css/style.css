@@ -103,6 +103,11 @@ h6,
   align-items: center;
   gap: 20px;
 }
+@media(max-width:600px){
+  [class*="grid"]{
+    grid-template-columns: auto !important;
+  }
+}
 
 .grid-30 {
   grid-template-columns: 30% auto;
@@ -150,12 +155,6 @@ h6,
 =================================================*/
 
 /*+++++++++++ Pagination +++++++++++++*/
-.pagination{
-  background: #fdfdfd;
-    padding: 1rem;
-    border-radius: 0.2rem;
-    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3);
-}
 .pagination .page-link{
   border: solid 1px #d7d7d7 !important;
     border-radius: 0.2rem;
@@ -186,7 +185,7 @@ h6,
 
 /*+++++++++++ Hoho Button +++++++++++++*/
 .hoho-btn {
-  padding: 5px 20px;
+  padding: 7px 20px;
   display: block;
   width: fit-content;
   color: #fff !important;
@@ -313,7 +312,7 @@ h6,
   overflow: hidden;
   -webkit-box-orient: vertical;
   color: var(--color);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 a[class*="title"]:hover {
@@ -331,6 +330,12 @@ a[class*="title"]:hover {
 
 .description {
   color: var(--meta);
+  display: -webkit-box !important;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+
 }
 
 [class*="hoho-cat"] {
@@ -349,7 +354,7 @@ a[class*="title"]:hover {
 .hoho-meta,
 .tour-details > *,
 .hoho-meta > * {
-  font-size: 14px;
+  /* font-size: 14px; */
   color: var(--meta);
 }
 
@@ -808,7 +813,9 @@ a[class*="title"]:hover {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
 }
 
-
+.pacakage-price span{
+  font-size: 14px;
+}
 
 .faq .accordion-button:not(.collapsed) {
   color: var(--pc) !important;
@@ -834,7 +841,8 @@ a[class*="title"]:hover {
   margin-right:10px;
 }
 .tour-packages .hoho-card{
-box-shadow:   0 3px 4px 0 rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  box-shadow:0 10px 35px 0 #0510361A;
 }
 
 .tour-packages .hoho-card :is(.img-placeholder, .img-placeholder a img) {
@@ -844,41 +852,25 @@ box-shadow:   0 3px 4px 0 rgba(0, 0, 0, 0.2);
   -webkit-transition: 0.8s ease-in-out;
   -o-transition: 0.8s ease-in-out;
   transition: 0.8s ease-in-out;
+  position: relative;
+  overflow: hidden;
 }
 
-.hoho-card > .rating {
-  width: 150px;
-  height: 40px;
-  line-height: 40px;
-  padding-left: 15px;
+.hoho-card  .rating {
   position: absolute;
-  left: -8px;
-  top: 20px;
-  background: var(--pc);
+  left: 0;
+  top: 0;
+  z-index: 2;
   color: #fff;
-}
-
-.rating::before,
-.rating::after {
-  content: "";
-  position: absolute;
-}
-
-.hoho-card > .rating:before {
-  height: 0;
-  width: 0;
-  top: -8.5px;
-  left: 0.1px;
-  border-bottom: 9px solid var(--pc);
-  border-left: 9px solid transparent;
-}
-.hoho-card > .rating:after {
-  height: 0;
-  width: 0;
-  right: -14.5px;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-left: 15px solid var(--pc);
+  font-size: 18px;
+  padding: 20px 45px 3px;
+  background: var(--pc);
+  transform: rotate(-45deg) translate(-30px, -40px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 14px;
 }
 
 .package-details svg{
@@ -887,9 +879,32 @@ box-shadow:   0 3px 4px 0 rgba(0, 0, 0, 0.2);
 
 .grid-r-10{  
   align-items:unset;
-  grid-template-columns: auto 10%;
+  grid-template-columns: auto 15%;
 
 }
+
+@media(max-width:768px){
+  .tour-packages .hoho-card {
+    padding: 20px;
+}
+
+.tour-packages .hoho-meta{
+  flex-direction: column;
+  align-items: unset;
+  gap: 20px;
+}
+
+.tour-packages .grid-r-10 {
+  grid-template-columns: auto 18%;
+  gap: 10px;
+}
+.pacakage-details.grid-2 {
+
+}
+
+}
+
+
 
 
 /* # Footer
