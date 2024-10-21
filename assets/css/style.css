@@ -155,32 +155,74 @@ h6,
 =================================================*/
 
 /*+++++++++++ Pagination +++++++++++++*/
-.pagination .page-link{
-  border: solid 1px #d7d7d7 !important;
-    border-radius: 0.2rem;
-    color: #7d7d7d;
-    text-decoration: none;
-    text-transform: uppercase;
-    display: inline-block;
-    text-align: center;
-    padding: 0.5rem 0.9rem;
-    margin:10px;
+.paginate{ text-align: center; }
+.pagination{
+    font-family: 'Ubuntu', sans-serif;
+    display: inline-flex;
+    position: relative;
+}
+.pagination li a.page-link{
+    line-height: 41px;
+    height: 42px;
+    width: 42px;
+    padding: 0;
+    margin: 0 5px;
+    border: none;
+    border-radius: 50% !important;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    background: var(--pc);
+    font-size: 20px;
+    font-weight: 600;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+}
+.pagination li a.page-link:hover,
+.pagination li a.page-link:focus,
+.pagination li.active a.page-link:hover,
+.pagination li.active a.page-link{
+    color: #222;
+    background: transparent;
+    box-shadow: 0 0 10px var(--pc);
+}
+.pagination li a.page-link:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    border: 5px solid var(--pc);;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-radius: 50%;
+    opacity: 0;
+    transform: rotate(155deg);
+    transition: all 0.3s ease 0s;
+}
+.pagination li a.page-link:hover:before,
+.pagination li a.page-link:focus:before,
+.pagination li.active a.page-link:before{
+    opacity: 1;
+    transform: rotate(-15deg);
+}
+@media only screen and (max-width: 480px){
+    .pagination{
+        font-size: 0;
+        border: none;
+        display: inline-block;
+    }
+    .pagination li{
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 0 10px;
+    }
 }
 
-.page-item.active .page-link {
-  z-index: 3;
-  color: #fff;
-  background-color: var(--pc);
-  border-color: var(--pc);
-}
-.page-link:focus {
-  color: var(--pc);
-  background:#da0f1012 !important;
-  box-shadow:none !important;
-}
-.page-link:hover {
-  color: var(--pc);
-  background:#da0f1012 !important;
+.page-item:not(:first-child) .page-link {
+  margin-left: 10px !important;
 }
 
 /*+++++++++++ Hoho Button +++++++++++++*/
@@ -843,6 +885,7 @@ a[class*="title"]:hover {
 .tour-packages .hoho-card{
   padding: 30px;
   box-shadow:0 10px 35px 0 #0510361A;
+  gap: 25px;
 }
 
 .tour-packages .hoho-card :is(.img-placeholder, .img-placeholder a img) {
@@ -881,6 +924,10 @@ a[class*="title"]:hover {
   align-items:unset;
   grid-template-columns: auto 15%;
 
+}
+
+.tour-packages .hoho-card svg{
+  fill: none !important;
 }
 
 @media(max-width:768px){
