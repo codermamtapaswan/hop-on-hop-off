@@ -105,11 +105,31 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // Tour Single feature  ..............
+  var swiper = new Swiper(".tours-img", {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+  var swiper2 = new Swiper(".tour-feature-img", {
+    loop: true,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+      swiper: swiper,
+    },
+  });
+
 
 
   // JavaScript to initialize Flatpickr
   flatpickr("#datePicker", {
-    enableTime: true, // Enable time selection
+    enableTime: false, // Enable time selection
     dateFormat: "Y-m-d H:i", // Format of the date
     altInput: true, // Use an alternate input field
     altFormat: "F j, Y", // Human-friendly format
