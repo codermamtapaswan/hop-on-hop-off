@@ -136,6 +136,40 @@ document.addEventListener("DOMContentLoaded", function () {
     disableMobile: "true"
   });
 
+  // Tour Single page  tab
+  window.addEventListener("scroll", onScroll);
+
+  function onScroll() {
+    const scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
+
+    document.querySelectorAll(".tour-tab  a").forEach((currLink) => {
+      const refElement = document.querySelector(currLink.getAttribute("href"));
+      if (
+        refElement.offsetTop - 0 <= scrollPos &&
+        refElement.offsetTop + refElement.offsetHeight > scrollPos
+      ) {
+        document.querySelectorAll(".tour-tab a").forEach((link) => {
+          link.classList.remove("active");
+        });
+        currLink.classList.add("active");
+      } else {
+        currLink.classList.remove("active");
+      }
+    });
+  }
+
+document.querySelectorAll(".tour-single-content a").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    const currentId = link.getAttribute("href");
+    setTimeout(() => {
+      window.scrollTo({
+        top: document.querySelector(currentId).offsetTop - 50,
+        behavior: "instant" // To match the behavior of animate with duration 0
+      });
+    }, 0);
+  });
+});
 
 
   // Scroll to top   ============ start =====>

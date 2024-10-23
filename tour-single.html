@@ -340,7 +340,7 @@
     </div>
     <!-- navigation  End-->
 
-    <main class="tour-single-page bg-white">
+    <main class="tour-single-page bg-white pb-70">
 
         <div class="page-header bg-white">
             <div class="container">
@@ -519,7 +519,7 @@
 
             <!-- content Start-->
             <div class="tour-single-content mt-5">
-                <div class="tour-tab">
+                <div class="tour-tab position-sticky">
                     <a href="#Overview" title="Overview" class="tab-btn active" data-rel="Overview">Overview</a>
                     <a href="#Itinerary" title="Itinerary" class="tab-btn" data-rel="Itinerary">Itinerary</a>
                     <a href="#Schedule" title="Schedule" class="tab-btn" data-rel="Schedule">Schedule</a>
@@ -535,75 +535,42 @@
                     <a href="#Cancellation-Policy" title="Cancellation Policy" class="tab-btn"
                         data-rel="Cancellation-Policy">Cancellation
                         Policy</a>
+                    <a href="#Faq" title="Cancellation Policy" class="tab-btn"
+                        data-rel="Faq">FAQ</a>
                 </div>
-                <div class="accordion tour-content" id="accordionExample">
+
+                <div class="accordion tour-content" id="tour-signle-content">
                     <div id="Overview" class="accordion-item">
                         <div class="accordion-header" id="headingOne">
-                            <button class="accordion-button px-0 fw-normal h3 mb-0" type="button"
+                            <button class="accordion-button px-0 h3 mb-0" type="button"
                                 data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
                                 aria-controls="collapseOne">
                                 Overview
                             </button>
                         </div>
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                            data-bs-parent="#accordionExample">
+                            data-bs-parent="#tour-signle-content">
                             <div class="accordion-body pt-0 px-0">
-                                <p>This hop-on hop-off sightseeing bus tour is the ultimate convenient way of exploring
+                                <p class="mb-0">This hop-on hop-off sightseeing bus tour is the ultimate convenient way of exploring
                                     London's top landmarks. Avoid the
                                     stress of navigating London's underground system, and instead—simply hop on and off
                                     the bus at stops on its designated
                                     route. Potential stops include Buckingham Palace, the Tower of London, Big Ben,
                                     Oxford Street, and The Shard.
                                 </p>
-                                <ul class="mb-0 list-unstyled grid-2">
-                                    <li class="d-flex align-items-center gap-2">
-                                        <svg width="24" height="24" viewBox="0 0 24 24"
-                                            xmlns="http://www.w3.org/2000/svg" fill="#008768">
-                                            <path
-                                                d="M12.5 6.75a.75.75 0 00-1.5 0v5.5c0 .41.34.75.75.75h4.75a.75.75 0 000-1.5h-4V6.75z">
-                                            </path>
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M12 2a10 10 0 100 20 10 10 0 000-20zM3.5 12a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0z">
-                                            </path>
-                                        </svg>
-                                        <span>2 hours 30 minutes (approx.)</span>
-                                    </li>
-                                    <li class="d-flex align-items-center gap-2">
-                                        <svg width="24" height="24" viewBox="0 0 24 24"
-                                            xmlns="http://www.w3.org/2000/svg" fill="#008768">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M8.75 2A2.75 2.75 0 006 4.75v14.5A2.75 2.75 0 008.75 22h6.5A2.75 2.75 0 0018 19.25V4.75A2.75 2.75 0 0015.25 2h-6.5zm7.75 14.5V4.75c0-.69-.56-1.25-1.25-1.25h-6.5c-.69 0-1.25.56-1.25 1.25V16.5h9zm-9 1.5h9v1.25c0 .69-.56 1.25-1.25 1.25h-6.5c-.69 0-1.25-.56-1.25-1.25V18z">
-                                            </path>
-                                        </svg>
-                                        <span>Mobile ticket</span>
-                                    </li>
-                                    <li class="d-flex align-items-center gap-2">
-                                        <svg width="20" height="20" viewBox="0 0 20 20"
-                                            xmlns="http://www.w3.org/2000/svg" fill="#008768">
-                                            <path
-                                                d="M8.5 13a.5.5 0 100-1 .5.5 0 000 1zM11 12.5a.5.5 0 11-1 0 .5.5 0 011 0zM6.5 13a.5.5 0 100-1 .5.5 0 000 1z">
-                                            </path>
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M6.5 2a2.5 2.5 0 00-2.45 2H4a2 2 0 00-2 2v8c0 1.1.9 2 2 2h1v1.5a.5.5 0 00.75.43L9.13 16H14a2 2 0 002-2v-1.05a2.5 2.5 0 002-2.45v-6A2.5 2.5 0 0015.5 2h-9zM14 4H5.09c.2-.58.76-1 1.41-1h9c.83 0 1.5.67 1.5 1.5v6c0 .65-.42 1.2-1 1.41V6a2 2 0 00-2-2zM4 5a1 1 0 00-1 1v8a1 1 0 001 1h2v1.64L8.87 15H14a1 1 0 001-1V6a1 1 0 00-1-1H4z">
-                                            </path>
-                                        </svg>
-                                        <span>Offer</span>
-                                    </li>
-
-                                </ul>
                             </div>
                         </div>
                     </div>
                     <div id="Itinerary" class="accordion-item">
                         <div class="accordion-header" id="headingTwo">
-                            <button class="accordion-button px-0 fw-normal h3 mb-0 collapsed" type="button"
+                            <button class="accordion-button px-0 h3 mb-0" type="button"
                                 data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true"
                                 aria-controls="collapseTwo">
                                 Itinerary
                             </button>
                         </div>
                         <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo"
-                            data-bs-parent="#accordionExample">
+                            data-bs-parent="#tour-signle-content">
                             <div class="accordion-body pt-0 px-0">
                                 <p>The Paris Hop On Hop off Must See pass is the perfect way to explore the City of
                                     Lights on foot and by boat. Not only
@@ -633,43 +600,126 @@
                     </div>
                     <div id="Schedule" class="accordion-item">
                         <div class="accordion-header" id="headingThree">
-                            <button class="accordion-button px-0 fw-normal h3 mb-0 collapsed" type="button"
+                            <button class="accordion-button px-0 h3 mb-0" type="button"
                                 data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true"
                                 aria-controls="collapseThree">
                                 Schedule
                             </button>
                         </div>
                         <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree"
-                            data-bs-parent="#accordionExample">
-                            <div class="accordion-body pt-0 px-0">
-                                <strong>This is the third item's accordion body.</strong> It is hidden by default,
-                                until the collapse
-                                plugin adds the appropriate classes that we use to style each element. These classes
-                                control the overall
-                                appearance, as well as the showing and hiding via CSS transitions. You can modify
-                                any of this with
-                                custom CSS or overriding our default variables. It's also worth noting that just
-                                about any HTML can go
-                                within the <code>.accordion-body pt-0 px-0</code>, though the transition does limit
-                                overflow.
+                            data-bs-parent="#tour-signle-content">
+                            <div class="accordion-body bg-theme-gray p-lg-5 p-md-4">
+
+                                <!--  -->
+                                <div class="accordion mt-0" id="Schedulefaq">
+                                    <div class="accordion-item">
+                                      <h2 class="accordion-header" id="heading1">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                            29th June to 27th Sep. 2024
+                                        </button>
+                                      </h2>
+                                      <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#Schedulefaq">
+                                        <div class="accordion-body py-0">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex py-3 border-bottom">
+                                                    <div class="heading fw-bold me-5">Yellow Route</div>
+                                                    <div class="content">First departure from stop 1 at 08:30AM - Last departure from stop 1 at 08:00 PM | 07:00 PM Mon-Thu</div>
+                                                </li>
+                                                <li class="d-flex py-3 border-bottom">
+                                                    <div class="heading fw-bold me-5">Yellow Route</div>
+                                                    <div class="content">First departure from stop 1 at 08:30AM - Last departure from stop 1 at 08:00 PM | 07:00 PM Mon-Thu</div>
+                                                </li>
+                                                <li class="d-flex py-3 border-bottom">
+                                                    <div class="heading fw-bold me-5">Yellow Route</div>
+                                                    <div class="content">First departure from stop 1 at 08:30AM - Last departure from stop 1 at 08:00 PM | 07:00 PM Mon-Thu</div>
+                                                </li>
+                                                <li class="d-flex py-3 border-bottom">
+                                                    <div class="heading fw-bold me-5">Yellow Route</div>
+                                                    <div class="content">First departure from stop 1 at 08:30AM - Last departure from stop 1 at 08:00 PM | 07:00 PM Mon-Thu</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                      <h2 class="accordion-header" id="heading2">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                            28th September to 01st November 2024
+                                        </button>
+                                      </h2>
+                                      <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#Schedulefaq">
+                                        <div class="accordion-body py-0">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex py-3 border-bottom">
+                                                    <div class="heading fw-bold me-5">Yellow Route</div>
+                                                    <div class="content">First departure from stop 1 at 08:30AM - Last departure from stop 1 at 08:00 PM | 07:00 PM Mon-Thu</div>
+                                                </li>
+                                                <li class="d-flex py-3 border-bottom">
+                                                    <div class="heading fw-bold me-5">Yellow Route</div>
+                                                    <div class="content">First departure from stop 1 at 08:30AM - Last departure from stop 1 at 08:00 PM | 07:00 PM Mon-Thu</div>
+                                                </li>
+                                                <li class="d-flex py-3 border-bottom">
+                                                    <div class="heading fw-bold me-5">Yellow Route</div>
+                                                    <div class="content">First departure from stop 1 at 08:30AM - Last departure from stop 1 at 08:00 PM | 07:00 PM Mon-Thu</div>
+                                                </li>
+                                                <li class="d-flex py-3 border-bottom">
+                                                    <div class="heading fw-bold me-5">Yellow Route</div>
+                                                    <div class="content">First departure from stop 1 at 08:30AM - Last departure from stop 1 at 08:00 PM | 07:00 PM Mon-Thu</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                      <h2 class="accordion-header" id="heading3">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                            02nd November 2024 to 05th January 2025
+                                        </button>
+                                      </h2>
+                                      <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#Schedulefaq">
+                                        <div class="accordion-body py-0">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex py-3 border-bottom">
+                                                    <div class="heading fw-bold me-5">Yellow Route</div>
+                                                    <div class="content">First departure from stop 1 at 08:30AM - Last departure from stop 1 at 08:00 PM | 07:00 PM Mon-Thu</div>
+                                                </li>
+                                                <li class="d-flex py-3 border-bottom">
+                                                    <div class="heading fw-bold me-5">Yellow Route</div>
+                                                    <div class="content">First departure from stop 1 at 08:30AM - Last departure from stop 1 at 08:00 PM | 07:00 PM Mon-Thu</div>
+                                                </li>
+                                                <li class="d-flex py-3 border-bottom">
+                                                    <div class="heading fw-bold me-5">Yellow Route</div>
+                                                    <div class="content">First departure from stop 1 at 08:30AM - Last departure from stop 1 at 08:00 PM | 07:00 PM Mon-Thu</div>
+                                                </li>
+                                                <li class="d-flex py-3 border-bottom">
+                                                    <div class="heading fw-bold me-5">Yellow Route</div>
+                                                    <div class="content">First departure from stop 1 at 08:30AM - Last departure from stop 1 at 08:00 PM | 07:00 PM Mon-Thu</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+
+                                <!--  -->
                             </div>
                         </div>
                     </div>
                     <div id="Incl-Excl" class="accordion-item">
-                        <div class="accordion-header" id="headingThree">
-                            <button class="accordion-button px-0 fw-normal h3 mb-0 collapsed" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true"
-                                aria-controls="collapseThree">
+                        <div class="accordion-header" id="headingFour">
+                            <button class="accordion-button px-0 h3 mb-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true"
+                                aria-controls="collapseFour">
                                 Incl & Excl
                             </button>
                         </div>
-                        <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree"
-                            data-bs-parent="#accordionExample">
+                        <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour"
+                            data-bs-parent="#tour-signle-content">
                             <div class="accordion-body pt-0 px-0">
-                                <div class="row">
+                                <div class="row row-gap">
                                     <div class="col-lg-6 col-md-6">
-                                        <div class="h5 mb-2">Inclusions</div>
-                                        <ul class="ps-0 tick-list included">
+                                        <ul class="rounded-tick-list tick-list included mb-0">
+                                            <div class="mb-4">Inclusions</div>
                                             <li>Professional Guide</li>
                                             <li>Entries to chosen attractions&nbsp;</li>
                                             <li>25% discount on guidebooks at Stonehenge!*</li>
@@ -678,9 +728,11 @@
                                         </ul>
                                     </div>
                                     <div class="col-lg-6 col-md-6">
-                                        <div class="h5 mb-2">Exclusions</div>
-                                        <ul class="ps-0 tick-list excluded">
+                                        <ul class="rounded-tick-list tick-list excluded mb-0">
+                                            <div class="mb-4">Exclusions</div>
                                             <li>Gratuities</li>
+                                            <li>Food and drink</li>
+                                            <li>Food and drink</li>
                                             <li>Food and drink</li>
                                         </ul>
                                     </div>
@@ -688,100 +740,230 @@
                             </div>
                         </div>
                     </div>
-
                     <div id="Redemption-Info" class="accordion-item">
-                        <div class="accordion-header" id="headingThree">
-                            <button class="accordion-button px-0 fw-normal h3 mb-0 collapsed" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true"
-                                aria-controls="collapseThree">
+                        <div class="accordion-header" id="headingFive">
+                            <button class="accordion-button px-0 h3 mb-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true"
+                                aria-controls="collapseFive">
                                 Redemption Info
                             </button>
                         </div>
-                        <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree"
-                            data-bs-parent="#accordionExample">
-                            <div class="accordion-body pt-0 px-0">
-                                <strong>This is the third item's accordion body.</strong> It is hidden by default,
-                                until the collapse
-                                plugin adds the appropriate classes that we use to style each element. These classes
-                                control the overall
-                                appearance, as well as the showing and hiding via CSS transitions. You can modify
-                                any of this with
-                                custom CSS or overriding our default variables. It's also worth noting that just
-                                about any HTML can go
-                                within the <code>.accordion-body pt-0 px-0</code>, though the transition does limit
-                                overflow.
+                        <div id="collapseFive" class="accordion-collapse collapse show" aria-labelledby="headingFive"
+                            data-bs-parent="#tour-signle-content">
+                            <div class="accordion-body bg-theme-sc p-lg-5 p-md-4">
+                               <div class="row row-gap">
+                                <div class="col-lg-7">
+                                    <ul class="ps-0 rounded-tick-list tick-list excluded mb-0">
+                                        <li>You can board the bus at any stop and voucher can be exchanged directly with the driver.</li> 
+                                        <li>Mobile and paper vouchers are both accepted.</li>
+                                        <li><strong>Voucher : </strong>  You will receive a ticket in exchange for your voucher, which you must keep until the expiry date/ tour. </li>
+                                        <li><strong>Ticket Expiry : </strong>  Please check your ticket to know when it expires.</li>
+                                        <li><strong>Ticket Exchange : </strong>  After exchanging your voucher for a ticket, your voucher will no longer be valid.</li>
+                                        <li><strong>Ticket Loss Policy : </strong>  In loss of voucher/ticket, company is not liable for any refund. </li>
+                                        <li><strong>Flexible Ticket : </strong>  The voucher can be used within 5 days from the date indicated during the purchase.</li> 
+                                        <li>Operational Updates : </strong>  Starting from tomorrow, July 03rd to July 27th, stop no. 11 of Line A will be suspended.</li>
+
+                                      
+                                    </ul>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="grid grid-2">
+                                        <img src="https://ik.imagekit.io/dejuq46pi/Tourpageimg/226_1.webp?updatedAt=2024091105416340780" alt="" class="img-fluid rounded">
+                                    <img src="https://ik.imagekit.io/dejuq46pi/Tourpageimg/226_1.webp?updatedAt=2024091105416340780" alt="" class="img-fluid rounded">
+                                    <img src="https://ik.imagekit.io/dejuq46pi/Tourpageimg/226_1.webp?updatedAt=2024091105416340780" alt="" class="img-fluid rounded">
+                                    </div>
+                                </div>
+                               </div>
                             </div>
                         </div>
                     </div>
                     <div id="Know-Before-You-Go" class="accordion-item">
-                        <div class="accordion-header" id="headingThree">
-                            <button class="accordion-button px-0 fw-normal h3 mb-0 collapsed" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true"
-                                aria-controls="collapseThree">
+                        <div class="accordion-header" id="headingSix">
+                            <button class="accordion-button px-0 h3 mb-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true"
+                                aria-controls="collapseSix">
                                 Know Before You Go
                             </button>
                         </div>
-                        <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree"
-                            data-bs-parent="#accordionExample">
+                        <div id="collapseSix" class="accordion-collapse collapse show" aria-labelledby="headingSix"
+                            data-bs-parent="#tour-signle-content">
                             <div class="accordion-body pt-0 px-0">
-                                <strong>This is the third item's accordion body.</strong> It is hidden by default,
-                                until the collapse
-                                plugin adds the appropriate classes that we use to style each element. These classes
-                                control the overall
-                                appearance, as well as the showing and hiding via CSS transitions. You can modify
-                                any of this with
-                                custom CSS or overriding our default variables. It's also worth noting that just
-                                about any HTML can go
-                                within the <code>.accordion-body pt-0 px-0</code>, though the transition does limit
-                                overflow.
+                               <div class="row row-gap">
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="box">
+                                           <div class="icon rounded-circle d-flex align-items-center justify-content-center mb-3">
+                                            <img src="assets/images/wifi.svg">
+                                           </div> 
+                                           <div class="heading fw-bold mb-2">Accessibility</div>
+                                           <p class="mb-0">Facilitated access for disabled people</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="box">
+                                           <div class="icon rounded-circle d-flex align-items-center justify-content-center mb-3">
+                                            <img src="assets/images/wifi.svg">
+                                           </div> 
+                                           <div class="heading fw-bold mb-2">Accessibility</div>
+                                           <p class="mb-0">Facilitated access for disabled people</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="box">
+                                           <div class="icon rounded-circle d-flex align-items-center justify-content-center mb-3">
+                                            <img src="assets/images/wifi.svg">
+                                           </div> 
+                                           <div class="heading fw-bold mb-2">Accessibility</div>
+                                           <p class="mb-0">Facilitated access for disabled people</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="box">
+                                           <div class="icon rounded-circle d-flex align-items-center justify-content-center mb-3">
+                                            <img src="assets/images/wifi.svg">
+                                           </div> 
+                                           <div class="heading fw-bold mb-2">Accessibility</div>
+                                           <p class="mb-0">Facilitated access for disabled people</p>
+                                    </div>
+                                </div>
+                               </div>
                             </div>
                         </div>
                     </div>
                     <div id="Useful-Downloads" class="accordion-item">
-                        <div class="accordion-header" id="headingThree">
-                            <button class="accordion-button px-0 fw-normal h3 mb-0 collapsed" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true"
-                                aria-controls="collapseThree">
+                        <div class="accordion-header" id="headingSeven">
+                            <button class="accordion-button px-0 h3 mb-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="true"
+                                aria-controls="collapseSeven">
                                 Useful Downloads
                             </button>
                         </div>
-                        <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree"
-                            data-bs-parent="#accordionExample">
+                        <div id="collapseSeven" class="accordion-collapse collapse show" aria-labelledby="headingSeven"
+                            data-bs-parent="#tour-signle-content">
                             <div class="accordion-body pt-0 px-0">
-                                <strong>This is the third item's accordion body.</strong> It is hidden by default,
-                                until the collapse
-                                plugin adds the appropriate classes that we use to style each element. These classes
-                                control the overall
-                                appearance, as well as the showing and hiding via CSS transitions. You can modify
-                                any of this with
-                                custom CSS or overriding our default variables. It's also worth noting that just
-                                about any HTML can go
-                                within the <code>.accordion-body pt-0 px-0</code>, though the transition does limit
-                                overflow.
+                                <div class="usefulbox d-flex  align-items-center justify-content-between">
+                                    <div class="fw-bold text-white fs-4"> Useful Downloads</div>
+                                    <div class="btn-group gap-3">
+                                        <a href="#" class="hoho-btn d-flex align-items-center gap-2">
+                                            Timetable
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                              <path d="M.901 2.135v-.817c0-.347.28-.627.625-.625L8.683.692c.346 0 .625.28.624.624v7.159a.623.623 0 0 1-.625.625h-.817a.625.625 0 0 1-.625-.639l.105-4.333L2.053 9.42a.625.625 0 0 1-.884 0L.58 8.832a.625.625 0 0 1 0-.883l5.292-5.293-4.333.105A.62.62 0 0 1 .9 2.137" fill="#fff"></path>
+                                            </svg>
+                                          </a>
+                                        <a href="#" class="hoho-btn d-flex align-items-center gap-2">
+                                            Route Map
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                              <path d="M.901 2.135v-.817c0-.347.28-.627.625-.625L8.683.692c.346 0 .625.28.624.624v7.159a.623.623 0 0 1-.625.625h-.817a.625.625 0 0 1-.625-.639l.105-4.333L2.053 9.42a.625.625 0 0 1-.884 0L.58 8.832a.625.625 0 0 1 0-.883l5.292-5.293-4.333.105A.62.62 0 0 1 .9 2.137" fill="#fff"></path>
+                                            </svg>
+                                          </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div id="Cancellation-Policy" class="accordion-item">
-                        <div class="accordion-header" id="headingThree">
-                            <button class="accordion-button px-0 fw-normal h3 mb-0 collapsed" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true"
-                                aria-controls="collapseThree">
+                        <div class="accordion-header" id="headingEight">
+                            <button class="accordion-button px-0 h3 mb-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="true"
+                                aria-controls="collapseEight">
                                 Cancellation Policy
                             </button>
                         </div>
-                        <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree"
-                            data-bs-parent="#accordionExample">
+                        <div id="collapseEight" class="accordion-collapse collapse show" aria-labelledby="headingEight"
+                            data-bs-parent="#tour-signle-content">
+                            <div class="accordion-body pt-0 px-0 ">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <ul class="ps-0 tick-list included">
+                                            <li class="fw-bold">NO cancellation Charges</li>
+                                            <p class="ps-4">up to 24 hours before the chosen travel date. 100% cancellation fee applied within 24 hours of travel date.
+                                            </p>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <ul class="ps-0 tick-list included">
+                                            <li class="fw-bold">NO cancellation Charges</li>
+                                            <p  class="ps-4">up to 24 hours before the chosen travel date. 100% cancellation fee applied within 24 hours of travel date.
+                                            </p>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <p class="mb-0 fw-bold">Changes Will only be honoured as long as the voucher has not been used.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="faq" class="accordion-item">
+                        <div class="accordion-header" id="headingNine">
+                            <button class="accordion-button px-0 h3 mb-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="true"
+                                aria-controls="collapseNine">
+                                Frequently Asked Questions
+                            </button>
+                        </div>
+                        <div id="collapseNine" class="accordion-collapse collapse show" aria-labelledby="headingNine"
+                            data-bs-parent="#tour-signle-content">
                             <div class="accordion-body pt-0 px-0">
-                                <strong>This is the third item's accordion body.</strong> It is hidden by default,
-                                until the collapse
-                                plugin adds the appropriate classes that we use to style each element. These classes
-                                control the overall
-                                appearance, as well as the showing and hiding via CSS transitions. You can modify
-                                any of this with
-                                custom CSS or overriding our default variables. It's also worth noting that just
-                                about any HTML can go
-                                within the <code>.accordion-body pt-0 px-0</code>, though the transition does limit
-                                overflow.
+                                <div class="accordion" id="accordionPanelsStayOpenExample">
+                                    <div class="accordion-item p-4">
+                                        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                            <button class="accordion-button p-0" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                                aria-controls="panelsStayOpen-collapseOne">
+                                                Why Should You Take San Francisco Hop-On Hop-Off Bus Tour?
+                                            </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                                            aria-labelledby="panelsStayOpen-headingOne">
+                                            <div class="accordion-body px-0 border-top pb-0">
+                                                <p class="mb-0"><strong>This is the first item's accordion body.</strong> It is shown by default, until
+                                                    the collapse plugin adds the appropriate classes that we use to style each element.
+                                                    These classes control the overall appearance, as well as the showing and hiding via CSS
+                                                    transitions. You can modify any of this with custom CSS or overriding our default
+                                                    variables. It's also worth noting that just about any HTML can go within the
+                                                    <code>.accordion-body</code>, though the transition does limit overflow.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item p-4">
+                                        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                            <button class="accordion-button p-0 collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                                aria-controls="panelsStayOpen-collapseTwo">
+                                                Why Should You Take San Francisco Hop-On Hop-Off Bus Tour?
+                                            </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                                            aria-labelledby="panelsStayOpen-headingTwo">
+                                            <div class="accordion-body px-0 border-top pb-0">
+                                                <p><strong>This is the first item's accordion body.</strong> It is shown by default, until
+                                                    the collapse plugin adds the appropriate classes that we use to style each element.
+                                                    These classes control the overall appearance, as well as the showing and hiding via CSS
+                                                    transitions. You can modify any of this with custom CSS or overriding our default
+                                                    variables. It's also worth noting that just about any HTML can go within the
+                                                    <code>.accordion-body px-0 border-top pb-0</code>, though the transition does limit overflow.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item p-4">
+                                        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                            <button class="accordion-button p-0 collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                                aria-controls="panelsStayOpen-collapseThree">
+                                                Why Should You Take San Francisco Hop-On Hop-Off Bus Tour?
+                                            </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                                            aria-labelledby="panelsStayOpen-headingThree">
+                                            <div class="accordion-body px-0 border-top pb-0">
+                                                <p><strong>This is the first item's accordion body.</strong> It is shown by default, until
+                                                    the collapse plugin adds the appropriate classes that we use to style each element.
+                                                    These classes control the overall appearance, as well as the showing and hiding via CSS
+                                                    transitions. You can modify any of this with custom CSS or overriding our default
+                                                    variables. It's also worth noting that just about any HTML can go within the
+                                                    <code>.accordion-body</code>, though the transition does limit overflow.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
