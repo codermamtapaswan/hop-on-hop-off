@@ -489,6 +489,26 @@ a[class*="title"]:hover {
     no-repeat;
 }
 
+
+/* Horizontall Scrollbar */
+.hoho-scroller::-webkit-scrollbar {
+  height: 1px;
+}
+
+.hoho-scroller::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0);
+}
+
+.hoho-scroller::-webkit-scrollbar-thumb {
+  height: 1px;
+  background:var(--pc);
+}
+
+.hoho-scroller::-webkit-scrollbar:vertical {
+  display: none;
+}
+
+
 /* # Navbar
 =================================================*/
 .navbar-nav .nav-link {
@@ -1092,10 +1112,12 @@ a[class*="title"]:hover {
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
   padding: 15px 0px;
+  white-space:nowrap;
+  gap: 20px;
 }
 .tour-tab.position-sticky {
   z-index: 100;
-  top: 100px;
+  top: 90px;
 
   overflow-x: scroll;
 }
