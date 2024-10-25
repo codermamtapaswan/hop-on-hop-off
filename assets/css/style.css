@@ -99,6 +99,10 @@ h6,
   padding-bottom: 20px;
 }
 
+.pt-70 {
+  padding-top: 70px !important;
+}
+
 .pb-70 {
   padding-bottom: 70px !important;
 }
@@ -156,6 +160,10 @@ h6,
   .separator-p {
     padding-top: 40px;
     padding-bottom: 10px;
+  }
+
+  .pt-70 {
+    padding-top: 40px;
   }
 
   .pb-70 {
@@ -1357,6 +1365,19 @@ a[class*="title"]:hover {
   background-color: transparent;
   border: 1px solid var(--pc);
 }
+
+/*# REGISTER || lOGIN || FORGOT PASSWORD FORM
+=================================================*/
+.crud-form{
+  background: #fff;
+  padding: 40px;
+  border-radius: 5px;
+}
+.crud-form .input-group-text{}
+.crud-form .input-group-text svg{
+  fill: var(--pc);
+}
+
 
 /* # Footer
 =================================================*/
