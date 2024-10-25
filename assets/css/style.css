@@ -176,7 +176,11 @@ h6,
 }
 
 .page-header {
-  padding-block: 30px;
+  padding-block: 45px;
+  background-size: cover;
+  background-position-y: 80%;
+  background-image: url(/assets/images/pg-header-bg.svg);
+  margin-bottom: 40px;
 }
 
 .page-header .rating {
@@ -185,6 +189,23 @@ h6,
 
 /* # Common Components
 =================================================*/
+.page-content {
+  counter-reset: term definition;
+}
+.page-content .number{
+  padding-left: 40px;
+  position: relative;
+}
+.page-content .number:not(:first-child){
+  margin-top:25px;
+}
+.page-content .number::before {
+  counter-increment: term;
+  content: counter(term) ". ";
+  position: absolute;
+  left: 0;
+}
+
 /*+++++++++++ Accordion +++++++++++++*/
 .accordion-button {
   font-weight: 700;
@@ -563,7 +584,7 @@ a[class*="title"]:hover {
 
 .store-item .image-store {
   width: 100%;
-  height: 140px;
+  height: 110px;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -572,6 +593,7 @@ a[class*="title"]:hover {
   font-size: 14px;
   font-weight: 400;
   line-height: 0.9;
+  margin-bottom: 0 !important;
 }
 
 .store-item .list-store .p-note {
@@ -1344,6 +1366,43 @@ a[class*="title"]:hover {
   }
 }
 
+/* # About Page Start
+=================================================*/
+
+.overlay-part{
+  padding-block: 50px;
+  background-color: #da0f1014;
+}
+
+.image-layout{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:20px;
+  flex-wrap: wrap;
+}
+
+
+.ft-card-content{
+  padding: 20px;
+  background-color: #ffffff;
+  margin-inline: 40px;
+  margin-top: -70px;
+  text-align: center;
+  border: 1px solid #dbdbdb;
+}
+
+.floating-card:hover .ft-card-content{
+  transform: translateY(-10px);
+}
+
+
+@media (max-width: 600px) {
+  .ft-card-content{
+    margin-inline: 0px;
+    margin-top: 0px;
+  }
+}
 /* # Faq Page
 =================================================*/
 .faq-page .nav-pills .nav-link {
@@ -1372,6 +1431,12 @@ a[class*="title"]:hover {
   background: #fff;
   padding: 40px;
   border-radius: 5px;
+}
+
+@media(max-width:768px){
+  .crud-form{
+    padding: 25px;
+  }
 }
 .crud-form .text-direction{
   font-weight: 600;
@@ -1466,3 +1531,71 @@ footer .list-unstyled li a {
   border: unset;
   cursor: pointer;
 }
+
+
+
+
+/* contact us page start */
+.contact-info{
+  background-color: #fff;
+  padding:60px 30px 30px 30px;
+  position: relative;
+}
+
+.contact-info svg{
+  width: 30px;
+  height: 30px;
+}
+.info-item{
+  display: flex;
+  gap:16px;
+}
+
+ .contact-form :is(input,select,textarea){
+  width: 100%;
+  padding: 10px 10px 15px 0px;
+  border: unset;
+  border-bottom: 1px solid #d1d1d19e;
+  background: transparent;
+}
+
+.contact-form :is(input:focus-visible,select:focus-visible,textarea:focus-visible){
+  outline: none;
+  border: unset;
+  border-bottom: 1px solid var(--pc); 
+}
+.contact-form :is(select){
+  color: rgb(63, 63, 63);
+} 
+
+.contact-icon{
+  padding: 17px;
+  background: #ffffff;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #e7e7e7;
+  position: absolute;
+  top: -40px;
+}
+
+.contact-form ::placeholder{
+  color: rgb(63, 63, 63);
+  font-size: 16px !important;
+}
+.contact-form{
+  padding: 35px;
+}
+
+.contact-form label{
+  background: #ff000021;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50% !important;
+}
+/* contact us page end*/
