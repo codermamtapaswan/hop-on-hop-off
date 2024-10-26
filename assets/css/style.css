@@ -82,6 +82,13 @@ h6,
   background: var(--sc);
 }
 
+.bg-gradient-2{
+  background-image: linear-gradient(to right,
+  #da0f10 0%,
+  #f05c5d 51%,
+  #da0f10 100%);
+}
+
 .bg-theme-gray {
   background: rgba(244, 244, 244, 1);
 }
@@ -1467,6 +1474,19 @@ a[class*="title"]:hover {
 .crud-form .form-control:focus,
 .crud-form .form-control:active{
   border-bottom: 1px solid var(--pc) !important;
+}
+
+/* # Comfirnation Page
+=================================================*/
+.comfirnation-details .comfirm-content{
+  padding-left: 40px;
+  border-left: 1px solid #e5e8ebe3;
+}
+
+.comfirnation-details .comfirm-content {
+  margin-left: 20px;
+  padding-left: 37px;
+  border-left: 1px solid #e5e8ebe3;
 }
 
 /* # Footer
