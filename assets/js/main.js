@@ -49,11 +49,10 @@ document.addEventListener("DOMContentLoaded", function () {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-        // If we need pagination
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
 
     breakpoints: {
       320: {
@@ -82,6 +81,10 @@ document.addEventListener("DOMContentLoaded", function () {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+     pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+  },
     breakpoints: {
       320: {
         slidesPerView: 1,
@@ -100,7 +103,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
-
 
  new Swiper(".testimonials", {
     slidesPerView: 3,
@@ -134,7 +136,8 @@ document.addEventListener("DOMContentLoaded", function () {
     watchSlidesProgress: true,
   });
 
- new Swiper(".tour-feature-img", {
+
+  new Swiper(".tour-feature-img", {
     loop: true,
     spaceBetween: 10,
     navigation: {

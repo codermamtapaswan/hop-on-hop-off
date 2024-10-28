@@ -784,7 +784,7 @@ a[class*="title"]:hover {
 /*+++++++++++++ hoho-con-popular-tour ++++++++++++++++++*/
 
 .tour-feature-img :is(.swiper-button-prev, .swiper-button-next),
-.mySwiper :is(.swiper-button-prev, .swiper-button-next) {
+.popular-tour-slider :is(.swiper-button-prev, .swiper-button-next) {
   width: 35px;
   height: 35px;
   background: #fff;
@@ -792,11 +792,11 @@ a[class*="title"]:hover {
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
 }
 
-.mySwiper .swiper-button-prev {
+.popular-tour-slider .swiper-button-prev {
   left: 140px;
 }
 
-.mySwiper .swiper-button-next {
+.popular-tour-slider .swiper-button-next {
   right: 140px;
 }
 
@@ -843,6 +843,7 @@ a[class*="title"]:hover {
   right: 25px !important;
   border-radius: 0 25px 25px 0;
 }
+
 .swiper-pagination-bullet-active {
   background: var(--pc);
 }
@@ -969,11 +970,11 @@ a[class*="title"]:hover {
   }
 
 
-  .mySwiper .swiper-button-prev {
+  .popular-tour-slider .swiper-button-prev {
     left: 0;
   }
 
-  .mySwiper .swiper-button-next {
+  .popular-tour-slider .swiper-button-next {
     right: 0;
   }
 }
