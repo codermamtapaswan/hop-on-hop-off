@@ -198,6 +198,17 @@ h6,
   width: fit-content;
 }
 
+@media (max-width: 600px) {
+ .page-header .h2 {
+  font-size: 20px!important;
+ }
+ .page-header {
+  padding-block: 30px;
+  margin-bottom: 20px;
+}
+
+}
+
 /* # Common Components
 =================================================*/
 .page-content {
@@ -219,7 +230,7 @@ h6,
 
 /*+++++++++++ Accordion +++++++++++++*/
 .accordion-button {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .accordion-button:not(.collapsed) {
@@ -245,7 +256,7 @@ h6,
 .pagination li a.page-link{
     color: #555;
     background: #eee;
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 40px;
     height: 40px;
@@ -1062,7 +1073,7 @@ a[class*="title"]:hover {
   }
 
   .tour-packages .hoho-meta {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: unset;
     gap: 20px;
   }
@@ -1072,6 +1083,12 @@ a[class*="title"]:hover {
     gap: 10px;
   }
 }
+@media (max-width: 768px) {
+  .hoho-big-title {
+    font-size: 18px;
+}
+}
+
 
 /* # Tour Single Page
 =================================================*/
