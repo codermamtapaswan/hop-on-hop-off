@@ -902,7 +902,7 @@ a[class*="title"]:hover {
   }
 
   .hoho-hero {
-    height: 300px;
+    height: 280px;
   }
 
   .hoho-con-handpicked :is(.swiper-button-next, .swiper-button-prev) {
@@ -911,12 +911,23 @@ a[class*="title"]:hover {
 }
 
 @media (max-width: 600px) {
+  .hoho-hero .main-heading {
+    width: 100%;
+  }
+  .hoho-hero .main-heading span::after {
+    background-color: var(--pc);
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+  }
+  
   .hoho-hero .hero-form {
     width: 100%;
   }
 
   .hoho-hero .form-search-btn {
-    width: 25%;
+    width: 32%;
   }
 
   .hoho-con-handpicked :is(.swiper-button-next, .swiper-button-prev) {
