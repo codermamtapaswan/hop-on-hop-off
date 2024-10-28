@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+ 
     breakpoints: {
       320: {
         slidesPerView: 1,
@@ -48,6 +49,12 @@ document.addEventListener("DOMContentLoaded", function () {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+      },
+
     breakpoints: {
       320: {
         slidesPerView: 1,

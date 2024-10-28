@@ -170,7 +170,7 @@ h6,
 @media (max-width: 600px) {
   .separator {
     padding-top: 40px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
   }
 
   .pt-70 {
@@ -842,6 +842,9 @@ a[class*="title"]:hover {
 .hoho-con-handpicked .swiper-button-next {
   right: 25px !important;
   border-radius: 0 25px 25px 0;
+}
+.swiper-pagination-bullet-active {
+  background: var(--pc);
 }
 
 /*++++++++++++++++++ testimonial ++++++++++++++++*/
