@@ -660,6 +660,9 @@ a[class*="title"]:hover {
   width: 100%;
   border-bottom: 1px solid #edebeb;
 }
+.remove{
+  border:1px solid #da0f10;
+  color: #da0f10;}
 
 @media (max-width: 540px) {
   .navbar-brand {
