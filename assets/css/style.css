@@ -726,6 +726,7 @@ a[class*="title"]:hover {
 .hoho-hero .main-heading {
   font-size: clamp(1.5625rem, 0.6696rem + 2.381vw, 2.8125rem);
   font-weight: 600;
+  width: 85%;
 }
 
 .hoho-hero .main-heading span::after {
@@ -1519,7 +1520,7 @@ footer .list-unstyled li {
 }
 
 footer .list-unstyled li a {
-  color: rgba(0, 0, 0, 0.7);
+  color: #212529;
   font-size: 15px;
 }
 
