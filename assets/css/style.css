@@ -240,83 +240,70 @@ h6,
 }
 
 /*+++++++++++ Pagination +++++++++++++*/
-.paginate {
-  text-align: center;
+.pagination{
+    font-family: 'Poppins', sans-serif;
+    display: inline-flex;
+    position: relative;
 }
-
-.pagination {
-  font-family: "Ubuntu", sans-serif;
-  display: inline-flex;
-  position: relative;
+.pagination li a.page-link{
+    color: #555;
+    background: #eee;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 40px;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    margin: 0 10px;
+    border: none;
+    border-radius: 0;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease 0.4s;
 }
-
-.pagination li a.page-link {
-  line-height: 41px;
-  height: 42px;
-  width: 42px;
-  padding: 0;
-  margin: 0 5px;
-  border: none;
-  border-radius: 50% !important;
-  overflow: hidden;
-  position: relative;
-  color: #fff;
-  background: var(--pc);
-  font-size: 20px;
-  font-weight: 600;
-  z-index: 1;
-  transition: all 0.3s ease 0s;
-}
-
 .pagination li a.page-link:hover,
 .pagination li a.page-link:focus,
 .pagination li.active a.page-link:hover,
-.pagination li.active a.page-link {
-  color: #222;
-  background: transparent;
-  box-shadow: 0 0 10px var(--pc);
+.pagination li.active a.page-link{
+    color: #fff;
+    background: var(--pc);
 }
-
-.pagination li a.page-link:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  border: 5px solid var(--pc);
-  border-top-color: transparent;
-  border-right-color: transparent;
-  border-radius: 50%;
-  opacity: 0;
-  transform: rotate(155deg);
-  transition: all 0.3s ease 0s;
+.pagination li a.page-link:before,
+.pagination li a.page-link:after{
+    content: '';
+    background-color: var(--pc);
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    transform: scale(0);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: all 0.3s ease-in 0s;
 }
-
+.pagination li a.page-link:after{ transition: all 0.3s ease-in 0.2s; }
 .pagination li a.page-link:hover:before,
 .pagination li a.page-link:focus:before,
-.pagination li.active a.page-link:before {
-  opacity: 1;
-  transform: rotate(-15deg);
+.pagination li.active a.page-link:hover:before,
+.pagination li.active a.page-link:before,
+.pagination li a.page-link:hover:after,
+.pagination li a.page-link:focus:after,
+.pagination li.active a.page-link:hover:after,
+.pagination li.active a.page-link:after{
+    opacity: 0;
+    transform: scale(1);
 }
-
-@media only screen and (max-width: 480px) {
-  .pagination {
-    font-size: 0;
-    border: none;
-    display: inline-block;
-  }
-
-  .pagination li {
-    display: inline-block;
-    vertical-align: top;
-    margin: 0 0 10px;
-  }
-}
-
-.page-item:not(:first-child) .page-link {
-  margin-left: 10px !important;
+@media only screen and (max-width: 480px){
+    .pagination{
+        font-size: 0;
+        display: inline-block;
+    }
+    .pagination li{
+        display: inline-block;
+        vertical-align: top;
+        margin: 10px 0;
+    }
 }
 
 /*+++++++++++ Hoho Button +++++++++++++*/
