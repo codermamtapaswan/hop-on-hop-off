@@ -22,6 +22,9 @@ a {
   transition: all 0.5s;
   text-decoration: none;
 }
+a:hover {
+color: var(--pc);
+}
 
 p {
   line-height: 1.8;
@@ -307,32 +310,34 @@ h6,
 
 /*+++++++++++ Hoho Button +++++++++++++*/
 .hoho-btn {
-  padding: 7px 20px;
+  padding: 8px 20px;
   display: block;
   width: fit-content;
   color: #fff !important;
   border-radius: 25px;
   transition: all 0.35s;
-  background-image: linear-gradient(to right,
+  /* background-image: linear-gradient(to right,
       #da0f10 0%,
       #f05c5d 51%,
       #da0f10 100%);
   background-size: 200% auto;
-  background-position: left top;
+  background-position: left top; */
+  background: var(--pc);
   border-color: transparent;
 }
 
 .hoho-btn:hover {
-  background-position: right bottom;
+  background: #a90001;
+  /* background-position: right bottom; */
 }
 
 .hoho-tag-btn {
-  padding: 5px 20px;
+  padding: 10px 20px;
   border: 1px solid var(--sc) !important;
   color: #000;
   display: block;
   width: fit-content;
-  border-radius: 20px;
+  border-radius: 540px;
   background: #fff !important;
 }
 
@@ -366,6 +371,7 @@ h6,
   position: relative;
   overflow: hidden;
   width: 100%;
+  border-radius: 12px;
 }
 
 .hoho-overlay-card .img-placeholder::after {
@@ -721,8 +727,8 @@ a[class*="title"]:hover {
 }
 
 .hoho-hero .hero-form {
-  gap: 20px;
-  padding: 10px 20px 10px 30px;
+  gap: 30px;
+  padding: 15px 20px 15px 30px;
   width: 80%;
 }
 
@@ -787,9 +793,13 @@ a[class*="title"]:hover {
 }
 
 /*++++++++++++++++ hoho-con-popular-month +++++++++++++++++*/
+.hoho-con-handpicked {
+  padding: 40px;
+  border-radius: 20px;
+}
 
 .hoho-con-handpicked .hoho-overlay-card .hoho-card-content {
-  bottom: -128px;
+  bottom: -105px;
 }
 
 .hoho-con-handpicked .hoho-overlay-card:hover .hoho-card-content {
@@ -805,9 +815,9 @@ a[class*="title"]:hover {
 }
 
 .hoho-con-handpicked :is(.swiper-button-next, .swiper-button-prev) {
-  top: 40px !important;
+  top: 55px !important;
   border: 1px solid #ccc;
-  height: 26px;
+  height: 35px;
   width: 55px;
 }
 
@@ -861,6 +871,7 @@ a[class*="title"]:hover {
 
 .cities-box {
   border: 1px solid #fff;
+  border-radius: 12px;
 }
 
 .cities-box:hover {
