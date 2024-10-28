@@ -1,6 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  var swiper = new Swiper(".mySwiper", {
+    // JavaScript to initialize Flatpickr  ============ start =====>
+
+    flatpickr("#datePicker", {
+      enableTime: false, 
+      dateFormat: "Y-m-d H:i", 
+      altInput: true, 
+      altFormat: "F j, Y", 
+      disableMobile: "true"
+    });
+  
+  
+  new Swiper(".popular-tour-slider", {
     spaceBetween: 20,
     loop: true,
     autoplay: true,
@@ -29,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  var swiper1 = new Swiper(".mySwiper1", {
+ new Swiper(".popular-month-tour-slider", {
     slidesPerView: 4,
     spaceBetween: 30,
     loop: true,
@@ -56,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  var swiper2 = new Swiper(".mySwiper2", {
+ new Swiper(".popular-handpicked-tour-slider", {
     slidesPerView: 4,
     spaceBetween: 30,
     loop: true,
@@ -83,7 +94,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  var swiper3 = new Swiper(".mySwiper3", {
+
+ new Swiper(".testimonials", {
     slidesPerView: 3,
     autoplay: true,
     spaceBetween: 30,
@@ -105,15 +117,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+
   // Tour Single feature  ..............
-  var swiper = new Swiper(".tours-img", {
+  const tourThumbs =  new Swiper(".tours-img", {
     loop: true,
     spaceBetween: 10,
     slidesPerView: 4,
     freeMode: true,
     watchSlidesProgress: true,
   });
-  var swiper2 = new Swiper(".tour-feature-img", {
+
+ new Swiper(".tour-feature-img", {
     loop: true,
     spaceBetween: 10,
     navigation: {
@@ -121,20 +135,11 @@ document.addEventListener("DOMContentLoaded", function () {
       prevEl: ".swiper-button-prev",
     },
     thumbs: {
-      swiper: swiper,
+      swiper: tourThumbs,
     },
   });
 
 
-
-  // JavaScript to initialize Flatpickr
-  flatpickr("#datePicker", {
-    enableTime: false, // Enable time selection
-    dateFormat: "Y-m-d H:i", // Format of the date
-    altInput: true, // Use an alternate input field
-    altFormat: "F j, Y", // Human-friendly format
-    disableMobile: "true"
-  });
 
   // Tour Single page  tab
   window.addEventListener("scroll", onScroll);
@@ -142,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function onScroll() {
     const scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
 
-    document.querySelectorAll(".tour-tab  a").forEach((currLink) => {
+    document.querySelectorAll(".tour-tab a").forEach((currLink) => {
       const refElement = document.querySelector(currLink.getAttribute("href"));
       if (
         refElement.offsetTop - 0 <= scrollPos &&
@@ -165,7 +170,7 @@ document.querySelectorAll(".tour-single-content a").forEach((link) => {
     setTimeout(() => {
       window.scrollTo({
         top: document.querySelector(currentId).offsetTop - 50,
-        behavior: "instant" // To match the behavior of animate with duration 0
+        behavior: "smooth" // To match the behavior of animate with duration 0
       });
     }, 0);
   });
@@ -174,25 +179,20 @@ document.querySelectorAll(".tour-single-content a").forEach((link) => {
 
   // Scroll to top   ============ start =====>
 
-  let mybutton = document.getElementById("scroll_to_top");
-  window.onscroll = function () {
-    scrollFunction();
-  };
+  const scrollTopBtn = document.getElementById("scroll_to_top");
 
-  function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      mybutton.classList.toggle('active');
-    }
-  }
-  function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
-  mybutton.addEventListener("click", topFunction);
+  window.addEventListener('scroll', function () {
+     scrollTopBtn.classList.toggle("show", window.scrollY > 20);
+
+  });
+
+  scrollTopBtn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 
 
 
-});
+ });  // Dcumnet Script  ============ End =====> 
 
 
 
