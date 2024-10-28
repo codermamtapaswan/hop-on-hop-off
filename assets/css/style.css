@@ -41,7 +41,7 @@ h3,
 h2,
 .h2,
 h1,
-.h1 {
+.h1,.separator {
   font-weight: 700;
   line-height: 1.5;
   text-transform: capitalize;
@@ -104,8 +104,9 @@ h6,
   font-size: 13px;
 }
 
-.separator-p {
-  padding-top: 70px;
+.separator {
+  font-size: clamp(1.325rem, calc(1.325rem + 0.9vw), 2rem) !important;
+  padding-top: 50px;
   padding-bottom: 20px;
 }
 
@@ -167,7 +168,7 @@ h6,
 }
 
 @media (max-width: 600px) {
-  .separator-p {
+  .separator {
     padding-top: 40px;
     padding-bottom: 10px;
   }
@@ -953,7 +954,7 @@ a[class*="title"]:hover {
     top: 130px !important;
   }
 
-  .hoho-con-handpicked .separator {
+  .hoho-con-handpicked separator {
     margin-bottom: 50px !important;
   }
 
