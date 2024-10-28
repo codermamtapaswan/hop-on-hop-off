@@ -356,6 +356,10 @@ h6,
   transition: all 0.3s ease-in-out;
 }
 
+[class*="card"] :is(.img-placeholder, .img-placeholder a img){
+  border-radius: 12px;
+}
+
 .hoho-card,
 .hoho-overlay-card {
   position: relative;
