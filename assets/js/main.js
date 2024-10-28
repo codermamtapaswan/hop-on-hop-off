@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
     centeredSlides: true,
     grabCursor: true,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".popular-tour-slider .swiper-button-next",
+      prevEl: ".popular-tour-slider .swiper-button-prev",
     },
  
     breakpoints: {
