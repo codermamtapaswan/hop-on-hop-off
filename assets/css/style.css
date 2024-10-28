@@ -843,6 +843,9 @@ a[class*="title"]:hover {
   right: 25px !important;
   border-radius: 0 25px 25px 0;
 }
+.swiper-pagination-bullet-active {
+  background: var(--pc);
+}
 
 /*++++++++++++++++++ testimonial ++++++++++++++++*/
 .testi-box img {

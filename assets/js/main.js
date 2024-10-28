@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+ 
     breakpoints: {
       320: {
         slidesPerView: 1,
@@ -29,7 +30,40 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  var swiper1 = new Swiper(".mySwiper1", {
+  var swiper = new Swiper(".mySwiper1", {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+      },
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+
+      },
+      480: {
+        slidesPerView: 2,
+
+      },
+      769: {
+        slidesPerView: 3,
+
+      },
+      991: {
+        slidesPerView: 4,
+      }
+    }
+  });
+
+  var swiper = new Swiper(".mySwiper2", {
     slidesPerView: 4,
     spaceBetween: 30,
     loop: true,
@@ -56,34 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  var swiper2 = new Swiper(".mySwiper2", {
-    slidesPerView: 4,
-    spaceBetween: 30,
-    loop: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-
-      },
-      480: {
-        slidesPerView: 2,
-
-      },
-      769: {
-        slidesPerView: 3,
-
-      },
-      991: {
-        slidesPerView: 4,
-      }
-    }
-  });
-
-  var swiper3 = new Swiper(".mySwiper3", {
+  var swiper = new Swiper(".mySwiper3", {
     slidesPerView: 3,
     autoplay: true,
     spaceBetween: 30,
