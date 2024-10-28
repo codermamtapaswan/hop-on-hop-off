@@ -63,6 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+
   var swiper = new Swiper(".mySwiper2", {
     slidesPerView: 4,
     spaceBetween: 30,
