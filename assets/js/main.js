@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const target = document.querySelector(link.getAttribute("href"));
       if (target) {
         window.scrollTo({
-          top: target.offsetTop - 10,
+          top: target.offsetTop,
           behavior: "smooth",
         });
       }
