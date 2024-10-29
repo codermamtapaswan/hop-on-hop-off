@@ -141,8 +141,8 @@ document.addEventListener("DOMContentLoaded", function () {
     loop: true,
     spaceBetween: 10,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".tour-feature-img .swiper-button-next",
+      prevEl: ".tour-feature-img .swiper-button-prev",
     },
     thumbs: {
       swiper: tourThumbs,
@@ -152,39 +152,44 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   // Tour Single page  tab
-  window.addEventListener("scroll", onScroll);
+  window.addEventListener("scroll", highlightActiveTab);
 
-  function onScroll() {
-    const scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
+  function highlightActiveTab() {
+    const scrollPos = window.scrollY + 1;
 
-    document.querySelectorAll(".tour-tab a").forEach((currLink) => {
-      const refElement = document.querySelector(currLink.getAttribute("href"));
-      if (
-        refElement.offsetTop - 0 <= scrollPos &&
-        refElement.offsetTop + refElement.offsetHeight > scrollPos
-      ) {
-        document.querySelectorAll(".tour-tab a").forEach((link) => {
-          link.classList.remove("active");
-        });
-        currLink.classList.add("active");
+    document.querySelectorAll(".tour-tab a").forEach((link) => {
+      const refElement = document.querySelector(link.getAttribute("href"));
+
+      if (refElement.offsetTop <= scrollPos &&
+        refElement.offsetTop + refElement.offsetHeight > scrollPos) {
+        activateLink(link);
       } else {
-        currLink.classList.remove("active");
+        link.classList.remove("active");
       }
     });
   }
 
+  // Helper function to activate the current link
+  function activateLink(activeLink) {
+    document.querySelectorAll(".tour-tab a").forEach((link) => link.classList.remove("active"));
+    activeLink.classList.add("active");
+  }
+
+  // Smooth scroll for internal links
   document.querySelectorAll(".tour-single-content a").forEach((link) => {
     link.addEventListener("click", (event) => {
-      event.preventDefault();
-      const currentId = link.getAttribute("href");
-      setTimeout(() => {
+      event.preventDefault(); // Prevent default anchor click behavior
+
+      const target = document.querySelector(link.getAttribute("href"));
+      if (target) {
         window.scrollTo({
-          top: document.querySelector(currentId).offsetTop - 50,
-          behavior: "smooth" // To match the behavior of animate with duration 0
+          top: target.offsetTop - 10,
+          behavior: "smooth",
         });
-      }, 0);
+      }
     });
   });
+
 
 
   // Scroll to top   ============ start =====>
