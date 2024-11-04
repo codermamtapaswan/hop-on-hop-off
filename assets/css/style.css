@@ -856,11 +856,13 @@ header ul {
   width:calc(100vw - 70%);
   height: 100%;
   box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease-in-out;
   
 }
 
 .show-canvas{
   right: 0%;
+  transition: transform 0.2s ease-in-out;
 }
 
 .offcanvas-body{
