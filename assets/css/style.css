@@ -851,12 +851,16 @@ header ul {
   position: fixed;
   background: #fff;
   top:0;
-  right: 0;
+  right: -100%;
   z-index: 1000;
   width:calc(100vw - 70%);
   height: 100%;
   box-shadow: var(--shadow-sm);
-  overflow-x: auto;
+  
+}
+
+.show-canvas{
+  right: 0%;
 }
 
 .offcanvas-body{
