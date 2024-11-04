@@ -226,28 +226,17 @@ document.addEventListener("DOMContentLoaded", function () {
   // offcanvas cart
    // Show mobile left canvas ============ start =====>
     const togglecartBtn = document.querySelector(".cart");
-   const cancelcartBtn = document.querySelector(".cancel-btn");
+   const cancelcartBtn = document.querySelector(".cancel-canvas-btn");
    const cartoffcanvas = document.querySelector(".offcanvas");
 
    togglecartBtn.addEventListener("click", function () {
        cartoffcanvas.classList.toggle("show-canvas");
    });
 
-   cancelcartBtn.addEventListener("click", function (e) {
-       if (contains(e.target)) {
+   cancelcartBtn.addEventListener("click", function () {
         cartoffcanvas.classList.remove("show-canvas");
-    }
    });
-
-
-
-
-  // Navigation ============ End =======>
-
-
-
-
-
+  // Navigation ============ End =======> 
 
 
   // Tour Single page  tab
