@@ -835,6 +835,45 @@ header ul {
 }
 
 
+
+.offcanvas-footer,
+.offcanvas-header{
+  background: #fff;
+  position: sticky;
+  padding: 15px;
+  box-shadow: var(--shadow-sm);
+  z-index: 100;
+
+}
+
+
+.offcanvas{
+  position: fixed;
+  background: #fff;
+  top:0;
+  right: 0;
+  z-index: 1000;
+  width:calc(100vw - 70%);
+  height: 100%;
+  box-shadow: var(--shadow-sm);
+  overflow-x: auto;
+}
+
+.offcanvas-body{
+  padding: 20px;
+}
+
+.offcanvas-header{
+  top: 0;  
+}
+.offcanvas-footer{
+  bottom: 0;  
+}
+
+.justify-content-between {
+  justify-content: space-between !important;
+}
+
 .cart{
   position: relative;
 }
