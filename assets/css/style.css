@@ -1189,7 +1189,8 @@ header ul {
 }
 
 .testi-box hr {
-  background: rgb(0 0 0 / 30%);
+  /* background: rgb(0 0 0 / 30%); */
+  border: 1px solid #b3b3b34d ;
   margin-block: 10px;
 }
 
