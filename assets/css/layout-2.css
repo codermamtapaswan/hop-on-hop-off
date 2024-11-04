@@ -1166,7 +1166,8 @@
     footer .row [class*="col-lg"]:not(:first-child):has(.fo-sep) {
       padding-left: 40px;
     }
-  
+
+ 
   }
   
   @media (min-width: 1200px) {
