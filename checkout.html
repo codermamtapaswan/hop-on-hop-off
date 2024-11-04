@@ -7,8 +7,8 @@
   <title>Signle Page - Hop Off Hop On</title>
 
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
 
   <!-- Date Piker -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -103,17 +103,50 @@
 
 <body class="bg-light">
 
-  <!-- navigation  Start-->
-  <nav class=" sticky-top navbar navbar-expand-lg  bg-white shadow-sm">
+  <!--  Navigation ============ Start =====  -->
+  <header>
     <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="assets/images/logo.svg" alt="Hop off Hop On logo" class="img-fluid hoho-logo">
+      <div class="menu-toggle-btn">
+        <svg fill="#000" width="20" height="20" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM64 256c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H96c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z">
+          </path>
+        </svg>
+      </div>
+
+      <a href="index.html" class="mg-logo">
+        <img src="assets/images/logo.svg" alt="managetrix-logo" class="img-fluid">
       </a>
-      <div class="mobile-layout d-lg-none d-flex align-items-center gap-3">
-        <ul class="mb-0">
-          <li class="nav-item dropdown btn gradient-theme btn-sm p-0">
-            <a class="nav-link dropdown-toggle text-white d-flex align-items-center gap-2 text-white" href="#"
-              id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+      <div class="menu-container">
+        <nav class="leftmenu">
+          <ul>
+            <li> <a href="about-us.html">About us</a></li>
+
+            <li class="dropdown">
+              <a href="#">Our Destinations</a>
+              <ul>
+                <li><a href="faq.html">faq</a></li>
+                <li><a href="country.html">Country</a></li>
+                <li><a href="Review.html">review</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="tour-single.html">Tour single Page</a></li>
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact us</a></li>
+
+            <svg class="cancel-btn" fill="#000" xmlns="http://www.w3.org/2000/svg" height="20" width="20"
+              viewBox="0 0 384 512">
+              <path
+                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z">
+              </path>
+            </svg>
+          </ul>
+        </nav>
+
+        <ul class="rightmenu">
+          <li class="dropdown hoho-btn account">
+            <a href="#" class="d-flex align-items-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" width="20" height="20" fill="#fff">
                 <path
                   d="M11.689 11.256a3.75 3.75 0 0 0-3.252-1.881H6.562a3.75 3.75 0 0 0-3.252 1.881c1.031 1.149 2.526 1.869 4.189 1.869s3.158-.723 4.189-1.869M0 7.5a7.5 7.5 0 1 1 15 0 7.5 7.5 0 1 1-15 0m7.5.469a2.109 2.109 0 1 0 0-4.219 2.109 2.109 0 1 0 0 4.219">
@@ -121,245 +154,36 @@
               </svg>
               <span class="d-lg-block d-none">Login or Create Account</span>
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="register.html">Register</a></li>
+            <ul>
               <li><a class="dropdown-item" href="login.html">login</a></li>
+              <li><a class="dropdown-item" href="register.html">Register</a></li>
               <li><a class="dropdown-item" href="forgot-password.html">Forgot Password</a></li>
             </ul>
           </li>
-
-          <li class="nav-item dropdown btn btn-light btn-sm p-0">
-            <a class="nav-link text-dark dropdown-toggle d-flex align-items-center gap-2" href="#"
-              id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              INR (₹)
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <li class="dropdown hoho-btn">
+            <a href="#">INR (₹)</a>
+            <ul>
+              <li><a href="#">CAD ($)</a></li>
+              <li><a href="#">CAD ($)</a></li>
+              <li><a href="#">CAD ($)</a></li>
+              <li><a href="#">CAD ($)</a></li>
             </ul>
           </li>
-
-          <li class="btn cart position-relative ps-2">
-            <a class="" href="javascript:void(0)" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-              aria-controls="offcanvasRight">
-              <img src="assets/images/cart.svg" alt="">
+          <li class="cart">
+            <a href="javascript:void(0)">
+              <img src="assets/images/cart.svg" alt="cart-img">
               <span
                 class="position-absolute start-lg-100 text-white ratio ratio-1x text-center  translate-middle p-2 bg-theme rounded-circle">
                 10
               </span>
             </a>
-
           </li>
         </ul>
 
-        <button class="navbar-toggler p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <svg width="20" height="20" viewBox="0 -5 32 32" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M30 18a2 2 0 0 1 0 4H2a2 2 0 0 1 0-4zm0-9a2 2 0 0 1 0 4H2a2 2 0 0 1 0-4zm0-9a2 2 0 0 1 0 4H2a2 2 0 0 1 0-4z" />
-          </svg>
-        </button>
-
-      </div>
-      <div class="collapse navbar-collapse " id="navbarNavDropdown">
-        <ul class="navbar-nav ms-auto gap-lg-3  gap-1 align-items-lg-center">
-          <li class="nav-item">
-            <a class="nav-link" href="about-us.html">About us</a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Our Destinations
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="faq.html">faq</a></li>
-              <li><a class="dropdown-item" href="country.html">Country</a></li>
-              <li><a class="dropdown-item" href="Review.html">review</a></li>
-              <li><a class="dropdown-item" href="blog.html">Blog</a></li>
-              <li><a class="dropdown-item" href="tour-single.html">Tour single Page</a></li>
-            </ul>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact us</a>
-          </li>
-
-          <div class="mobile-layout  d-lg-flex d-none align-items-center gap-lg-3 gap-1">
-            <li class="nav-item dropdown btn gradient-theme btn-sm p-0">
-              <a class="nav-link dropdown-toggle text-white d-flex align-items-center gap-2 text-white" href="#"
-                id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" width="20" height="20" fill="#fff">
-                  <path
-                    d="M11.689 11.256a3.75 3.75 0 0 0-3.252-1.881H6.562a3.75 3.75 0 0 0-3.252 1.881c1.031 1.149 2.526 1.869 4.189 1.869s3.158-.723 4.189-1.869M0 7.5a7.5 7.5 0 1 1 15 0 7.5 7.5 0 1 1-15 0m7.5.469a2.109 2.109 0 1 0 0-4.219 2.109 2.109 0 1 0 0 4.219">
-                  </path>
-                </svg>
-                <span class="d-lg-block d-none">Login or Create Account</span>
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="login.html">login</a></li>
-                <li><a class="dropdown-item" href="register.html">Register</a></li>
-                <li><a class="dropdown-item" href="forgot-password.html">Forgot Password</a></li>
-              </ul>
-            </li>
-
-            <li class="nav-item dropdown btn btn-light btn-sm p-0">
-              <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="#" id="navbarDropdownMenuLink"
-                role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                INR (₹)
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-
-            <li class="nav-item cart position-relative ps-2">
-              <a class="nav-link" href="javascript:void(0)" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-                aria-controls="offcanvasRight">
-                <img src="assets/images/cart.svg" alt="">
-                <span
-                  class="position-absolute start-lg-100 text-white ratio ratio-1x text-center  translate-middle p-2 bg-theme rounded-circle">
-                  10
-                </span>
-              </a>
-
-            </li>
-          </div>
-
-        </ul>
       </div>
 
-
     </div>
-  </nav>
-  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-    <div class="offcanvas-header">
-      <div id="offcanvasRightLabel" class="h6">Cart (2 items)</div>
-      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-
-    <div class="offcanvas-body pt-0">
-      <div class="cart-item-list">
-        <div class="row store-item bottom-line">
-          <div class="col-12 mb-4 gap-3 d-flex align-items-center justify-content-between">
-            <a href="#"><img class="image-store col-5"
-                src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/e2/fe/13.jpg"
-                alt="Blue Hoodie"></a>
-            <a href="#" class="h6 mb-0 col-7">TooTBus: Paris Hop-On, Hop-Off Bus Tour Ca ital of Games</a>
-          </div>
-          <div class="col-4 list-store mb-2">
-            <p>Adult (+ 16)</p>
-            <div class="btn-quantity-container d-flex align-items-center justify-content-center">
-              <button type="button" class="btn-quantity btn btn-default">−</button>
-              <span class="p-quantity">0</span>
-              <button type="button" class="btn-quantity btn btn-default">+</button>
-            </div>
-          </div>
-          <div class="col-4 list-store mb-2">
-            <p>Child (5 -15)</p>
-            <div class="btn-quantity-container d-flex align-items-center justify-content-center">
-              <button type="button" class="btn-quantity btn btn-default">−</button>
-              <span class="p-quantity">0</span>
-              <button type="button" class="btn-quantity btn btn-default">+</button>
-            </div>
-          </div>
-          <div class="col-4 list-store mb-2">
-            <p>Infant (0-4)</p>
-            <div class="btn-quantity-container d-flex align-items-center justify-content-center">
-              <button type="button" class="btn-quantity btn btn-default">−</button>
-              <span class="p-quantity">0</span>
-              <button type="button" class="btn-quantity btn btn-default">+</button>
-            </div>
-          </div>
-          <div class="col-12 mt-2 list-store d-flex align-items-center justify-content-between">
-            <button type="button" class="btn btn-sm remove">Remove Item </button>
-            <div class="fs-6 fw-bold">₹45,646</div>
-          </div>
-        </div>
-        <div class="row mt-2 store-item bottom-line pb-3">
-          <div class="col-12 mb-4 gap-3 d-flex align-items-center justify-content-between">
-            <a href="#"><img class="image-store col-5"
-                src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/e2/fe/13.jpg"
-                alt="Blue Hoodie"></a>
-            <a href="#" class="h6 mb-0 col-7">TooTBus: Paris Hop-On, Hop-Off Bus Tour Ca ital of Games</a>
-          </div>
-          <div class="col-4 list-store mb-2">
-            <p>Adult (+ 16)</p>
-            <div class="btn-quantity-container d-flex align-items-center justify-content-center">
-              <button type="button" class="btn-quantity btn btn-default">−</button>
-              <span class="p-quantity">0</span>
-              <button type="button" class="btn-quantity btn btn-default">+</button>
-            </div>
-          </div>
-          <div class="col-4 list-store mb-2">
-            <p>Child (5 -15)</p>
-            <div class="btn-quantity-container d-flex align-items-center justify-content-center">
-              <button type="button" class="btn-quantity btn btn-default">−</button>
-              <span class="p-quantity">0</span>
-              <button type="button" class="btn-quantity btn btn-default">+</button>
-            </div>
-          </div>
-          <div class="col-4 list-store mb-2">
-            <p>Infant (0-4)</p>
-            <div class="btn-quantity-container d-flex align-items-center justify-content-center">
-              <button type="button" class="btn-quantity btn btn-default">−</button>
-              <span class="p-quantity">0</span>
-              <button type="button" class="btn-quantity btn btn-default">+</button>
-            </div>
-          </div>
-          <div class="col-12 mt-2 list-store d-flex align-items-center justify-content-between">
-            <button type="button" class="btn btn-sm remove">Remove Item </button>
-            <div class="fs-6 fw-bold">₹45,646</div>
-          </div>
-        </div>
-        <div class="row mt-2 store-item bottom-line pb-3">
-          <div class="col-12 mb-4 gap-3 d-flex align-items-center justify-content-between">
-            <a href="#"><img class="image-store col-5"
-                src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/e2/fe/13.jpg"
-                alt="Blue Hoodie"></a>
-            <a href="#" class="h6 mb-0 col-7">TooTBus: Paris Hop-On, Hop-Off Bus Tour Ca ital of Games</a>
-          </div>
-          <div class="col-4 list-store mb-2">
-            <p>Adult (+ 16)</p>
-            <div class="btn-quantity-container d-flex align-items-center justify-content-center">
-              <button type="button" class="btn-quantity btn btn-default">−</button>
-              <span class="p-quantity">0</span>
-              <button type="button" class="btn-quantity btn btn-default">+</button>
-            </div>
-          </div>
-          <div class="col-4 list-store mb-2">
-            <p>Child (5 -15)</p>
-            <div class="btn-quantity-container d-flex align-items-center justify-content-center">
-              <button type="button" class="btn-quantity btn btn-default">−</button>
-              <span class="p-quantity">0</span>
-              <button type="button" class="btn-quantity btn btn-default">+</button>
-            </div>
-          </div>
-          <div class="col-4 list-store mb-2">
-            <p>Infant (0-4)</p>
-            <div class="btn-quantity-container d-flex align-items-center justify-content-center">
-              <button type="button" class="btn-quantity btn btn-default">−</button>
-              <span class="p-quantity">0</span>
-              <button type="button" class="btn-quantity btn btn-default">+</button>
-            </div>
-          </div>
-          <div class="col-12 mt-2 list-store d-flex align-items-center justify-content-between">
-            <button type="button" class="btn btn-sm remove">Remove Item </button>
-            <div class="fs-6 fw-bold">₹45,646</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="offcanvas-header list-store d-flex align-items-center justify-content-between shadow">
-      <a href="#" class="hoho-btn">Checkout</a>
-      <div class="fs-5 fw-bold">₹45,646</div>
-    </div>
-
-  </div>
+  </header>
   <!-- navigation  End-->
 
   <main class="tour-single-page bg-white pb-70">
@@ -767,7 +591,7 @@
     <div class="container">
       <div class="row row-gap">
         <div class="col-lg-3 col-md-6">
-          <div class="h5">Top Bus Tours</div>
+          <div class="h6">Top Bus Tours</div>
           <ul class="list-unstyled">
             <li> <a href="#">Athens Hop On Hop Off</a></li>
             <li> <a href="#">Madrid Hop On Hop Off</a></li>
@@ -778,7 +602,7 @@
           </ul>
         </div>
         <div class="col-lg-3 col-md-6">
-          <div class="h5">Our Company</div>
+          <div class="h6">Our Company</div>
           <ul class="list-unstyled">
             <li> <a href="#">About Us</a></li>
             <li> <a href="#">Blog</a></li>
@@ -788,7 +612,7 @@
           </ul>
         </div>
         <div class="col-lg-3 col-md-6">
-          <div class="h5">Support</div>
+          <div class="h6">Support</div>
           <ul class="list-unstyled">
             <li> <a href="#">About Us</a></li>
             <li> <a href="#">Blog</a></li>
@@ -814,13 +638,13 @@
         </div>
         <div class="col-lg-3 col-md-12 text-lg-start  text-center">
           <a class="footer-logo" href="#">
-            <img src="assets/images/logo.svg" alt="Hop off Hop On logo" class="img-fluid ">
+            <img src="assets/images/logo.svg" alt="Hop off Hop On logo">
           </a>
         </div>
 
         <div class="col-lg-9 col-md-12">
           <div class="footer-form rounded d-lg-flex justify-content-betwwen align-items-center">
-            <span class="d-block mb-lg-0 mb-3 fw-bold fs-5">SUBSCRIBE FOR UPDATES &amp; LATEST OFFERS</span>
+            <span class="d-block mb-lg-0 mb-3 fw-bold fs-5">Subscribe For Updates & Latest Offers</span>
             <form action="#" class="d-flex ps-3 ms-lg-auto">
               <input type="text" placeholder="Your Email" class="border-0 form-control w-100">
               <button class="btn hoho-btn ms-auto rounded">Subscribe</button>
