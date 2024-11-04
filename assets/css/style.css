@@ -666,7 +666,7 @@ header ul {
   list-style-type: none;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: center;
   gap: 30px;
 }
@@ -853,14 +853,17 @@ header ul {
   top:0;
   right: -100%;
   z-index: 1000;
-  width:calc(100vw - 70%);
+  width:400px;
   height: 100%;
   box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease-in-out;
   
 }
 
 .show-canvas{
   right: 0%;
+  transition: transform 0.2s ease-in-out;
+  overflow-y: auto;
 }
 
 .offcanvas-body{
