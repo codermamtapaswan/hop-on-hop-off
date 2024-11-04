@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Show mobile left canvas ============ start =====>
       const toggleslideBtn = document.querySelector(".menu-toggle-btn");
       const cancelBtn = document.querySelector(".cancel-btn");
-      const headerUl = document.querySelector("header .menu ul");
+      const headerUl = document.querySelector("header .leftmenu ul");
   
       toggleslideBtn.addEventListener("click", function () {
           const backDrop = createBackdrop();
