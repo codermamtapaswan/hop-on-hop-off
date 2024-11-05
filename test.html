@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .slider {
+      max-width: 600px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .main-slide img {
+      width: 100%;
+      height: auto;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .thumbnails {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .thumbnails img {
+      width: 80px;
+      height: 60px;
+      margin: 0 5px;
+      cursor: pointer;
+      opacity: 0.6;
+      border-radius: 4px;
+      transition: opacity 0.3s;
+    }
+
+    .thumbnails img:hover,
+    .thumbnails img.active {
+      opacity: 1;
+      border: 2px solid #007bff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="slider">
+    <div class="main-slide">
+      <img id="mainImage" src="https://swiperjs.com/demos/images/nature-1.jpg" alt="Main Slide">
+    </div>
+    <div class="thumbnails">
+      <img src="https://swiperjs.com/demos/images/nature-1.jpg" alt="Thumbnail 1" onclick="changeSlide(1)">
+      <img src="https://swiperjs.com/demos/images/nature-2.jpg" alt="Thumbnail 2" onclick="changeSlide(2)">
+      <img src="https://swiperjs.com/demos/images/nature-3.jpg" alt="Thumbnail 3" onclick="changeSlide(3)">
+    </div>
+  </div>
+
+  <script>
+    const images = [
+      "https://swiperjs.com/demos/images/nature-1.jpg",
+      "https://swiperjs.com/demos/images/nature-2.jpg",
+      "https://swiperjs.com/demos/images/nature-3.jpg"
+    ];
+
+    function changeSlide(index) {
+      // Change the main image source
+      document.getElementById("mainImage").src = images[index - 1];
+
+      // Remove active class from all thumbnails
+      const thumbnails = document.querySelectorAll(".thumbnails img");
+      thumbnails.forEach(img => img.classList.remove("active"));
+
+      // Add active class to the clicked thumbnail
+      thumbnails[index - 1].classList.add("active");
+    }
+
+  </script>
+
+</body>
+
+</html>
