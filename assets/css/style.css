@@ -2084,6 +2084,7 @@ footer .list-unstyled a:hover {
 .checkout-form label {
   font-size: 15px;
   font-weight: 500;
+  display: block;
 }
 
 .checkout-form hr {
