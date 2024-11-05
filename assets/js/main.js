@@ -1,241 +1,241 @@
 document.addEventListener("DOMContentLoaded", function () {
 
 
-    // JavaScript to initialize Flatpickr  ============ start =====>
+  // JavaScript to initialize Flatpickr  ============ start =====>
 
-      flatpickr("#datePicker", {
-        enableTime: false,
-        dateFormat: "Y-m-d H:i",
-        altInput: true,
-        altFormat: "F j, Y",
-        disableMobile: "true"
-      });
-    
-    
-      new Swiper(".popular-tour-slider", {
-        spaceBetween: 20,
-        loop: true,
-        autoplay: true,
-        centeredSlides: true,
-        grabCursor: true,
-        navigation: {
-          nextEl: ".popular-tour-slider .swiper-button-next",
-          prevEl: ".popular-tour-slider .swiper-button-prev",
-        },
-    
-        breakpoints: {
-          320: {
-            slidesPerView: 1,
-    
-          },
-          480: {
-            slidesPerView: 2,
-    
-          },
-          769: {
-            slidesPerView: 3,
-    
-          },
-          991: {
-            slidesPerView: 4,
-          }
-        }
-      });
-    
-      new Swiper(".popular-month-tour-slider", {
-        slidesPerView: 4,
-        spaceBetween: 30,
-        loop: true,
-        navigation: {
-          nextEl: ".month .swiper-button-next",
-          prevEl: ".month .swiper-button-prev",
-        },
-        pagination: {
-          el: '.month .swiper-pagination',
-          clickable: true,
-        },
-    
-        breakpoints: {
-          320: {
-            slidesPerView: 1,
-    
-          },
-          480: {
-            slidesPerView: 2,
-    
-          },
-          769: {
-            slidesPerView: 3,
-    
-          },
-          991: {
-            slidesPerView: 4,
-          }
-        }
-      });
-    
-      new Swiper(".popular-handpicked-tour-slider", {
-        slidesPerView: 4,
-        spaceBetween: 30,
-        loop: true,
-        navigation: {
-          nextEl: ".hanpicked .swiper-button-next",
-          prevEl: ".hanpicked .swiper-button-prev",
-        },
-        pagination: {
-          el: '.hanpicked .swiper-pagination',
-          clickable: true,
-        },
-        breakpoints: {
-          320: {
-            slidesPerView: 1,
-    
-          },
-          480: {
-            slidesPerView: 2,
-    
-          },
-          769: {
-            slidesPerView: 3,
-    
-          },
-          991: {
-            slidesPerView: 4,
-          }
-        }
-      });
-    
-      new Swiper(".testimonials", {
+  flatpickr("#datePicker", {
+    enableTime: false,
+    dateFormat: "Y-m-d H:i",
+    altInput: true,
+    altFormat: "F j, Y",
+    disableMobile: "true"
+  });
+
+
+  new Swiper(".popular-tour-slider", {
+    spaceBetween: 20,
+    loop: true,
+    autoplay: true,
+    centeredSlides: true,
+    grabCursor: true,
+    navigation: {
+      nextEl: ".popular-tour-slider .swiper-button-next",
+      prevEl: ".popular-tour-slider .swiper-button-prev",
+    },
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+
+      },
+      480: {
+        slidesPerView: 2,
+
+      },
+      769: {
         slidesPerView: 3,
-        autoplay: true,
-        spaceBetween: 30,
-        loop: true,
-        centeredSlides: true,
-        roundLengths: true,
-        breakpoints: {
-          320: {
-            slidesPerView: 1,
-    
-          },
-          480: {
-            slidesPerView: 2,
-    
-          },
-          769: {
-            slidesPerView: 3,
-          }
-        }
-      });
-    
-    
-      // Tour Single feature  ..............
-      const tourThumbs = new Swiper(".tours-img", {
-        loop: true,
-        spaceBetween: 10,
+
+      },
+      991: {
         slidesPerView: 4,
-        freeMode: true,
-        watchSlidesProgress: true,
-      });
-    
-    
-      new Swiper(".tour-feature-img", {
-        loop: true,
-        spaceBetween: 10,
-        navigation: {
-          nextEl: ".tour-feature-img .swiper-button-next",
-          prevEl: ".tour-feature-img .swiper-button-prev",
-        },
-        thumbs: {
-          swiper: tourThumbs,
-        },
-      });
+      }
+    }
+  });
 
-    // Header Sticky  ============ start =====>
+  new Swiper(".popular-month-tour-slider", {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+      nextEl: ".month .swiper-button-next",
+      prevEl: ".month .swiper-button-prev",
+    },
+    pagination: {
+      el: '.month .swiper-pagination',
+      clickable: true,
+    },
 
-      const header = document.querySelector("header");
-      const handleScroll = () => {
-          window.scrollY > 0 ? header.classList.add("sticky-header") : header.classList.remove("sticky-header");
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+
+      },
+      480: {
+        slidesPerView: 2,
+
+      },
+      769: {
+        slidesPerView: 3,
+
+      },
+      991: {
+        slidesPerView: 4,
       }
-      window.addEventListener("scroll", handleScroll);
-  
-  
-      // Show mobile left canvas ============ start =====>
-      const toggleslideBtn = document.querySelector(".menu-toggle-btn");
-      const cancelBtn = document.querySelector(".cancel-btn");
-      const headerUl = document.querySelector("header .leftmenu ul");
-  
-      toggleslideBtn.addEventListener("click", function () {
-          const backDrop = createBackdrop();
-          headerUl.classList.toggle("show-ul");
-          toggleScrollLock();
-      });
-  
-      cancelBtn.addEventListener("click", function () {
-          const backDrop = document.querySelector('.back-drop');
-          if (backDrop) backDrop.remove();
-          headerUl.classList.remove("show-ul");
-          toggleScrollLock();
-      });
-  
-      function createBackdrop() {
-          const backDrop = document.querySelector('.back-drop');
-          if (!backDrop) {
-              const newBackdrop = document.createElement('div');
-              newBackdrop.classList.add('back-drop');
-              header.appendChild(newBackdrop);
-              newBackdrop.addEventListener("click", function () {
-                  headerUl.classList.remove("show-ul");
-                  newBackdrop.remove();
-                  toggleScrollLock();
-              });
-              return newBackdrop;
-          }
-          return backDrop;
+    }
+  });
+
+  new Swiper(".popular-handpicked-tour-slider", {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+      nextEl: ".hanpicked .swiper-button-next",
+      prevEl: ".hanpicked .swiper-button-prev",
+    },
+    pagination: {
+      el: '.hanpicked .swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+
+      },
+      480: {
+        slidesPerView: 2,
+
+      },
+      769: {
+        slidesPerView: 3,
+
+      },
+      991: {
+        slidesPerView: 4,
       }
-  
-      function toggleScrollLock() {
-          document.body.style.overflow = (document.body.style.overflow === 'hidden') ? 'auto' : 'hidden';
+    }
+  });
+
+  new Swiper(".testimonials", {
+    slidesPerView: 3,
+    autoplay: true,
+    spaceBetween: 30,
+    loop: true,
+    centeredSlides: true,
+    roundLengths: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+
+      },
+      480: {
+        slidesPerView: 2,
+
+      },
+      769: {
+        slidesPerView: 3,
       }
-  
-  
-      // mobile Dropdown  ============ start =====>
-      const navDropdowns = document.querySelectorAll(".dropdown");
-      navDropdowns.forEach((parentDropdown) => {
-          parentDropdown.addEventListener("click", function (e) {
-              this.classList.toggle("showMenu");
-          });
-  
-          const subDropdowns = parentDropdown.querySelectorAll(".dropdown ul");
-          subDropdowns.forEach((subDropdown) => {
-              subDropdown.addEventListener("click", function (event) {
-                  event.stopPropagation(); // Prevents the click event from reaching the parent dropdown
-              });
-          });
+    }
+  });
+
+
+  // Tour Single feature  ..............
+  const tourThumbs = new Swiper(".tours-img", {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+
+
+  new Swiper(".tour-feature-img", {
+    loop: true,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".tour-feature-img .swiper-button-next",
+      prevEl: ".tour-feature-img .swiper-button-prev",
+    },
+    thumbs: {
+      swiper: tourThumbs,
+    },
+  });
+
+  // Header Sticky  ============ start =====>
+
+  const header = document.querySelector("header");
+  const handleScroll = () => {
+    window.scrollY > 0 ? header.classList.add("sticky-header") : header.classList.remove("sticky-header");
+  }
+  window.addEventListener("scroll", handleScroll);
+
+
+  // Show mobile left canvas ============ start =====>
+  const toggleslideBtn = document.querySelector(".menu-toggle-btn");
+  const cancelBtn = document.querySelector(".cancel-btn");
+  const headerUl = document.querySelector("header .leftmenu ul");
+
+  toggleslideBtn.addEventListener("click", function () {
+    const backDrop = createBackdrop();
+    headerUl.classList.toggle("show-ul");
+    toggleScrollLock();
+  });
+
+  cancelBtn.addEventListener("click", function () {
+    const backDrop = document.querySelector('.back-drop');
+    if (backDrop) backDrop.remove();
+    headerUl.classList.remove("show-ul");
+    toggleScrollLock();
+  });
+
+  function createBackdrop() {
+    const backDrop = document.querySelector('.back-drop');
+    if (!backDrop) {
+      const newBackdrop = document.createElement('div');
+      newBackdrop.classList.add('back-drop');
+      header.appendChild(newBackdrop);
+      newBackdrop.addEventListener("click", function () {
+        headerUl.classList.remove("show-ul");
+        newBackdrop.remove();
+        toggleScrollLock();
       });
-  
-      // Add a click event listener to the document to close dropdowns when clicking outside
-      document.addEventListener("click", (e) => {
-          navDropdowns.forEach((dropdown) => {
-              if (!dropdown.contains(e.target)) {
-                  dropdown.classList.remove("showMenu");
-              }
-          });
+      return newBackdrop;
+    }
+    return backDrop;
+  }
+
+  function toggleScrollLock() {
+    document.body.style.overflow = (document.body.style.overflow === 'hidden') ? 'auto' : 'hidden';
+  }
+
+
+  // mobile Dropdown  ============ start =====>
+  const navDropdowns = document.querySelectorAll(".dropdown");
+  navDropdowns.forEach((parentDropdown) => {
+    parentDropdown.addEventListener("click", function (e) {
+      this.classList.toggle("showMenu");
+    });
+
+    const subDropdowns = parentDropdown.querySelectorAll(".dropdown ul");
+    subDropdowns.forEach((subDropdown) => {
+      subDropdown.addEventListener("click", function (event) {
+        event.stopPropagation(); // Prevents the click event from reaching the parent dropdown
       });
+    });
+  });
+
+  // Add a click event listener to the document to close dropdowns when clicking outside
+  document.addEventListener("click", (e) => {
+    navDropdowns.forEach((dropdown) => {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove("showMenu");
+      }
+    });
+  });
 
 
   // offcanvas cart
-   // Show mobile left canvas ============ start =====>
-    const togglecartBtn = document.querySelector(".cart");
-   const cancelcartBtn = document.querySelector(".cancel-canvas-btn");
-   const cartoffcanvas = document.querySelector(".offcanvas");
+  // Show mobile left canvas ============ start =====>
+  const togglecartBtn = document.querySelector(".cart");
+  const cancelcartBtn = document.querySelector(".cancel-canvas-btn");
+  const cartoffcanvas = document.querySelector(".offcanvas");
 
-   togglecartBtn.addEventListener("click", function () {
-       cartoffcanvas.classList.toggle("show-canvas");
-   });
+  togglecartBtn.addEventListener("click", function () {
+    cartoffcanvas.classList.toggle("show-canvas");
+  });
 
-   cancelcartBtn.addEventListener("click", function () {
-        cartoffcanvas.classList.remove("show-canvas");
-   });
+  cancelcartBtn.addEventListener("click", function () {
+    cartoffcanvas.classList.remove("show-canvas");
+  });
   // Navigation ============ End =======> 
 
 
@@ -280,6 +280,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+  // Scroll to top   ============ start =====>
+  function myFunction() {
+    let moreText = document.getElementById("more");
+    let btnText = document.getElementById("myBtn");
+
+    // Get the computed style of #more
+    let currentDisplay = window.getComputedStyle(moreText).display;
+
+    if (currentDisplay === "none") {
+      // Show the more content
+      moreText.style.display = "block";
+      btnText.innerHTML = "Read Less"; // Change button text to "Read Less"
+    } else {
+      // Hide the more content
+      moreText.style.display = "none";
+      btnText.innerHTML = "Read More"; // Change button text to "Read More"
+    }
+  }
   // Scroll to top   ============ start =====>
 
   const scrollTopBtn = document.getElementById("scroll_to_top");
