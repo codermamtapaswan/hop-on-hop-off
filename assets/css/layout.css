@@ -176,6 +176,9 @@ h6 {
 .fs-5 {
   font-size: 1.25rem !important;
 }
+.fs-6 {
+  font-size: 1rem !important;
+}
 /* font-size end */
 
 .d-block {
@@ -201,6 +204,10 @@ h6 {
 
 .justify-content-between {
   justify-content: space-between !important;
+}
+
+.justify-content-center{
+  justify-content: center !important;
 }
 
 .flex-wrap {
