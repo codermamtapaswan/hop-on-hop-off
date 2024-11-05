@@ -4309,6 +4309,7 @@ fieldset:disabled .btn {
 .breadcrumb-item.active {
   color: #6c757d;
 }
+
 .pagination {
   display: flex;
   padding-left: 0;
