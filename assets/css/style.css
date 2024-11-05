@@ -2232,6 +2232,13 @@ footer .list-unstyled a:hover {
   position: relative;
 }
 
+.contact-info .info-item a{
+  color: #000;
+}
+.contact-info .info-item a:hover{
+  color: var(--pc);
+}
+
 .contact-info svg {
   width: 30px;
   height: 30px;
@@ -2302,6 +2309,7 @@ footer .list-unstyled a:hover {
 .checkout-form label {
   font-size: 15px;
   font-weight: 500;
+  display: block;
 }
 
 .checkout-form hr {
