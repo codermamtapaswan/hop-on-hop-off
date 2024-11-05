@@ -255,6 +255,10 @@ h6 {
   justify-content: space-between !important;
 }
 
+.justify-content-center{
+  justify-content: center !important;
+}
+
 .flex-wrap {
   flex-wrap: wrap !important;
 }
