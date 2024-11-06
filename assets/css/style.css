@@ -1830,6 +1830,47 @@ header ul {
   }
 }
 
+
+/* main-stops  */
+
+#main-stops .hoho-card {
+  border:1px solid var(--bd-color);
+  border-radius: 12px;
+  text-align: center;
+  height: auto;
+}
+#main-stops [class*='col']:has(.hoho-card):nth-child(even){
+  margin-top: 40px;
+}
+
+#main-stops .hoho-card .number::before {
+  top: 0;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  background: #da0f10;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transform: translate(-50%, -50%) !important;
+  border: 1px solid #fff;
+  content: counter(term);
+}
+
+#main-stops .hoho-card-content {
+  padding: 10px;
+}
+
+#main-stops  .tour-content-body{
+  padding-top:30px;
+}
+
+#main-stops :is(.img-placeholder, .img-placeholder a img) {
+  border-radius: 12px 12px 0 0 ;
+}
+
 .main-timeline {
   padding: 20px 0;
   position: relative;
@@ -2024,6 +2065,58 @@ header ul {
 .timeline:has(#more) {
   display: none;
 }
+
+
+/* Itinerary */
+
+#Itinerary .itinerary-list {
+  border-left: 1px dotted var(--pc);
+}
+
+#Itinerary :is(.step, .tour-content-body) {
+  padding-left: 30px !important;
+  position: relative;
+}
+
+#Itinerary .step::before{
+  content: "";
+  flex-shrink: 0;
+  position: absolute;
+  background-repeat: no-repeat;
+  transition: transform 0.2s ease-in-out;
+}
+
+#Itinerary .step:nth-child(1):before {
+  background-image: url("../images/location.svg");
+  width: 30px;
+  height: 30px;
+  left: -16px;
+  top: 0;
+}
+
+#Itinerary .step::before {
+  top:5px;
+  left: -8px;
+  width: 15px;
+  height: 15px;
+  background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='7.5' cy='7.5' r='7.5' fill='%23D32C4A'/%3E%3C/svg%3E");
+}
+
+#Itinerary .step{
+ margin-bottom: 25px;
+}
+
+#Itinerary .step-name{
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
 
 /* # About Page Start
 =================================================*/
