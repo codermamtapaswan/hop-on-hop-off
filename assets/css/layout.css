@@ -343,6 +343,10 @@ h6 {
   margin-bottom: 1.5rem !important;
 }
 
+.mt-4 {
+  margin-top: 1.5rem !important;
+}
+
 .ms-1 {
   margin-left: .25rem !important;
 }
@@ -399,6 +403,14 @@ h6 {
 
 .pt-0 {
   padding-top: 0px !important;
+}
+
+.pt-4 {
+  padding-top: 1.5rem !important;
+}
+
+.pb-4 {
+  padding-bottom: 1.5rem !important;
 }
 
 .p-4 {
@@ -784,6 +796,25 @@ tbody, td, tfoot, th, thead, tr {
   .ps-lg-0 {
     padding-left: 0 !important;
   }
+
+  .pb-lg-5 {
+    padding-bottom: 3rem !important;
+  }
+
+  .pt-lg-5 {
+    padding-top: 3rem !important;
+  }
+
+  .py-lg-5 {
+    padding-block: 3rem !important;
+  }
+
+  .justify-content-lg-between {
+    justify-content: space-between !important;
+  }
+  .mt-lg-5 {
+    margin-top: 3rem !important;
+}
 }
 
 
