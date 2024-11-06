@@ -14,7 +14,11 @@ Tour Single Pages Chnages
 4. All routes: Add snake pattern in each route with view more button -> Show x routes then on view more show rest routes.
 
 5. Itinerary: Change it to this format
-Departure Points: London Eye, Belvedere Road, Tourist bus stop, London, SE1 7NA (nearest tube and train station is Waterloo, 2 minute walk). 
+Departure Points:
+ London Eye, 
+ Belvedere Road, 
+ Tourist bus stop, 
+ London, SE1 7NA (nearest tube and train station is Waterloo, 2 minute walk). 
 First Bus: 10:00am from London Eye, Belvedere Road (SE1 7NA)
 Last Bus: 8:00pm from London Eye, Belvedere Road (SE1 7NA)
 Live Guide: On most departures
