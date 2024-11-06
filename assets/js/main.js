@@ -316,11 +316,22 @@ document.addEventListener("DOMContentLoaded", function () {
 });  // Dcumnet Script  ============ End =====> 
 
 
+// accordion code  ============ start =====>
+  const detailsElements = document.querySelectorAll("details");
+const summaryElements = document.querySelectorAll("summary");
 
-
-
-
-
+if (detailsElements.length > 0) {
+  detailsElements[0].open = true;
+}
+summaryElements.forEach((summary, index) => {
+  summary.addEventListener("click", () => {
+    detailsElements.forEach((details, i) => {
+      if (i !== index) {
+        details.open = false;
+      }
+    });
+  });
+});
 
 
 

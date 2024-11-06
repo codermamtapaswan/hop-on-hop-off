@@ -238,6 +238,10 @@ h6 {
   --bs-gutter-y: 1rem;
 }
 
+.g-2, .gy-2 {
+  --bs-gutter-y: 0.5rem;
+}
+
 .h-100 {
   height: 100%;
 }
@@ -271,6 +275,9 @@ h6 {
   flex-wrap: wrap !important;
 }
 
+.flex-nowrap {
+  flex-wrap: nowrap !important;
+}
 /* flex end */
 
 .rounded {
@@ -295,6 +302,9 @@ h6 {
   color: #fff !important;
 }
 
+.text-muted {
+  color: #6c757d !important;
+}
 /* text-color */
 
 .position-relative {
@@ -337,6 +347,10 @@ h6 {
 
 .mb-4 {
   margin-bottom: 1.5rem !important;
+}
+
+.mt-4 {
+  margin-top: 1.5rem !important;
 }
 
 .ms-1 {
@@ -397,8 +411,20 @@ h6 {
   padding-top: 0px !important;
 }
 
+.pt-4 {
+  padding-top: 1.5rem !important;
+}
+
+.pb-4 {
+  padding-bottom: 1.5rem !important;
+}
+
 .p-4 {
   padding: 1.5rem !important;
+}
+
+.p-3 {
+  padding: 1rem !important;
 }
 
 .ps-3 {
@@ -544,7 +570,51 @@ h6 {
   -moz-appearance: none;
   appearance: none;
 }
+
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+
+button, input, optgroup, select, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
 /* form */
+
+/* table */
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  border-color: #dee2e6;
+  border-collapse: collapse;
+}
+
+tbody, td, tfoot, th, thead, tr {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+  --bs-table-accent-bg: rgba(0, 0, 0, 0.05);
+}
+
+.table>:not(caption)>*>* {
+  padding: .5rem .5rem;
+  background-color: var(--bs-table-bg);
+  border-bottom-width: 1px;
+  box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+}
+
+
+/* table */
 
 .alert-success {
   color: #0f5132;
@@ -732,6 +802,25 @@ h6 {
   .ps-lg-0 {
     padding-left: 0 !important;
   }
+
+  .pb-lg-5 {
+    padding-bottom: 3rem !important;
+  }
+
+  .pt-lg-5 {
+    padding-top: 3rem !important;
+  }
+
+  .py-lg-5 {
+    padding-block: 3rem !important;
+  }
+
+  .justify-content-lg-between {
+    justify-content: space-between !important;
+  }
+  .mt-lg-5 {
+    margin-top: 3rem !important;
+}
 }
 
 
@@ -744,6 +833,11 @@ h6 {
   .container-xl {
     max-width: 1140px;
   }
+
+  .fs-4 {
+    font-size: 1.5rem !important;
+  }
+
 }
 
 @media (min-width: 1400px) {

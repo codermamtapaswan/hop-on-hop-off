@@ -6,10 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home - Hop Off Hop On</title>
 
-  <!-- Bootstrap CSS -->
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
-
   <!-- Date Piker -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
@@ -203,7 +199,78 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-7">
+          <form action="" class="contact-form crud-form">
+            <h4 class="mb-4">Need Help?</h4>
+            <div class="row gy-2">
+              <div class="col-lg-6">
+                <div class="input-group flex-nowrap gap-3 align-items-center">
+                  <input type="text" class="form-control" id="f-name" placeholder="Your Name">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="input-group flex-nowrap gap-3 align-items-center">
+                  <input type="email" class="form-control" placeholder="Email Id">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="input-group flex-nowrap gap-3 align-items-center">
+                  <input type="tel" placeholder="Phone Number(optional)" name="f-tel" class="form-control">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="input-group flex-nowrap gap-3 align-items-center">
+                  <input type="text" placeholder="Booking reference(optional)" name="f-book" class="form-control">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="input-group flex-nowrap gap-3 align-items-center">
+                  <select name="city" id="f-city" class="input-group flex-nowrap gap-3">
+                    <option value="Las Vegas">Las Vegas</option>
+                    <option value="Abu Dhabi">Abu Dhabi</option>
+                    <option value="Berlin">Berlin</option>
+                    <option value="Dubai">Dubai</option>
+                  </select>
+                </div>
+
+              </div>
+              <div class="col-lg-6">
+                <div class="input-group flex-nowrap gap-3 align-items-center">
+                  <input type="text" class="form-control" id="datePicker" placeholder="dd/mm/yy">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="input-group flex-nowrap gap-3 align-items-center">
+                  <input type="text" name="" placeholder="Number of Guest(optional)" id="" class="form-control">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="input-group flex-nowrap gap-3">
+                  <select name="" id="" class="input-group flex-nowrap gap-3">
+                    <option value>Type of Query</option>
+                    <option value="Abu Dhabi">Abu Dhabi</option>
+                    <option value="Berlin">Berlin</option>
+                    <option value="Dubai">Dubai</option>
+                  </select>
+                </div>
+
+              </div>
+              <div class="col-12">
+                <textarea name="" id="" rows="6" cols="50" placeholder="Tell us About Your Query"></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="hoho-btn d-flex align-items-center gap-2">Submit<svg width="10" height="10"
+                    viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M.901 2.135v-.817c0-.347.28-.627.625-.625L8.683.692c.346 0 .625.28.624.624v7.159a.623.623 0 0 1-.625.625h-.817a.625.625 0 0 1-.625-.639l.105-4.333L2.053 9.42a.625.625 0 0 1-.884 0L.58 8.832a.625.625 0 0 1 0-.883l5.292-5.293-4.333.105A.62.62 0 0 1 .9 2.137"
+                      fill="#fff"></path>
+                  </svg></button>
+
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-5">
           <div class="contact-info">
             <div class="contact-icon">
               <img src="https://colorlib.com/etc/cf/ContactFrom_v20/images/icons/symbol-01.png" class="img-fluid"
@@ -255,104 +322,8 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
-          <form action="" class="contact-form crud-form">
-            <h4 class="mb-4">Need Help?</h4>
-            <!-- <div class="line-sep"></div> -->
-            <div class="row gy-2">
-              <div class="col-lg-6">
-                <div class="input-group flex-nowrap gap-3 align-items-center">
-                  <!-- <label for="f-name">
-                          <span class="input-group-text" id="addon-wrapping"><svg width="20" height="20" viewBox="0 0 0.45 0.45" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color"><path d="M.394.375a.037.037 0 0 1-.037.037H.094A.037.037 0 0 1 .057.375.11.11 0 0 1 .169.263h.112a.11.11 0 0 1 .112.112M.224.225A.094.094 0 1 0 .13.131a.094.094 0 0 0 .094.094"></path></svg></span>
-                        </label> -->
-                  <input type="text" class="form-control" id="f-name" placeholder="Your Name">
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="input-group flex-nowrap gap-3 align-items-center">
-                  <!-- <label for="f-email">
-                              <span class="input-group-text" id="addon-wrapping"><svg width="20" height="20" viewBox="0 0 9.6 9.6" xmlns="http://www.w3.org/2000/svg"><path d="M1.2 2.4q0-.281.169-.431.15-.169.431-.169h6q.281 0 .45.169.15.15.15.431v.3L4.8 5.1 1.2 2.7zm3.6 3.75 3.6-2.4V7.2q0 .6-.6.6h-6q-.6 0-.6-.6V3.75z"></path></svg></span>
-                            </label> -->
-                  <input type="email" class="form-control" placeholder="Email Id">
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="input-group flex-nowrap gap-3 align-items-center">
-                  <!-- <label for="f-tel">
-                            <span class="input-group-text" id="addon-wrapping"><svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="si-glyph si-glyph-call" width="20" height="20"><g stroke-width="0"/><g stroke-linecap="round" stroke-linejoin="round"/><path d="M17.539 14.815c-.535-.674-1.404-1.65-2.147-1.742-.453-.056-.973.319-1.485.673-.1.05-.872.51-.966.537-.495.141-1.551.182-2.19-.4-.615-.563-1.587-1.604-2.373-2.557-.75-.983-1.536-2.164-1.939-2.889-.42-.751-.117-1.745.143-2.183.048-.079.623-.67.751-.807l.019.022c.476-.4.975-.806 1.031-1.246.092-.732-.656-1.799-1.191-2.474-.536-.676-1.365-1.86-2.493-1.693a3.1 3.1 0 0 0-1.153.425L3.536.47l-.06.046-.031.016.004.005c-.208.16-.8.603-.867.663-.732.651-1.835 2.185-.983 4.944.633 2.05 1.981 4.457 3.819 6.893l-.01.009c.09.117.182.224.276.338q.13.175.264.346l.013-.009c1.95 2.349 3.995 4.226 5.861 5.334 2.512 1.49 4.299.819 5.124.285.077-.051.667-.51.867-.661l.005.005.022-.025.054-.041-.007-.01c.302-.293.545-.605.712-.999.439-1.036-.525-2.116-1.06-2.792" class="si-glyph-fill" fill-rule="evenodd"/></svg></span>
-                          </label> -->
-                  <input type="tel" placeholder="Phone Number(optional)" name="f-tel" class="form-control">
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="input-group flex-nowrap gap-3 align-items-center">
-                  <!-- <label for="f-book">
-                        <span class="input-group-text" id="addon-wrapping"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" height="20"><g stroke-width="0"/><g stroke-linecap="round" stroke-linejoin="round"/><g><path fill-rule="evenodd" clip-rule="evenodd" d="M3.939 2.26c.255-.249.612-.412 1.287-.5.695-.092 1.615-.093 2.935-.093h3.678c1.32 0 2.24.002 2.935.093.675.088 1.032.251 1.287.5.254.25.42.6.511 1.261.093.681.095 1.583.095 2.875v6.533H6.122c-.753 0-1.266-.001-1.706.115a3.5 3.5 0 0 0-1.083.493v-7.14c0-1.293.002-2.195.095-2.876.091-.661.257-1.011.511-1.261m2.383 2.56a.683.683 0 0 0-.69.675c0 .373.308.676.689.676h7.357a.683.683 0 0 0 .689-.675.683.683 0 0 0-.689-.676zm-.69 3.828c0-.372.308-.675.689-.675h4.598a.683.683 0 0 1 .69.675.683.683 0 0 1-.69.676H6.322a.683.683 0 0 1-.689-.675"/><path d="M6.228 14.279c-.899 0-1.213.006-1.455.069a2.05 2.05 0 0 0-1.414 1.282q.019.476.07.849c.091.661.257 1.011.511 1.261.255.249.612.412 1.287.5.695.092 1.615.093 2.935.093h3.678c1.32 0 2.24-.002 2.935-.092.675-.089 1.032-.252 1.287-.501.18-.177.317-.405.413-.758H6.322a.683.683 0 0 1-.689-.675c0-.373.308-.676.689-.676h10.32c.017-.388.022-.833.025-1.352z"/></g></svg></span>
-                      </label> -->
-                  <input type="text" placeholder="Booking reference(optional)" name="f-book" class="form-control">
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="input-group flex-nowrap gap-3 align-items-center">
-                  <!-- <label for="f-book">   <span class="input-group-text" id="addon-wrapping"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" height="20"><g stroke-width="0"/><g stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M13.75 1.25H1.25v17.5h2.5v-5h2.5v5h12.5v-7.5h-5zm-7.5 2.5h-2.5v2.5h2.5zm5 0h-2.5v2.5h2.5zm-2.5 5h2.5v2.5h-2.5zm5 5h2.5v2.5h-2.5z"/></svg></span></label> -->
-
-                  <select name="city" id="f-city" class="input-group flex-nowrap gap-3">
-                    <option value="Las Vegas">Las Vegas</option>
-                    <option value="Abu Dhabi">Abu Dhabi</option>
-                    <option value="Berlin">Berlin</option>
-                    <option value="Dubai">Dubai</option>
-                  </select>
-                </div>
-
-              </div>
-              <div class="col-lg-6">
-                <div class="input-group flex-nowrap gap-3 align-items-center">
-                  <!-- <label for="f-book">     <span class="input-group-text" id="addon-wrapping"><svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" width="20" height="20"><g stroke-width="0"/><g stroke-linecap="round" stroke-linejoin="round"/><path d="M1.667 15.833c0 1.417 1.083 2.5 2.5 2.5h11.667c1.417 0 2.5-1.083 2.5-2.5V9.166H1.667zm14.166-12.5h-1.667V2.5c0-.5-.333-.833-.833-.833S12.5 2 12.5 2.5v.833h-5V2.5c0-.5-.333-.833-.833-.833S5.834 2 5.834 2.5v.833H4.167c-1.417 0-2.5 1.084-2.5 2.5V7.5h16.667V5.833c0-1.417-1.083-2.5-2.5-2.5"/></svg></span></label> -->
-                  <input type="text" class="form-control" id="datePicker" placeholder="dd/mm/yy">
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="input-group flex-nowrap gap-3 align-items-center">
-                  <!-- <label for="f-book">   <span class="input-group-text" id="addon-wrapping"><svg viewBox="0 -0.229 20 20" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="20" height="20"><g stroke-width="0"/><g stroke-linecap="round" stroke-linejoin="round"/><path d="M14.736 6.226c.363-.122.745.072.998.374h3.005a.083.083 0 0 1 .083.083v.791a.083.083 0 0 1-.083.083h-.526v2.635h-.607V7.557h-1.638a1.5 1.5 0 0 1-.384.547v2.088h-.61V8.53a9 9 0 0 1-1.302.55 14 14 0 0 1-1.465.454 2.93 2.93 0 0 1-2.557-.651 7 7 0 0 1-.568-.545l-.055-.059-.488 2.889a10 10 0 0 0 1.172.679c1.266.591 2.308 1.079 2.531 3.068.041.348.023 2.389 0 3.392h1.755a.3.3 0 0 1-.109-.233v-.308a.776.776 0 0 1-.767-.775v-5.859a.78.78 0 0 1 .775-.775h.177v.037l.194.739a1.2 1.2 0 0 0 .291.55.7.7 0 0 0 .51.199h.776v.415c0 .067.313.119.378.119h1.031a.117.117 0 0 0 .119-.117v-.417h.814a.7.7 0 0 0 .514-.215 1.1 1.1 0 0 0 .28-.553l.163-.729v-.039h.083a.78.78 0 0 1 .775.775v5.868a.776.776 0 0 1-.767.775v.302a.3.3 0 0 1-.109.233h.876v1.234H0v-1.234h3.228c.229-.617.465-1.274.697-1.935a100 100 0 0 0 1.27-3.88 3.6 3.6 0 0 1-.522-.824 1.84 1.84 0 0 1-.143-1.081l.705-3.551c-.252-.013-.544-.088-.781.016-.461.202-1.139 1.061-1.541 1.465l-.539.545c-.415.42-.692.885-1.326.835-.788-.062-1.351-.938-.796-1.61l1.242-1.257c.597-.607 1.165-1.322 1.903-1.738.592-.335 1.237-.565 2.303-.519.391 0 .804.044 1.195.081l.456.039c1.79.116 2.624 1.058 3.275 1.79.288.326.535.602.804.731.127.06.326-.024.552-.119l1.651-.614 1.104-.443Zm-4.784 12.08c.023-1.13.047-2.723.029-3.031-.015-.22-.163-.801-.394-.907a10 10 0 0 0-.949-.353c-.448-.148-.814-.298-1.257-.42a57 57 0 0 1-1.232 3.595l-.444 1.115Zm8.605 0h-3.992a.29.29 0 0 0 .109-.233v-.308h3.774v.301a.29.29 0 0 0 .109.233Zm-4.087-1.991a.143.143 0 0 1 0-.286h4.202a.143.143 0 0 1 0 .286Zm0-1.385a.143.143 0 0 1 0-.286h4.202a.143.143 0 1 1 0 .286Zm0-1.385a.143.143 0 0 1 0-.286h4.202a.143.143 0 1 1 0 .286Zm4.351-3.052h-4.417l.146.558a.9.9 0 0 0 .218.42.4.4 0 0 0 .298.127h3.12a.43.43 0 0 0 .313-.132.83.83 0 0 0 .202-.409zM7.295.116A2.144 2.144 0 1 1 6.065 1.2 2.14 2.14 0 0 1 7.295.116" style="fill-rule:evenodd"/></svg></span></label> -->
-                  <input type="text" name="" placeholder="Number of Guest(optional)" id="" class="form-control">
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="input-group flex-nowrap gap-3">
-                  <!-- <span class="input-group-text" id="addon-wrapping">
-                            <label for="f-book">  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" xml:space="preserve" width="20" height="20"><g stroke-width="0"/><g stroke-linecap="round" stroke-linejoin="round"/><path d="M10 1.25a8.75 8.75 0 1 0 .001 17.501A8.75 8.75 0 0 0 10 1.25m0 15A.625.625 0 1 1 10 15a.625.625 0 0 1 0 1.25m.625-4.427v1.302a.625.625 0 1 1-1.25 0V11.25a.625.625 0 0 1 .625-.625c1.379 0 2.5-1.121 2.5-2.5s-1.121-2.5-2.5-2.5-2.5 1.121-2.5 2.5a.625.625 0 1 1-1.25 0c0-2.068 1.682-3.75 3.75-3.75s3.75 1.682 3.75 3.75a3.756 3.756 0 0 1-3.125 3.698"/></svg></label>
-
-                          </span> -->
-                  <select name="" id="" class="input-group flex-nowrap gap-3">
-                    <option value>Type of Query</option>
-                    <option value="Abu Dhabi">Abu Dhabi</option>
-                    <option value="Berlin">Berlin</option>
-                    <option value="Dubai">Dubai</option>
-                  </select>
-                </div>
-
-              </div>
-              <div class="col-12">
-                <textarea name="" id="" rows="6" cols="50" placeholder="Tell us About Your Query"></textarea>
-              </div>
-              <div class="col-12">
-                <button type="submit" class="hoho-btn d-flex align-items-center gap-2">Submit<svg width="10" height="10"
-                    viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M.901 2.135v-.817c0-.347.28-.627.625-.625L8.683.692c.346 0 .625.28.624.624v7.159a.623.623 0 0 1-.625.625h-.817a.625.625 0 0 1-.625-.639l.105-4.333L2.053 9.42a.625.625 0 0 1-.884 0L.58 8.832a.625.625 0 0 1 0-.883l5.292-5.293-4.333.105A.62.62 0 0 1 .9 2.137"
-                      fill="#fff"></path>
-                  </svg></button>
-
-              </div>
-            </div>
-          </form>
-        </div>
-
       </div>
     </div>
-
-
-
 
   </main>
   <!-- footer Start -->
