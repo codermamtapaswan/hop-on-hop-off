@@ -119,7 +119,7 @@ h6,
   background-image: linear-gradient(to right,
       #da0f10 0%,
       #f05c5d 51%,
-      #da0f10 100%);
+      #da0f10 100%) !important;
 }
 
 .bg-theme-gray {
@@ -1647,59 +1647,6 @@ header ul {
 .tour-content .bg-theme-sc {
   padding: 40px;
   border-radius: 4px;
-
-}
-
-.highlights-point {
-  background: #fff;
-  border: 1px solid var(--bd-color);
-  border-radius: 4px;
-  padding: 30px;
-  margin-left: -40px;
-}
-
-#highlights .bg-theme-sc {
-  padding-right: 80px !important;
-}
-
-.point-head {
-  font-size: 12px;
-  font-weight: 600;
-  text-align: center;
-}
-
-.tour-content #highlights .icon {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto;
-}
-
-.tour-content #must-see-route .icon {
-  width: 60px;
-  height: 60px;
-  flex-shrink: 0;
-}
-
-.route-head strong {
-  font-weight: 600;
-  text-transform: capitalize;
-}
-
-.route-head span {
-  color: #6d6d6d;
-  font-weight: normal;
-}
-
-.route-head>* {
-  display: block;
-  font-size: 15px;
-}
-
-
-
-
-.map-box iframe {
-  border-radius: 12px;
 }
 
 .tick-list li {
@@ -1708,13 +1655,6 @@ header ul {
   list-style-type: none;
 }
 
-.rounded-tick-list li {
-  padding: 0 0 0 28px !important;
-}
-
-.rounded-tick-list li:not(:last-child) {
-  margin-bottom: 15px !important;
-}
 
 .tick-list li:not(:last-child) {
   margin-bottom: 10px;
@@ -1736,22 +1676,10 @@ header ul {
   height: 14px;
 }
 
-.rounded-tick-list.included li::before {
-  width: 18px;
-  height: 18px;
-  background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23a)' stroke='%2370AD46' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16.5 8.31V9a7.5 7.5 0 1 1-4.447-6.855'/%3E%3Cpath d='M16.5 3 9 10.508l-2.25-2.25'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h18v18H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
-}
-
 .tick-list.excluded li::before {
   width: 14px;
   height: 14px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Cpath d='M2 12 12 2m0 10L2 2' stroke='%23E03E2D' stroke-width='3' fill='none'/%3E%3C/svg%3E");
-}
-
-.rounded-tick-list.excluded li::before {
-  width: 18px;
-  height: 18px;
-  background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23a)' stroke='%23D32C4A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16.5 8.31V9a7.5 7.5 0 1 1-4.447-6.855'/%3E%3Cpath d='M16.5 3 9 10.508l-2.25-2.25'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h18v18H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
 }
 
 /* Redemption-Info */
@@ -1761,10 +1689,6 @@ header ul {
   height: 200px;
   width: 100%;
   object-fit: cover;
-}
-
-#Redemption-Info {
-  padding: 40px;
 }
 
 .usefulbox {
@@ -1796,19 +1720,6 @@ header ul {
   border-color: rgba(211, 44, 74, 1);
 }
 
-#Incl-Excl .rounded-tick-list li:not(:last-of-type) {
-  padding-bottom: 15px !important;
-}
-
-#Incl-Excl .rounded-tick-list li:not(:last-of-type):after {
-  content: "";
-  width: 100%;
-  height: 1px;
-  background: rgba(0, 0, 0, 0.1);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
 
 .tour-content .box {
   padding: 20px;
@@ -1836,6 +1747,7 @@ header ul {
     flex-direction: column;
   }
 }
+
 
 .main-timeline {
   padding: 20px 0;
@@ -2031,6 +1943,58 @@ header ul {
 .timeline:has(#more) {
   display: none;
 }
+
+
+/* Itinerary */
+
+#Itinerary .itinerary-list {
+  border-left: 1px dotted var(--pc);
+}
+
+#Itinerary :is(.step, .tour-content-body) {
+  padding-left: 30px !important;
+  position: relative;
+}
+
+#Itinerary .step::before{
+  content: "";
+  flex-shrink: 0;
+  position: absolute;
+  background-repeat: no-repeat;
+  transition: transform 0.2s ease-in-out;
+}
+
+#Itinerary .step:nth-child(1):before {
+  background-image: url("../images/location.svg");
+  width: 30px;
+  height: 30px;
+  left: -16px;
+  top: 0;
+}
+
+#Itinerary .step::before {
+  top:5px;
+  left: -8px;
+  width: 15px;
+  height: 15px;
+  background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='7.5' cy='7.5' r='7.5' fill='%23D32C4A'/%3E%3C/svg%3E");
+}
+
+#Itinerary .step{
+ margin-bottom: 25px;
+}
+
+#Itinerary .step-name{
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
 
 /* # About Page Start
 =================================================*/
