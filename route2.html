@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signle Page - Hop Off Hop On</title>
+
+    <!-- Date Piker -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!--custom style css -->
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="preload" href="assets/fonts/kaushan-script/kaushan-script-v18-latin-regular.woff2" as="font"
+        type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/kaushan-script/kaushan-script-v18-latin-regular.ttf" as="font"
+        type="font/ttf" crossorigin />
+
+    <link rel="preload" href="assets/fonts/poppins/poppins-v21-latin-regular.woff2" as="font" type="font/woff2"
+        crossorigin />
+    <link rel="preload" href="assets/fonts/poppins/poppins-v21-latin-regular.ttf" as="font" type="font/ttf"
+        crossorigin />
+
+    <link rel="preload" href="assets/fonts/poppins/poppins-v21-latin-500.woff2" as="font" type="font/woff2"
+        crossorigin />
+    <link rel="preload" href="assets/fonts/poppins/poppins-v21-latin-500.ttf" as="font" type="font/ttf" crossorigin />
+
+    <link rel="preload" href="assets/fonts/poppins/poppins-v21-latin-600.woff2" as="font" type="font/woff2"
+        crossorigin />
+    <link rel="preload" href="assets/fonts/poppins/poppins-v21-latin-600.ttf" as="font" type="font/ttf" crossorigin />
+
+    <link rel="preload" href="assets/fonts/poppins/poppins-v21-latin-700.woff2" as="font" type="font/woff2"
+        crossorigin />
+    <link rel="preload" href="assets/fonts/poppins/poppins-v21-latin-700.ttf" as="font" type="font/ttf" crossorigin />
+
+    <link rel="preload" href="assets/fonts/poppins/poppins-v21-latin-800.woff2" as="font" type="font/woff2"
+        crossorigin />
+    <link rel="preload" href="assets/fonts/poppins/poppins-v21-latin-800.ttf" as="font" type="font/ttf" crossorigin />
+
+
+    <style>
+        @font-face {
+            font-display: swap;
+            font-family: 'Kaushan Script';
+            font-style: normal;
+            font-weight: 400;
+            src: url('assets/fonts/kaushan-script/kaushan-script-v18-latin-regular.woff2') format('woff2'),
+                url('assets/fonts/kaushan-script/kaushan-script-v18-latin-regular.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            src: url('assets/fonts/poppins/poppins-v21-latin-regular.woff2') format('woff2'),
+                url('assets/fonts/poppins/poppins-v21-latin-regular.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            src: url('assets/fonts/poppins/poppins-v21-latin-500.woff2') format('woff2'),
+                url('assets/fonts/poppins/poppins-v21-latin-500.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            src: url('assets/fonts/poppins/poppins-v21-latin-600.woff2') format('woff2'),
+                url('assets/fonts/poppins/poppins-v21-latin-600.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            src: url('assets/fonts/poppins/poppins-v21-latin-700.woff2') format('woff2'),
+                url('assets/fonts/poppins/poppins-v21-latin-700.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 800;
+            src: url('assets/fonts/poppins/poppins-v21-latin-800.woff2') format('woff2'),
+                url('assets/fonts/poppins/poppins-v21-latin-800.ttf') format('truetype');
+        }
+    </style>
+
+
+<!-- route stykle start -->
+ <style>
+    .route-sec{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        position: relative;
+        height: 230px;
+        overflow: hidden;
+    }
+
+    .route-sec .route-map .circle-sep::before {
+        content: "";
+    width: 218px;
+    height: 2px;
+    border-top: 2px dashed gray;
+    display: block;
+    margin-top: 3px;
+    margin-left: 12px;
+} 
+
+    .route-sec .route-map:nth-child(even){
+        flex-direction: row-reverse;
+    }
+
+    .route-sec .route-map:nth-child(even)::before{
+        content: "";
+    border-right: 2px dashed gray;
+    border-bottom: 2px dashed gray;
+    border-top: 2px dashed gray;
+    position: absolute;
+    height: 250px;
+    right: -48px;
+    top: -180px;
+    width: 141px;
+    border-radius: 0px 10px 10px 0px;
+    }
+
+    .route-sec .route-map:nth-child(odd) .route-stops:last-of-type .circle-sep::before{
+         display: none;
+    }
+    .route-sec .route-map:nth-child(even) .route-stops:first-of-type .circle-sep::before{
+         display: none;
+    }
+
+    .route-sec .route-map:nth-child(odd)::before{
+        content: "";
+    border-left: 2px dashed gray;
+    border-bottom: 2px dashed gray;
+    border-top: 2px dashed gray;
+    position: absolute;
+    height: 250px;
+    left: -48px;
+    top: -180px;
+    width: 141px;
+    border-radius: 10px 0 0 10px;
+    }
+
+    .route-sec .route-map:nth-child(odd):nth-child(1):before{
+     display: none;
+    }
+
+    .route-map{
+    display: flex;
+    gap:25px;
+    flex-wrap: wrap;
+    position: relative;
+    }
+.route-tour-content{
+    padding:30px;
+    background-color: #fbeaed;
+    border-radius: 8px;
+    --route-color:#d32c4a;
+}
+
+.route-tour-content svg path{
+    fill: var(--route-color);
+}
+
+.route-stops{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:25px;
+    width: 200px;
+}
+.stops {
+    padding: 6px 22px;
+    background: var(--route-color);
+    border-radius: 4px;
+    color: #fff;
+    position: relative;
+}
+
+.stops::before {
+    content: "";
+    border-top: 12px solid var(--route-color);
+    border-left: 10px solid transparent;
+    border-right: 10px solid #ff000000;
+    position: absolute;
+    bottom: -17px;
+    transform: translate(-50%, -50%);
+    left: 50%;
+}
+
+.circle-sep{
+width: 14px;
+height: 14px;
+background-color: #fff;
+border-radius: 50%;
+border: 3px solid var(--route-color);
+position: relative;
+}
+
+.route-details{
+    padding:20px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid var(--route-color);
+    position: relative;
+}
+
+.route-details::before{
+    content: "";
+border-bottom:10px solid var(--route-color);
+border-left: 10px solid transparent;
+border-right: 10px solid transparent;
+position: absolute;
+top: -10px;
+left: 44.5%;
+}
+.route-details::after{
+    content: "";
+    border-bottom: 9px solid #ffffff;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    position: absolute;
+    top: -9px;
+    left: 45.2%;
+}
+
+.route-sec .route-map:nth-child(odd) .route-stops:last-of-type .circle-sep::before {
+    width: 144px;
+}
+.route-sec .route-map:nth-child(even) .route-stops:first-of-type .circle-sep::before{
+    width: 144px;
+}
+
+.route-sec.expanded {
+  height: 100%;
+  overflow: visible;
+}
+
+#blueroute{
+    background-color: #e9edf6;
+    --route-color:#051036;
+}
+
+#greenroute{
+    background-color: #eff5e7;
+    --route-color:#55ae36;
+}
+
+@media (max-width:600px){
+    .route-map{
+        justify-content: center;
+    }
+
+    .route-sec .route-map .circle-sep::before,.route-sec .route-map:nth-child(even)::before,.route-sec .route-map:nth-child(odd)::before{
+        display: none;
+    }
+    .route-sec {
+    height: 479px;
+}
+}
+@media (max-width:768px){
+    .route-map{
+        justify-content: center;
+    }
+
+    .route-sec {
+    height: 479px;
+}
+
+.route-sec .route-map .route-stops:nth-child(even) .circle-sep::before,.route-sec .route-map:nth-child(even)::before,.route-sec .route-map .circle-sep::before,.route-sec .route-map:nth-child(odd)::before{
+    display: none;
+}
+    
+}
+
+ </style>
+<!-- route stykle end -->
+
+
+</head>
+
+<body class="bg-light">
+
+  <!--  Navigation ============ Start =====  -->
+  <header>
+    <div class="container">
+      <div class="menu-toggle-btn">
+        <svg fill="#000" width="20" height="20" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM64 256c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H96c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z">
+          </path>
+        </svg>
+      </div>
+
+      <a href="index.html" class="mg-logo">
+        <img src="assets/images/logo.svg" alt="managetrix-logo" class="img-fluid">
+      </a>
+
+      <div class="menu-container">
+        <nav class="leftmenu">
+          <ul>
+            <li> <a href="about-us.html">About us</a></li>
+
+            <li class="dropdown">
+              <a href="#">Our Destinations</a>
+              <ul>
+                <li><a href="faq.html">faq</a></li>
+                <li><a href="country.html">Country</a></li>
+                <li><a href="Review.html">review</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="tour-single.html">Tour single Page</a></li>
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact us</a></li>
+
+            <svg class="cancel-btn" fill="#000" xmlns="http://www.w3.org/2000/svg" height="20" width="20"
+              viewBox="0 0 384 512">
+              <path
+                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z">
+              </path>
+            </svg>
+          </ul>
+        </nav>
+
+        <ul class="rightmenu">
+          <li class="dropdown hoho-btn account">
+            <a href="#" class="d-flex align-items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" width="20" height="20" fill="#fff">
+                <path
+                  d="M11.689 11.256a3.75 3.75 0 0 0-3.252-1.881H6.562a3.75 3.75 0 0 0-3.252 1.881c1.031 1.149 2.526 1.869 4.189 1.869s3.158-.723 4.189-1.869M0 7.5a7.5 7.5 0 1 1 15 0 7.5 7.5 0 1 1-15 0m7.5.469a2.109 2.109 0 1 0 0-4.219 2.109 2.109 0 1 0 0 4.219">
+                </path>
+              </svg>
+              <span class="d-lg-block d-none">Login or Create Account</span>
+            </a>
+            <ul>
+              <li><a class="dropdown-item" href="login.html">login</a></li>
+              <li><a class="dropdown-item" href="register.html">Register</a></li>
+              <li><a class="dropdown-item" href="forgot-password.html">Forgot Password</a></li>
+            </ul>
+          </li>
+          <li class="dropdown hoho-btn">
+            <a href="#">INR (₹)</a>
+            <ul>
+              <li><a href="#">CAD ($)</a></li>
+              <li><a href="#">CAD ($)</a></li>
+              <li><a href="#">CAD ($)</a></li>
+              <li><a href="#">CAD ($)</a></li>
+            </ul>
+          </li>
+          <li class="cart">
+            <a href="javascript:void(0)">
+              <img src="assets/images/cart.svg" alt="cart-img">
+              <span
+                class="position-absolute start-lg-100 text-white ratio ratio-1x text-center  translate-middle p-2 bg-theme rounded-circle">
+                10
+              </span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </header>
+  <!-- navigation  End-->
+
+    <main class="tour-single-page bg-white pb-70">
+
+        <div class="page-header bg-white">
+            <div class="container">
+                <!-- Breadcrums -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+                    </ol>
+                </nav>
+                <div class="h2 text-muted">Checkout</div>
+                <div class="d-flex align-items-center gap-5">
+                </div>
+            </div>
+        </div>
+
+        <!-- route -->
+     <div class="container">
+
+            <div class="tour-content">
+            <div id="all-route" class="tour-content-item">
+                <div class="tour-item-heading">All Routes</div>
+                <div class="route-tour-content">
+                    <div class="fs-5 tour-item-heading"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.225 12.78 10 20l5.775-7.22A7.88 7.88 0 0 0 17.5 7.865V7.5a7.5 7.5 0 0 0-15 0v.365c0 1.785.606 3.52 1.725 4.915M10 10a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" /></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h20v20H0z"/></clipPath></defs></svg> Red Route</div>
+                    
+                   <div class="route-sec">
+                    <div class="route-map">
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 1
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 2
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 3
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 4
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 5
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                    </div>
+                    <div class="route-map">
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 6
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 7
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 8
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 9
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 10
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                    </div>
+                    <div class="route-map">
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 11
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 12
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 13
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 14
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 15
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                    </div>
+                    <div class="route-map">
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 16
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 17
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 18
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 19
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 20
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                    </div>
+                    <div class="route-map">
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 21
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 22
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 23
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 24
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 25
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                    </div>
+                   </div>
+                    
+                  <div class="d-flex justify-content-center mt-4">
+                    <button class="toggleBtn hoho-btn">Show More</button>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+            <div class="tour-content">
+            <div id="all-route" class="tour-content-item">
+                <div class="route-tour-content" id="blueroute">
+                    <div class="fs-5 tour-item-heading"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.225 12.78 10 20l5.775-7.22A7.88 7.88 0 0 0 17.5 7.865V7.5a7.5 7.5 0 0 0-15 0v.365c0 1.785.606 3.52 1.725 4.915M10 10a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h20v20H0z"/></clipPath></defs></svg> Blue Route</div>
+                    
+                   <div class="route-sec">
+                    <div class="route-map">
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 1
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 2
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 3
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 4
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 5
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                    </div>
+                    <div class="route-map">
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 6
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 7
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 8
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 9
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 10
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                    </div>
+                    <div class="route-map">
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 11
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 12
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 13
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 14
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 15
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                    </div>
+                    <div class="route-map">
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 16
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 17
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 18
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 19
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 20
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                    </div>
+                    <div class="route-map">
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 21
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 22
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 23
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 24
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 25
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                    </div>
+                   </div>
+                    
+                  <div class="d-flex justify-content-center mt-4">
+                    <button class="toggleBtn hoho-btn">Show More</button>
+                  </div>
+                </div>
+            </div>
+        </div>
+       
+        <div class="tour-content">
+            <div id="all-route" class="tour-content-item">
+                <div class="route-tour-content" id="greenroute">
+                    <div class="fs-5 tour-item-heading"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.225 12.78 10 20l5.775-7.22A7.88 7.88 0 0 0 17.5 7.865V7.5a7.5 7.5 0 0 0-15 0v.365c0 1.785.606 3.52 1.725 4.915M10 10a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h20v20H0z"/></clipPath></defs></svg> Green Route</div>
+                    
+                   <div class="route-sec">
+                    <div class="route-map">
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 1
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 2
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 3
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 4
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 5
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                    </div>
+                    <div class="route-map">
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 6
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 7
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 8
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 9
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 10
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                    </div>
+                    <div class="route-map">
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 11
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 12
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 13
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 14
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 15
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                    </div>
+                    <div class="route-map">
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 16
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 17
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 18
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 19
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 20
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                    </div>
+                    <div class="route-map">
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 21
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 22
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 23
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 24
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="stops">
+                                Stop 25
+                            </div>
+                            <div class="circle-sep"></div>
+                            <div class="route-details">
+                                Belvedere Road, behind the London Eye, 08:30 – 18:00
+                            </div>
+                        </div>
+                    </div>
+                   </div>
+                    
+                  <div class="d-flex justify-content-center mt-4">
+                    <button class="toggleBtn hoho-btn">Show More</button>
+                  </div>
+                </div>
+            </div>
+        </div>
+      
+     </div>
+        <!-- route -->
+       
+        </div>
+
+    </main>
+
+
+    <!-- footer Start -->
+    <footer>
+        <div class="container">
+            <div class="row row-gap">
+                <div class="col-lg-3 col-md-6">
+                    <div class="h5">Top Bus Tours</div>
+                    <ul class="list-unstyled">
+                        <li> <a href="#">Athens Hop On Hop Off</a></li>
+                        <li> <a href="#">Madrid Hop On Hop Off</a></li>
+                        <li> <a href="#">Barcelona Hop On Hop Off</a></li>
+                        <li> <a href="#">London Hop On Hop Off</a></li>
+                        <li> <a href="#">Paris Hop On Hop Off</a></li>
+                        <li> <a href="#">Vienna Hop On Hop Off</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="h5">Our Company</div>
+                    <ul class="list-unstyled">
+                        <li> <a href="#">About Us</a></li>
+                        <li> <a href="#">Blog</a></li>
+                        <li> <a href="#">Privacy Policy</a></li>
+                        <li> <a href="#">Terms and Conditions</a></li>
+                        <li> <a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="h5">Support</div>
+                    <ul class="list-unstyled">
+                        <li> <a href="#">About Us</a></li>
+                        <li> <a href="#">Blog</a></li>
+                        <li> <a href="#">Privacy Policy</a></li>
+                        <li> <a href="#">Terms and Conditions</a></li>
+                        <li> <a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="#" class="d-flex align-items-center mb-4">
+                        <div class="img">
+                            <img src="assets/images/live.svg" alt="">
+                        </div>
+                        <div class="content ms-3">
+                            <span class="d-block text-dark">Live Support?</span>
+                            <strong class="d-block text-dark">Live Chat</strong>
+                        </div>
+
+                    </a>
+
+                    <span class="d-block">E-mail support?</span>
+                    <a href="mailto:support@sightseeingo.com" class="text-dark fw-bold">support@sightseeingo.com</a>
+                </div>
+                <div class="col-lg-3 col-md-12 text-lg-start  text-center">
+                    <a class="footer-logo" href="#">
+                        <img src="assets/images/logo.svg" alt="Hop off Hop On logo" class="img-fluid ">
+                    </a>
+                </div>
+
+                <div class="col-lg-9 col-md-12">
+                    <div class="footer-form rounded d-lg-flex justify-content-betwwen align-items-center">
+                        <span class="d-block mb-lg-0 mb-3 fw-bold fs-5">SUBSCRIBE FOR UPDATES &amp; LATEST OFFERS</span>
+                        <form action="#" class="d-flex ps-3 ms-lg-auto">
+                            <input type="text" placeholder="Your Email" class="border-0 form-control w-100">
+                            <button class="btn hoho-btn ms-auto rounded">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <div class="copywrite text-center py-3">
+        &copy; 2024 Hop On Hop Off Bus Tours. All rights reserved.
+    </div>
+    <!-- footer End -->
+
+    <button title="back to top button" id="scroll_to_top" class="">
+        <svg width="16" fill="#fff" viewBox="0 -4.5 20 20" xmlns="http://www.w3.org/2000/svg">
+            <g stroke-width="0"></g>
+            <g stroke-linecap="round" stroke-linejoin="round"></g>
+            <path
+                d="M19.708 10.634c.39-.405.39-1.06 0-1.464L11.444.607a1.95 1.95 0 0 0-2.827 0L.292 9.232c-.385.4-.39 1.048-.01 1.454a.976.976 0 0 0 1.425.01l7.617-7.893a.975.975 0 0 1 1.414 0l7.557 7.83a.974.974 0 0 0 1.413 0"
+                fill-rule="evenodd">
+            </path>
+        </svg>
+    </button>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <!-- custom Script -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+    const toggleBtns = document.querySelectorAll(".toggleBtn");
+const routeSecs = document.querySelectorAll(".route-sec");
+
+toggleBtns.forEach((toggleBtn, index) => {
+    const routeSec = routeSecs[index];
+
+    toggleBtn.addEventListener('click', function() {
+        routeSec.classList.toggle('expanded');
+
+        if (routeSec.classList.contains('expanded')) {
+            toggleBtn.textContent = 'Show Less'; 
+        } else {
+            toggleBtn.textContent = 'Show More'; 
+        }
+    });
+});
+
+    </script>
+
+</body>
+
+</html>
