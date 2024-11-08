@@ -892,8 +892,13 @@ header ul {
   }
 
   .dropdown {
-    display: block;
+    /* display: block; */
     position: relative;
+  }
+
+  .menu-toggle-btn{
+    order: 1;
+    margin-left: 14px;
   }
 
   header .leftmenu>ul>li {
