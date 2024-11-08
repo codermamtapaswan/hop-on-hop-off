@@ -11,153 +11,12 @@ document.addEventListener("DOMContentLoaded", function () {
     disableMobile: "true"
   });
 
-
-  new Swiper(".popular-tour-slider", {
-    spaceBetween: 20,
-    loop: true,
-    autoplay: true,
-    centeredSlides: true,
-    grabCursor: true,
-    navigation: {
-      nextEl: ".popular-tour-slider .swiper-button-next",
-      prevEl: ".popular-tour-slider .swiper-button-prev",
-    },
-
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-
-      },
-      480: {
-        slidesPerView: 2,
-
-      },
-      769: {
-        slidesPerView: 3,
-
-      },
-      991: {
-        slidesPerView: 4,
-      }
-    }
-  });
-
-  new Swiper(".popular-month-tour-slider", {
-    slidesPerView: 4,
-    spaceBetween: 30,
-    loop: true,
-    navigation: {
-      nextEl: ".month .swiper-button-next",
-      prevEl: ".month .swiper-button-prev",
-    },
-    pagination: {
-      el: '.month .swiper-pagination',
-      clickable: true,
-    },
-
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-
-      },
-      480: {
-        slidesPerView: 2,
-
-      },
-      769: {
-        slidesPerView: 3,
-
-      },
-      991: {
-        slidesPerView: 4,
-      }
-    }
-  });
-
-  new Swiper(".popular-handpicked-tour-slider", {
-    slidesPerView: 4,
-    spaceBetween: 30,
-    loop: true,
-    navigation: {
-      nextEl: ".hanpicked .swiper-button-next",
-      prevEl: ".hanpicked .swiper-button-prev",
-    },
-    pagination: {
-      el: '.hanpicked .swiper-pagination',
-      clickable: true,
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-
-      },
-      480: {
-        slidesPerView: 2,
-
-      },
-      769: {
-        slidesPerView: 3,
-
-      },
-      991: {
-        slidesPerView: 4,
-      }
-    }
-  });
-
-  new Swiper(".testimonials", {
-    slidesPerView: 3,
-    autoplay: true,
-    spaceBetween: 30,
-    loop: true,
-    centeredSlides: true,
-    roundLengths: true,
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-
-      },
-      480: {
-        slidesPerView: 2,
-
-      },
-      769: {
-        slidesPerView: 3,
-      }
-    }
-  });
-
-
-  // Tour Single feature  ..............
-  const tourThumbs = new Swiper(".tours-img", {
-    loop: true,
-    spaceBetween: 10,
-    slidesPerView: 4,
-    freeMode: true,
-    watchSlidesProgress: true,
-  });
-
-
-  new Swiper(".tour-feature-img", {
-    loop: true,
-    spaceBetween: 10,
-    navigation: {
-      nextEl: ".tour-feature-img .swiper-button-next",
-      prevEl: ".tour-feature-img .swiper-button-prev",
-    },
-    thumbs: {
-      swiper: tourThumbs,
-    },
-  });
-
   // Header Sticky  ============ start =====>
-
   const header = document.querySelector("header");
   const handleScroll = () => {
     window.scrollY > 0 ? header.classList.add("sticky-header") : header.classList.remove("sticky-header");
   }
   window.addEventListener("scroll", handleScroll);
-
 
   // Show mobile left canvas ============ start =====>
   const toggleslideBtn = document.querySelector(".menu-toggle-btn");
@@ -281,24 +140,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   // Scroll to top   ============ start =====>
-  function myFunction() {
-    let moreText = document.getElementById("more");
-    let btnText = document.getElementById("myBtn");
-
-    // Get the computed style of #more
-    let currentDisplay = window.getComputedStyle(moreText).display;
-
-    if (currentDisplay === "none") {
-      // Show the more content
-      moreText.style.display = "block";
-      btnText.innerHTML = "Read Less"; // Change button text to "Read Less"
-    } else {
-      // Hide the more content
-      moreText.style.display = "none";
-      btnText.innerHTML = "Read More"; // Change button text to "Read More"
-    }
-  }
-  // Scroll to top   ============ start =====>
 
   const scrollTopBtn = document.getElementById("scroll_to_top");
 
@@ -310,7 +151,6 @@ document.addEventListener("DOMContentLoaded", function () {
   scrollTopBtn.addEventListener("click", function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
-
 
 
 });  // Dcumnet Script  ============ End =====> 
@@ -332,6 +172,72 @@ summaryElements.forEach((summary, index) => {
     });
   });
 });
+
+
+// route start
+const toggleBtns = document.querySelectorAll(".toggleBtn");
+const routeSecs = document.querySelectorAll(".route-sec");
+
+toggleBtns.forEach((toggleBtn, index) => {
+    const routeSec = routeSecs[index];
+
+    toggleBtn.addEventListener('click', function() {
+        routeSec.classList.toggle('expanded');
+
+        if (routeSec.classList.contains('expanded')) {
+            toggleBtn.textContent = 'Show Less'; 
+        } else {
+            toggleBtn.textContent = 'Show More'; 
+        }
+    });
+});
+
+
+// route end
+
+
+// single page slider start
+let slideIndex = 1;
+const slides = document.getElementsByClassName("gallery-slider");
+const dots = document.getElementsByClassName("demo");
+const prevButton = document.querySelector(".swiper-button-prev");
+const nextButton = document.querySelector(".swiper-button-next");
+
+document.addEventListener("DOMContentLoaded", () => {
+    showSlides(slideIndex);
+
+    prevButton.addEventListener("click", () => plusSlides(-1));
+    nextButton.addEventListener("click", () => plusSlides(1));
+
+    Array.from(dots).forEach((dot, index) => {
+        dot.addEventListener("click", () => currentSlide(index + 1));
+    });
+});
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    if (n > slides.length) { slideIndex = 1; }
+    if (n < 1) { slideIndex = slides.length; }
+
+    Array.from(slides).forEach(slide => {
+        slide.style.display = "none";
+    });
+
+    Array.from(dots).forEach(dot => {
+        dot.classList.remove("active");
+    });
+
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].classList.add("active");
+}
+// single page slider end
 
 
 
