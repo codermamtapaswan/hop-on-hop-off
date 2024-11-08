@@ -175,23 +175,45 @@ summaryElements.forEach((summary, index) => {
 
 
 // route start
-const toggleBtns = document.querySelectorAll(".toggleBtn");
-const routeSecs = document.querySelectorAll(".route-sec");
+// const toggleBtns = document.querySelectorAll(".toggleBtn");
+// const routeSecs = document.querySelectorAll(".route-sec");
 
-toggleBtns.forEach((toggleBtn, index) => {
-    const routeSec = routeSecs[index];
+// toggleBtns.forEach((toggleBtn, index) => {
+//     const routeSec = routeSecs[index];
 
-    toggleBtn.addEventListener('click', function() {
-        routeSec.classList.toggle('expanded');
+//     toggleBtn.addEventListener('click', function() {
+//         routeSec.classList.toggle('expanded');
 
-        if (routeSec.classList.contains('expanded')) {
-            toggleBtn.textContent = 'Show Less'; 
-        } else {
-            toggleBtn.textContent = 'Show More'; 
-        }
-    });
-});
+//         if (routeSec.classList.contains('expanded')) {
+//             toggleBtn.textContent = 'Show Less'; 
+//         } else {
+//             toggleBtn.textContent = 'Show More'; 
+//         }
+//     });
+// });
 
+function toggleAccordion(expand, toggle) {
+  const toggleBtns = document.querySelectorAll(toggle);
+  const expandSecs = document.querySelectorAll(expand);
+
+  toggleBtns.forEach((toggleBtn, index) => {
+      const expandSec = expandSecs[index];
+      
+      console.log(expandSecs[index]);
+      toggleBtn.addEventListener('click', function() {
+          expandSec.classList.toggle('expanded');
+
+          if (expandSec.classList.contains('expanded')) {
+              toggleBtn.textContent = 'Show Less'; 
+          } else {
+              toggleBtn.textContent = 'Show More'; 
+          }
+      });
+  });
+}
+
+toggleAccordion(".route-sec", "#all-route .toggleBtn");
+toggleAccordion(".itinerary-list", "#Itinerary .toggleBtn");
 // route end
 
 
