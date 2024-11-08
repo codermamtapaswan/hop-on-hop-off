@@ -98,6 +98,33 @@
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+  <style>
+    .slider {
+        overflow: hidden;
+    }
+    .resource-short-img, .slider {
+        position: relative;
+    }
+
+    .slide-card, .slider-wrap {
+        display: flex;
+        position: relative;
+        width: 100%;
+    }
+
+    .slider-wrap {
+        box-sizing: content-box;
+        height: 100%;
+        transition: transform 0.5s ease;
+    }
+
+    .slide-card {
+        align-items: center;
+        flex-shrink: 0;
+        justify-content: center;
+    }
+
+</style>
 </head>
 
 <body class="bg-light">
@@ -323,269 +350,7 @@
 
   </div>
 
-  <!--  Navigation ============ End =====  -->
-  <!-- navigation  Start-->
-  <!-- <nav class=" sticky-top navbar navbar-expand-lg  bg-white shadow-sm">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="assets/images/logo.svg" alt="Hop off Hop On logo" class="img-fluid hoho-logo">
-      </a>
-      <div class="mobile-layout d-lg-none d-flex align-items-center gap-3">
-        <ul class="mb-0">
-          <li class="nav-item dropdown btn gradient-theme btn-sm p-0">
-            <a class="nav-link dropdown-toggle text-white d-flex align-items-center gap-2 text-white" href="#"
-              id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" width="20" height="20" fill="#fff">
-                <path
-                  d="M11.689 11.256a3.75 3.75 0 0 0-3.252-1.881H6.562a3.75 3.75 0 0 0-3.252 1.881c1.031 1.149 2.526 1.869 4.189 1.869s3.158-.723 4.189-1.869M0 7.5a7.5 7.5 0 1 1 15 0 7.5 7.5 0 1 1-15 0m7.5.469a2.109 2.109 0 1 0 0-4.219 2.109 2.109 0 1 0 0 4.219">
-                </path>
-              </svg>
-              <span class="d-lg-block d-none">Login or Create Account</span>
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="register.html">Register</a></li>
-              <li><a class="dropdown-item" href="login.html">login</a></li>
-              <li><a class="dropdown-item" href="forgot-password.html">Forgot Password</a></li>
-            </ul>
-          </li>
-
-          <li class="nav-item dropdown btn btn-light btn-sm p-0">
-            <a class="nav-link text-dark dropdown-toggle d-flex align-items-center gap-2" href="#"
-              id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              INR (₹)
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-
-          <li class="btn cart position-relative ps-2">
-            <a class="" href="javascript:void(0)" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-              aria-controls="offcanvasRight">
-              <img src="assets/images/cart.svg" alt="">
-              <span
-                class="position-absolute start-lg-100 text-white ratio ratio-1x text-center  translate-middle p-2 bg-theme rounded-circle">
-                10
-              </span>
-            </a>
-
-          </li>
-        </ul>
-
-        <button class="navbar-toggler p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <svg width="20" height="20" viewBox="0 -5 32 32" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M30 18a2 2 0 0 1 0 4H2a2 2 0 0 1 0-4zm0-9a2 2 0 0 1 0 4H2a2 2 0 0 1 0-4zm0-9a2 2 0 0 1 0 4H2a2 2 0 0 1 0-4z" />
-          </svg>
-        </button>
-
-      </div>
-      <div class="collapse navbar-collapse " id="navbarNavDropdown">
-        <ul class="navbar-nav ms-auto gap-lg-3  gap-1 align-items-lg-center">
-          <li class="nav-item">
-            <a class="nav-link" href="about-us.html">About us</a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Our Destinations
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="faq.html">faq</a></li>
-              <li><a class="dropdown-item" href="country.html">Country</a></li>
-              <li><a class="dropdown-item" href="Review.html">review</a></li>
-              <li><a class="dropdown-item" href="blog.html">Blog</a></li>
-              <li><a class="dropdown-item" href="tour-single.html">Tour single Page</a></li>
-            </ul>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact us</a>
-          </li>
-
-          <div class="mobile-layout  d-lg-flex d-none align-items-center gap-lg-3 gap-1">
-            <li class="nav-item dropdown btn gradient-theme btn-sm p-0">
-              <a class="nav-link dropdown-toggle text-white d-flex align-items-center gap-2 text-white" href="#"
-                id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" width="20" height="20" fill="#fff">
-                  <path
-                    d="M11.689 11.256a3.75 3.75 0 0 0-3.252-1.881H6.562a3.75 3.75 0 0 0-3.252 1.881c1.031 1.149 2.526 1.869 4.189 1.869s3.158-.723 4.189-1.869M0 7.5a7.5 7.5 0 1 1 15 0 7.5 7.5 0 1 1-15 0m7.5.469a2.109 2.109 0 1 0 0-4.219 2.109 2.109 0 1 0 0 4.219">
-                  </path>
-                </svg>
-                <span class="d-lg-block d-none">Login or Create Account</span>
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="login.html">login</a></li>
-                <li><a class="dropdown-item" href="register.html">Register</a></li>
-                <li><a class="dropdown-item" href="forgot-password.html">Forgot Password</a></li>
-              </ul>
-            </li>
-
-            <li class="nav-item dropdown btn btn-light btn-sm p-0">
-              <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="#" id="navbarDropdownMenuLink"
-                role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                INR (₹)
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-
-            <li class="nav-item cart position-relative ps-2">
-              <a class="nav-link" href="javascript:void(0)" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-                aria-controls="offcanvasRight">
-                <img src="assets/images/cart.svg" alt="">
-                <span
-                  class="position-absolute start-lg-100 text-white ratio ratio-1x text-center  translate-middle p-2 bg-theme rounded-circle">
-                  10
-                </span>
-              </a>
-
-            </li>
-          </div>
-
-        </ul>
-      </div>
-
-
-    </div>
-  </nav> -->
-
-  <!-- <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-    <div class="offcanvas-header">
-      <div id="offcanvasRightLabel" class="h6">Cart (2 items)</div>
-      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div> -->
-
-  <!-- <div class="offcanvas-body pt-0">
-      <div class="cart-item-list">
-        <div class="row store-item bottom-line">
-          <div class="col-12 mb-4 gap-3 d-flex align-items-center justify-content-between">
-            <a href="#"><img class="image-store col-5"
-                src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/e2/fe/13.jpg"
-                alt="Blue Hoodie"></a>
-            <a href="#" class="h6 mb-0 col-7">TooTBus: Paris Hop-On, Hop-Off Bus Tour Ca ital of Games</a>
-          </div>
-          <div class="col-4 list-store mb-2">
-            <p>Adult (+ 16)</p>
-            <div class="btn-quantity-container d-flex align-items-center justify-content-center">
-              <button type="button" class="btn-quantity btn btn-default">−</button>
-              <span class="p-quantity">0</span>
-              <button type="button" class="btn-quantity btn btn-default">+</button>
-            </div>
-          </div>
-          <div class="col-4 list-store mb-2">
-            <p>Child (5 -15)</p>
-            <div class="btn-quantity-container d-flex align-items-center justify-content-center">
-              <button type="button" class="btn-quantity btn btn-default">−</button>
-              <span class="p-quantity">0</span>
-              <button type="button" class="btn-quantity btn btn-default">+</button>
-            </div>
-          </div>
-          <div class="col-4 list-store mb-2">
-            <p>Infant (0-4)</p>
-            <div class="btn-quantity-container d-flex align-items-center justify-content-center">
-              <button type="button" class="btn-quantity btn btn-default">−</button>
-              <span class="p-quantity">0</span>
-              <button type="button" class="btn-quantity btn btn-default">+</button>
-            </div>
-          </div>
-          <div class="col-12 mt-2 list-store d-flex align-items-center justify-content-between">
-            <button type="button" class="btn btn-sm remove">Remove Item </button>
-            <div class="fs-6 fw-bold">₹45,646</div>
-          </div>
-        </div>
-        <div class="row mt-2 store-item bottom-line pb-3">
-          <div class="col-12 mb-4 gap-3 d-flex align-items-center justify-content-between">
-            <a href="#"><img class="image-store col-5"
-                src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/e2/fe/13.jpg"
-                alt="Blue Hoodie"></a>
-            <a href="#" class="h6 mb-0 col-7">TooTBus: Paris Hop-On, Hop-Off Bus Tour Ca ital of Games</a>
-          </div>
-          <div class="col-4 list-store mb-2">
-            <p>Adult (+ 16)</p>
-            <div class="btn-quantity-container d-flex align-items-center justify-content-center">
-              <button type="button" class="btn-quantity btn btn-default">−</button>
-              <span class="p-quantity">0</span>
-              <button type="button" class="btn-quantity btn btn-default">+</button>
-            </div>
-          </div>
-          <div class="col-4 list-store mb-2">
-            <p>Child (5 -15)</p>
-            <div class="btn-quantity-container d-flex align-items-center justify-content-center">
-              <button type="button" class="btn-quantity btn btn-default">−</button>
-              <span class="p-quantity">0</span>
-              <button type="button" class="btn-quantity btn btn-default">+</button>
-            </div>
-          </div>
-          <div class="col-4 list-store mb-2">
-            <p>Infant (0-4)</p>
-            <div class="btn-quantity-container d-flex align-items-center justify-content-center">
-              <button type="button" class="btn-quantity btn btn-default">−</button>
-              <span class="p-quantity">0</span>
-              <button type="button" class="btn-quantity btn btn-default">+</button>
-            </div>
-          </div>
-          <div class="col-12 mt-2 list-store d-flex align-items-center justify-content-between">
-            <button type="button" class="btn btn-sm remove">Remove Item </button>
-            <div class="fs-6 fw-bold">₹45,646</div>
-          </div>
-        </div>
-        <div class="row mt-2 store-item bottom-line pb-3">
-          <div class="col-12 mb-4 gap-3 d-flex align-items-center justify-content-between">
-            <a href="#"><img class="image-store col-5"
-                src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/e2/fe/13.jpg"
-                alt="Blue Hoodie"></a>
-            <a href="#" class="h6 mb-0 col-7">TooTBus: Paris Hop-On, Hop-Off Bus Tour Ca ital of Games</a>
-          </div>
-          <div class="col-4 list-store mb-2">
-            <p>Adult (+ 16)</p>
-            <div class="btn-quantity-container d-flex align-items-center justify-content-center">
-              <button type="button" class="btn-quantity btn btn-default">−</button>
-              <span class="p-quantity">0</span>
-              <button type="button" class="btn-quantity btn btn-default">+</button>
-            </div>
-          </div>
-          <div class="col-4 list-store mb-2">
-            <p>Child (5 -15)</p>
-            <div class="btn-quantity-container d-flex align-items-center justify-content-center">
-              <button type="button" class="btn-quantity btn btn-default">−</button>
-              <span class="p-quantity">0</span>
-              <button type="button" class="btn-quantity btn btn-default">+</button>
-            </div>
-          </div>
-          <div class="col-4 list-store mb-2">
-            <p>Infant (0-4)</p>
-            <div class="btn-quantity-container d-flex align-items-center justify-content-center">
-              <button type="button" class="btn-quantity btn btn-default">−</button>
-              <span class="p-quantity">0</span>
-              <button type="button" class="btn-quantity btn btn-default">+</button>
-            </div>
-          </div>
-          <div class="col-12 mt-2 list-store d-flex align-items-center justify-content-between">
-            <button type="button" class="btn btn-sm remove">Remove Item </button>
-            <div class="fs-6 fw-bold">₹45,646</div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-  <!-- <div class="offcanvas-header list-store d-flex align-items-center justify-content-between shadow">
-      <a href="#" class="hoho-btn">Checkout</a>
-      <div class="fs-5 fw-bold">₹45,646</div>
-    </div>
-
-  </div> -->
-  <!-- navigation  End-->
-
   <main class="home-page pb-70">
-
     <!-- Hero Section Start -->
     <div class="hoho-hero d-flex align-items-center justify-content-center">
       <div class="container">
@@ -634,11 +399,11 @@
 
 
     <!--  Popular Hop On Hop Off Bus Tours --- Start-->
-    <!-- <div class="container-fluid hoho-con-popular-tour px-lg-0">
+    <div class="container-fluid hoho-con-popular-tour px-lg-0">
       <div class="separator text-center">
         Popular Hop On Hop Off Bus Tours
       </div>
-      <div class="swiper popular-tour-slider">
+      <!-- <div class="swiper popular-tour-slider">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="hoho-card gap-3">
@@ -812,19 +577,19 @@
 
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
-      </div>
+      </div> -->
 
-    </div> -->
+    </div>
     <!--  Popular Hop On Hop Off Bus Tours --- End-->
 
 
 
     <!-- Popular this month --Start-->
-    <!-- <div class="container mt-70">
+    <div class="container mt-70">
       <div class="hoho-con-handpicked month bg-white shadow-sm  position-relative">
         <div class="separator pt-0 text-lg-start text-center">Popular this month</div>
 
-        <div class="swiper popular-month-tour-slider">
+        <!-- <div class="swiper popular-month-tour-slider">
           <div class="swiper-wrapper pb-lg-0 pb-md-0 pb-3">
             <div class="swiper-slide">
               <div class="hoho-overlay-card">
@@ -962,10 +727,215 @@
         </div>
         <div class="swiper-pagination d-lg-none d-block"></div>
         <div class="swiper-button-next d-lg-flex d-none"></div>
-        <div class="swiper-button-prev d-lg-flex d-none"></div>
+        <div class="swiper-button-prev d-lg-flex d-none"></div> -->
+        <div class="slider">
+          <div class="slider-wrap" style="transform: translateX(0px);">
+            <div class="slide-card">
+              <div class="hoho-overlay-card rounded">
+                <div class="img-placeholder">
+                  <a href="#">
+                    <img src="https://www.triphippies.com/wp-content/uploads/2024/01/trip-the-smokies-with-kids.webp" alt="" class="img-fluid ">
+                  </a>
+                </div>
+                <div class="hoho-card-content gap-2">
+                  <a href="#" class="hoho-cat">Top 1</a>
+                  <a href="#" class="hoho-title">TooTBus: Paris Hop-On, Hop-Off Bus Tour Ca ital of Games</a>
+                  <div class="hoho-meta flex-column align-items-start">
+                    <span class="d-block">Rating: 4.7/5</span>
+                    <strong class="d-block">₹ 3065.35p.p.</strong>
+                    <a href="#" class="hoho-btn d-flex align-items-center gap-2 mt-3">
+                      Book Now
+                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M.901 2.135v-.817c0-.347.28-.627.625-.625L8.683.692c.346 0 .625.28.624.624v7.159a.623.623 0 0 1-.625.625h-.817a.625.625 0 0 1-.625-.639l.105-4.333L2.053 9.42a.625.625 0 0 1-.884 0L.58 8.832a.625.625 0 0 1 0-.883l5.292-5.293-4.333.105A.62.62 0 0 1 .9 2.137" fill="#fff"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide-card">
+              <div class="hoho-overlay-card rounded">
+                <div class="img-placeholder">
+                  <a href="#">
+                    <img src="https://www.triphippies.com/wp-content/uploads/2024/01/trip-the-smokies-with-kids.webp" alt="" class="img-fluid ">
+                  </a>
+                </div>
+                <div class="hoho-card-content gap-2">
+                  <a href="#" class="hoho-cat">Top 1</a>
+                  <a href="#" class="hoho-title">TooTBus: Paris Hop-On, Hop-Off Bus Tour Ca ital of Games</a>
+                  <div class="hoho-meta flex-column align-items-start">
+                    <span class="d-block">Rating: 4.7/5</span>
+                    <strong class="d-block">₹ 3065.35p.p.</strong>
+                    <a href="#" class="hoho-btn d-flex align-items-center gap-2 mt-3">
+                      Book Now
+                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M.901 2.135v-.817c0-.347.28-.627.625-.625L8.683.692c.346 0 .625.28.624.624v7.159a.623.623 0 0 1-.625.625h-.817a.625.625 0 0 1-.625-.639l.105-4.333L2.053 9.42a.625.625 0 0 1-.884 0L.58 8.832a.625.625 0 0 1 0-.883l5.292-5.293-4.333.105A.62.62 0 0 1 .9 2.137" fill="#fff"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide-card">
+              <div class="hoho-overlay-card rounded">
+                <div class="img-placeholder">
+                  <a href="#">
+                    <img src="https://www.triphippies.com/wp-content/uploads/2024/01/trip-the-smokies-with-kids.webp" alt="" class="img-fluid ">
+                  </a>
+                </div>
+                <div class="hoho-card-content gap-2">
+                  <a href="#" class="hoho-cat">Top 1</a>
+                  <a href="#" class="hoho-title">TooTBus: Paris Hop-On, Hop-Off Bus Tour Ca ital of Games</a>
+                  <div class="hoho-meta flex-column align-items-start">
+                    <span class="d-block">Rating: 4.7/5</span>
+                    <strong class="d-block">₹ 3065.35p.p.</strong>
+                    <a href="#" class="hoho-btn d-flex align-items-center gap-2 mt-3">
+                      Book Now
+                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M.901 2.135v-.817c0-.347.28-.627.625-.625L8.683.692c.346 0 .625.28.624.624v7.159a.623.623 0 0 1-.625.625h-.817a.625.625 0 0 1-.625-.639l.105-4.333L2.053 9.42a.625.625 0 0 1-.884 0L.58 8.832a.625.625 0 0 1 0-.883l5.292-5.293-4.333.105A.62.62 0 0 1 .9 2.137" fill="#fff"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide-card">
+              <div class="hoho-overlay-card rounded">
+                <div class="img-placeholder">
+                  <a href="#">
+                    <img src="https://www.triphippies.com/wp-content/uploads/2024/01/trip-the-smokies-with-kids.webp" alt="" class="img-fluid ">
+                  </a>
+                </div>
+                <div class="hoho-card-content gap-2">
+                  <a href="#" class="hoho-cat">Top 1</a>
+                  <a href="#" class="hoho-title">TooTBus: Paris Hop-On, Hop-Off Bus Tour Ca ital of Games</a>
+                  <div class="hoho-meta flex-column align-items-start">
+                    <span class="d-block">Rating: 4.7/5</span>
+                    <strong class="d-block">₹ 3065.35p.p.</strong>
+                    <a href="#" class="hoho-btn d-flex align-items-center gap-2 mt-3">
+                      Book Now
+                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M.901 2.135v-.817c0-.347.28-.627.625-.625L8.683.692c.346 0 .625.28.624.624v7.159a.623.623 0 0 1-.625.625h-.817a.625.625 0 0 1-.625-.639l.105-4.333L2.053 9.42a.625.625 0 0 1-.884 0L.58 8.832a.625.625 0 0 1 0-.883l5.292-5.293-4.333.105A.62.62 0 0 1 .9 2.137" fill="#fff"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide-card">
+              <div class="hoho-overlay-card rounded">
+                <div class="img-placeholder">
+                  <a href="#">
+                    <img src="https://www.triphippies.com/wp-content/uploads/2024/01/trip-the-smokies-with-kids.webp" alt="" class="img-fluid ">
+                  </a>
+                </div>
+                <div class="hoho-card-content gap-2">
+                  <a href="#" class="hoho-cat">Top 1</a>
+                  <a href="#" class="hoho-title">TooTBus: Paris Hop-On, Hop-Off Bus Tour Ca ital of Games</a>
+                  <div class="hoho-meta flex-column align-items-start">
+                    <span class="d-block">Rating: 4.7/5</span>
+                    <strong class="d-block">₹ 3065.35p.p.</strong>
+                    <a href="#" class="hoho-btn d-flex align-items-center gap-2 mt-3">
+                      Book Now
+                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M.901 2.135v-.817c0-.347.28-.627.625-.625L8.683.692c.346 0 .625.28.624.624v7.159a.623.623 0 0 1-.625.625h-.817a.625.625 0 0 1-.625-.639l.105-4.333L2.053 9.42a.625.625 0 0 1-.884 0L.58 8.832a.625.625 0 0 1 0-.883l5.292-5.293-4.333.105A.62.62 0 0 1 .9 2.137" fill="#fff"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide-card">
+              <div class="hoho-overlay-card rounded">
+                <div class="img-placeholder">
+                  <a href="#">
+                    <img src="https://www.triphippies.com/wp-content/uploads/2024/01/trip-the-smokies-with-kids.webp" alt="" class="img-fluid ">
+                  </a>
+                </div>
+                <div class="hoho-card-content gap-2">
+                  <a href="#" class="hoho-cat">Top 1</a>
+                  <a href="#" class="hoho-title">TooTBus: Paris Hop-On, Hop-Off Bus Tour Ca ital of Games</a>
+                  <div class="hoho-meta flex-column align-items-start">
+                    <span class="d-block">Rating: 4.7/5</span>
+                    <strong class="d-block">₹ 3065.35p.p.</strong>
+                    <a href="#" class="hoho-btn d-flex align-items-center gap-2 mt-3">
+                      Book Now
+                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M.901 2.135v-.817c0-.347.28-.627.625-.625L8.683.692c.346 0 .625.28.624.624v7.159a.623.623 0 0 1-.625.625h-.817a.625.625 0 0 1-.625-.639l.105-4.333L2.053 9.42a.625.625 0 0 1-.884 0L.58 8.832a.625.625 0 0 1 0-.883l5.292-5.293-4.333.105A.62.62 0 0 1 .9 2.137" fill="#fff"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide-card">
+              <div class="hoho-overlay-card rounded">
+                <div class="img-placeholder">
+                  <a href="#">
+                    <img src="https://www.triphippies.com/wp-content/uploads/2024/01/trip-the-smokies-with-kids.webp" alt="" class="img-fluid ">
+                  </a>
+                </div>
+                <div class="hoho-card-content gap-2">
+                  <a href="#" class="hoho-cat">Top 1</a>
+                  <a href="#" class="hoho-title">TooTBus: Paris Hop-On, Hop-Off Bus Tour Ca ital of Games</a>
+                  <div class="hoho-meta flex-column align-items-start">
+                    <span class="d-block">Rating: 4.7/5</span>
+                    <strong class="d-block">₹ 3065.35p.p.</strong>
+                    <a href="#" class="hoho-btn d-flex align-items-center gap-2 mt-3">
+                      Book Now
+                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M.901 2.135v-.817c0-.347.28-.627.625-.625L8.683.692c.346 0 .625.28.624.624v7.159a.623.623 0 0 1-.625.625h-.817a.625.625 0 0 1-.625-.639l.105-4.333L2.053 9.42a.625.625 0 0 1-.884 0L.58 8.832a.625.625 0 0 1 0-.883l5.292-5.293-4.333.105A.62.62 0 0 1 .9 2.137" fill="#fff"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide-card">
+              <div class="hoho-overlay-card rounded">
+                <div class="img-placeholder">
+                  <a href="#">
+                    <img src="https://www.triphippies.com/wp-content/uploads/2024/01/trip-the-smokies-with-kids.webp" alt="" class="img-fluid ">
+                  </a>
+                </div>
+                <div class="hoho-card-content gap-2">
+                  <a href="#" class="hoho-cat">Top 1</a>
+                  <a href="#" class="hoho-title">TooTBus: Paris Hop-On, Hop-Off Bus Tour Ca ital of Games</a>
+                  <div class="hoho-meta flex-column align-items-start">
+                    <span class="d-block">Rating: 4.7/5</span>
+                    <strong class="d-block">₹ 3065.35p.p.</strong>
+                    <a href="#" class="hoho-btn d-flex align-items-center gap-2 mt-3">
+                      Book Now
+                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M.901 2.135v-.817c0-.347.28-.627.625-.625L8.683.692c.346 0 .625.28.624.624v7.159a.623.623 0 0 1-.625.625h-.817a.625.625 0 0 1-.625-.639l.105-4.333L2.053 9.42a.625.625 0 0 1-.884 0L.58 8.832a.625.625 0 0 1 0-.883l5.292-5.293-4.333.105A.62.62 0 0 1 .9 2.137" fill="#fff"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="button-container">
+            <button class="button-prev" id="previous-arrow" disabled="">
+              <div>
+                <svg width="21" height="21" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+                  <path d="m7.027 10.038 5.313-5.312a.934.934 0 0 1 1.324 0l.883.882a.934.934 0 0 1 0 1.325l-3.762 3.769 3.765 3.766a.934.934 0 0 1 0 1.324l-.882.887a.934.934 0 0 1-1.325 0l-5.312-5.313a.935.935 0 0 1-.004-1.328"></path>
+                  <path d="m7.027 10.038 5.313-5.312a.934.934 0 0 1 1.324 0l.883.882a.934.934 0 0 1 0 1.325l-3.762 3.769 3.765 3.766a.934.934 0 0 1 0 1.324l-.882.887a.934.934 0 0 1-1.325 0l-5.312-5.313a.935.935 0 0 1-.004-1.328" fill="#fff"></path>
+                </svg>
+              </div>
+            </button>
+            <button class="button-next" id="next-arrow">
+              <div>
+                <svg width="21" height="21" fill="none" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+                  <path d="m14.101 11.345-5.312 5.313a.934.934 0 0 1-1.325 0l-.883-.883a.934.934 0 0 1 0-1.325l3.766-3.765-3.766-3.766a.934.934 0 0 1 0-1.324l.88-.89a.934.934 0 0 1 1.324 0l5.312 5.312a.935.935 0 0 1 .004 1.328" fill="#fff"></path>
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
 
       </div>
-    </div> -->
+    </div>
     <!-- Popular this month-- End-->
 
 
@@ -1563,7 +1533,6 @@
     </div>
     <!-- About Us End-->
 
-
     <!-- Latest Blog Start-->
     <div class="container hoho-con">
       <div class="separator text-center">Latest Blog</div>
@@ -1652,7 +1621,6 @@
       </div>
     </div>
     <!-- Latest Blog End-->
-
 
     <!--Why book with us? Start-->
     <div class="container hoho-con">
@@ -1790,6 +1758,156 @@
   <!-- custom Script -->
   <script src="assets/js/main.js"></script>
 
+
+  <script>
+    // slider
+    function accountSlider(sliders) {
+      sliders.forEach(config => {
+        let { className, slidesPerView, spaceBetween } = config;
+        const defaultSlidesPerView = slidesPerView || 2; // Default slidesPerView if not provided
+        const defaultSpaceBetween = spaceBetween || 20; // Default spaceBetween if not provided
+    
+        const sliderParent = document.querySelector('.' + className);
+        if (!sliderParent) {
+          console.warn(`Slider with class ${className} does not exist on this page.`);
+          return; // Skip this slider if it doesn't exist
+        }
+    
+        const sliderWrap = sliderParent.querySelector('.slider-wrap');
+        const slideCards = sliderWrap.querySelectorAll('.slide-card');
+        let currentIndex = 0;
+        let slideWidth;
+        let isDragging = false; // To track dragging state
+        let startPosition = 0; // To store the position where dragging starts
+        let currentTranslate = 0; // Current translation value of the slider
+        let prevTranslate = 0; // Previous translate value (for calculating distance)
+    
+        // Helper function to calculate the slide width and apply styles
+        function updateSlider() {
+          // Update slidesPerView based on window width (responsive design)
+          if (window.innerWidth >= 768 && window.innerWidth < 1024) {
+            slidesPerView = 2; // Display two slides on tablets
+          } else if (window.innerWidth <= 600) {
+            slidesPerView = 1; // Display one slide on mobile
+          }
+    
+          // Calculate the width of the container
+          const containerWidth = sliderWrap.offsetWidth;
+    
+          // Calculate the width of each slide based on the formula
+          slideWidth = (containerWidth / slidesPerView) - ((slidesPerView - 1) * defaultSpaceBetween / slidesPerView);
+    
+          // Apply width and marginRight to each slide card
+          slideCards.forEach(card => {
+            card.style.width = slideWidth + 'px';
+            card.style.marginRight = defaultSpaceBetween + 'px';
+          });
+    
+          // Update button states (next/previous)
+          updateButtonState();
+        }
+    
+        // Function to move to the next slide
+        function goToNextSlide() {
+          currentIndex = (currentIndex + slidesPerView) % slideCards.length;
+          updateSliderPosition();
+        }
+    
+        // Function to move to the previous slide
+        function goToPrevSlide() {
+          currentIndex = (currentIndex - slidesPerView + slideCards.length) % slideCards.length;
+          updateSliderPosition();
+        }
+    
+        // Function to update the position of the slider based on current index
+        function updateSliderPosition() {
+          const translateValue = -currentIndex * (slideWidth + defaultSpaceBetween);
+          sliderWrap.style.transform = `translateX(${translateValue}px)`;
+          updateButtonState();
+        }
+    
+        // Function to update the state of navigation buttons (enable/disable)
+        function updateButtonState() {
+          sliderParent.querySelector('#previous-arrow').disabled = currentIndex === 0;
+          sliderParent.querySelector('#next-arrow').disabled = currentIndex + slidesPerView >= slideCards.length;
+        }
+    
+        // Add swipe-like behavior for dragging
+        function handleMouseDown(event) {
+          isDragging = true;
+          startPosition = event.clientX || event.touches[0].clientX; // Support for both mouse and touch
+          sliderWrap.style.transition = "none"; // Disable transition during dragging
+        }
+    
+        function handleMouseMove(event) {
+          if (!isDragging) return;
+          const movePosition = event.clientX || event.touches[0].clientX;
+          const distance = movePosition - startPosition;
+          currentTranslate = prevTranslate + distance;
+          sliderWrap.style.transform = `translateX(${currentTranslate}px)`; // Move the slider
+        }
+    
+        function handleMouseUp() {
+          if (!isDragging) return;
+          isDragging = false;
+          sliderWrap.style.transition = "transform 0.3s ease"; // Re-enable smooth transition after dragging
+          const movedBy = currentTranslate - prevTranslate;
+          if (movedBy > slideWidth / 2) {
+            currentIndex -= 1; // Move to previous slide
+          } else if (movedBy < -slideWidth / 2) {
+            currentIndex += 1; // Move to next slide
+          }
+          prevTranslate = currentTranslate; // Store the new translate position
+          updateSliderPosition();
+        }
+    
+        // Add event listeners for dragging
+        sliderWrap.addEventListener('mousedown', handleMouseDown);
+        sliderWrap.addEventListener('mousemove', handleMouseMove);
+        sliderWrap.addEventListener('mouseup', handleMouseUp);
+        sliderWrap.addEventListener('mouseleave', handleMouseUp); // Ensure dragging ends if mouse leaves
+        sliderWrap.addEventListener('touchstart', handleMouseDown);
+        sliderWrap.addEventListener('touchmove', handleMouseMove);
+        sliderWrap.addEventListener('touchend', handleMouseUp);
+    
+        // Add autoplay functionality (manually)
+        let autoplayInterval;
+        function startAutoplay() {
+          autoplayInterval = setInterval(goToNextSlide, 3000); // Move every 3 seconds
+        }
+    
+        function stopAutoplay() {
+          clearInterval(autoplayInterval); // Stop autoplay when manual interaction happens
+        }
+    
+        // Start autoplay when user doesn't interact
+        startAutoplay();
+    
+        // Reset autoplay on user interaction
+        sliderWrap.addEventListener('mousedown', stopAutoplay);
+        sliderWrap.addEventListener('touchstart', stopAutoplay);
+    
+        // Initialize the slider
+        updateSlider();
+    
+        // Recalculate slide size when the window is resized
+        window.addEventListener('resize', updateSlider);
+    
+        // Attach click events to navigation buttons
+        sliderParent.querySelector('#next-arrow').addEventListener('click', goToNextSlide);
+        sliderParent.querySelector('#previous-arrow').addEventListener('click', goToPrevSlide);
+      });
+    }
+    
+    // Usage of the accountSlider function
+    accountSlider([
+      { className: 'slider', slidesPerView: 4, spaceBetween: 30 },
+      { className: 'slider-name-second', slidesPerView: 2, spaceBetween: 30 },
+      { className: 'slider-name-third', slidesPerView: 2, spaceBetween: 30 }
+    ]);
+    
+    
+          </script>
 
 </body>
 

@@ -1840,9 +1840,14 @@ header ul {
 }
 
 /* Itinerary */
-
 #Itinerary .itinerary-list {
   border-left: 1px dotted var(--pc);
+  height: 256px;
+  overflow-y: clip;
+}
+
+#Itinerary .itinerary-list.expanded{
+  height: 100%;
 }
 
 #Itinerary :is(.step, .tour-content-body) {
@@ -1871,7 +1876,7 @@ header ul {
   left: -8px;
   width: 15px;
   height: 15px;
-  background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='7.5' cy='7.5' r='7.5' fill='%23D32C4A'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='7.5' cy='7.5' r='7.5' fill='%23DA0F10'/%3E%3C/svg%3E");
 }
 
 #Itinerary .step{
