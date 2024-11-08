@@ -192,7 +192,6 @@ toggleBtns.forEach((toggleBtn, index) => {
     });
 });
 
-
 // route end
 
 
