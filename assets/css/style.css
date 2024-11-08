@@ -1008,6 +1008,7 @@ header ul {
   font-size: 14px;
   font-weight: 500;
   line-height: 0.9;
+  white-space: nowrap;
 }
 
 .store-item .list-store .p-note {
@@ -1236,7 +1237,7 @@ header ul {
 }
 
 .hoho-con-handpicked .hoho-overlay-card .hoho-card-content {
-  bottom: -105px;
+  bottom: -95px;
 }
 
 .hoho-con-handpicked .hoho-overlay-card:hover .hoho-card-content {
@@ -1384,6 +1385,10 @@ header ul {
 
   .month .swiper-button-prev {
     left: calc(100% - 95px);
+  }
+
+  .offcanvas{
+    width: 360px;
   }
 }
 

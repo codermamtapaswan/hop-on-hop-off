@@ -124,6 +124,52 @@
         justify-content: center;
     }
 
+    .overlay-slider{
+      position: relative;
+    padding-top: 60px;
+    margin-top: -71px;
+    }
+
+    .overlay-slider :is(.button-prev, .button-next) {
+      top: 40px !important;
+    border: 1px solid #ccc;
+    height: 26px;
+    width: 55px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    background-color: red;
+}
+
+.overlay-slider .button-container{
+  top: 2px !important;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 28px;
+    justify-content: center;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+}
+
+@media (max-width:600px){
+  .overlay-slider{
+    padding-top: 0px; 
+    padding-bottom: 10px;
+   margin-top: 0;
+  }
+  .overlay-slider .button-container{
+    position: static;
+  }
+  .slider-wrap{
+    margin-bottom: 10px;
+  }
+}
+
 </style>
 </head>
 
@@ -728,7 +774,7 @@
         <div class="swiper-pagination d-lg-none d-block"></div>
         <div class="swiper-button-next d-lg-flex d-none"></div>
         <div class="swiper-button-prev d-lg-flex d-none"></div> -->
-        <div class="slider">
+        <div class="slider overlay-slider">
           <div class="slider-wrap" style="transform: translateX(0px);">
             <div class="slide-card">
               <div class="hoho-overlay-card rounded">
@@ -943,7 +989,7 @@
     <!--Top Hop On Hop Off Cities -- Start-->
     <div class="container hoho-con">
       <div class="separator text-center">Top Hop On Hop Off Cities</div>
-      <div class="row row-cols-2 row-cols-lg-5 g-3 g-lg-4">
+      <div class="row row-cols-2 row-cols-lg-5 g-3 g-lg-4 row-gap">
         <div class="col">
           <div class="cities-box p-4 bg-white shadow-sm  text-center position-relative">
             <div class="img-box rounded-circle">
@@ -1760,152 +1806,150 @@
 
 
   <script>
-    // slider
-    function accountSlider(sliders) {
-      sliders.forEach(config => {
-        let { className, slidesPerView, spaceBetween } = config;
-        const defaultSlidesPerView = slidesPerView || 2; // Default slidesPerView if not provided
-        const defaultSpaceBetween = spaceBetween || 20; // Default spaceBetween if not provided
-    
-        const sliderParent = document.querySelector('.' + className);
-        if (!sliderParent) {
-          console.warn(`Slider with class ${className} does not exist on this page.`);
-          return; // Skip this slider if it doesn't exist
-        }
-    
-        const sliderWrap = sliderParent.querySelector('.slider-wrap');
-        const slideCards = sliderWrap.querySelectorAll('.slide-card');
-        let currentIndex = 0;
-        let slideWidth;
-        let isDragging = false; // To track dragging state
-        let startPosition = 0; // To store the position where dragging starts
-        let currentTranslate = 0; // Current translation value of the slider
-        let prevTranslate = 0; // Previous translate value (for calculating distance)
-    
-        // Helper function to calculate the slide width and apply styles
-        function updateSlider() {
-          // Update slidesPerView based on window width (responsive design)
-          if (window.innerWidth >= 768 && window.innerWidth < 1024) {
-            slidesPerView = 2; // Display two slides on tablets
-          } else if (window.innerWidth <= 600) {
-            slidesPerView = 1; // Display one slide on mobile
-          }
-    
-          // Calculate the width of the container
-          const containerWidth = sliderWrap.offsetWidth;
-    
-          // Calculate the width of each slide based on the formula
-          slideWidth = (containerWidth / slidesPerView) - ((slidesPerView - 1) * defaultSpaceBetween / slidesPerView);
-    
-          // Apply width and marginRight to each slide card
-          slideCards.forEach(card => {
-            card.style.width = slideWidth + 'px';
-            card.style.marginRight = defaultSpaceBetween + 'px';
-          });
-    
-          // Update button states (next/previous)
-          updateButtonState();
-        }
-    
-        // Function to move to the next slide
-        function goToNextSlide() {
-          currentIndex = (currentIndex + slidesPerView) % slideCards.length;
-          updateSliderPosition();
-        }
-    
-        // Function to move to the previous slide
-        function goToPrevSlide() {
-          currentIndex = (currentIndex - slidesPerView + slideCards.length) % slideCards.length;
-          updateSliderPosition();
-        }
-    
-        // Function to update the position of the slider based on current index
-        function updateSliderPosition() {
-          const translateValue = -currentIndex * (slideWidth + defaultSpaceBetween);
-          sliderWrap.style.transform = `translateX(${translateValue}px)`;
-          updateButtonState();
-        }
-    
-        // Function to update the state of navigation buttons (enable/disable)
-        function updateButtonState() {
-          sliderParent.querySelector('#previous-arrow').disabled = currentIndex === 0;
-          sliderParent.querySelector('#next-arrow').disabled = currentIndex + slidesPerView >= slideCards.length;
-        }
-    
-        // Add swipe-like behavior for dragging
-        function handleMouseDown(event) {
-          isDragging = true;
-          startPosition = event.clientX || event.touches[0].clientX; // Support for both mouse and touch
-          sliderWrap.style.transition = "none"; // Disable transition during dragging
-        }
-    
-        function handleMouseMove(event) {
-          if (!isDragging) return;
-          const movePosition = event.clientX || event.touches[0].clientX;
-          const distance = movePosition - startPosition;
-          currentTranslate = prevTranslate + distance;
-          sliderWrap.style.transform = `translateX(${currentTranslate}px)`; // Move the slider
-        }
-    
-        function handleMouseUp() {
-          if (!isDragging) return;
-          isDragging = false;
-          sliderWrap.style.transition = "transform 0.3s ease"; // Re-enable smooth transition after dragging
-          const movedBy = currentTranslate - prevTranslate;
-          if (movedBy > slideWidth / 2) {
-            currentIndex -= 1; // Move to previous slide
-          } else if (movedBy < -slideWidth / 2) {
-            currentIndex += 1; // Move to next slide
-          }
-          prevTranslate = currentTranslate; // Store the new translate position
-          updateSliderPosition();
-        }
-    
-        // Add event listeners for dragging
-        sliderWrap.addEventListener('mousedown', handleMouseDown);
-        sliderWrap.addEventListener('mousemove', handleMouseMove);
-        sliderWrap.addEventListener('mouseup', handleMouseUp);
-        sliderWrap.addEventListener('mouseleave', handleMouseUp); // Ensure dragging ends if mouse leaves
-        sliderWrap.addEventListener('touchstart', handleMouseDown);
-        sliderWrap.addEventListener('touchmove', handleMouseMove);
-        sliderWrap.addEventListener('touchend', handleMouseUp);
-    
-        // Add autoplay functionality (manually)
-        let autoplayInterval;
-        function startAutoplay() {
-          autoplayInterval = setInterval(goToNextSlide, 3000); // Move every 3 seconds
-        }
-    
-        function stopAutoplay() {
-          clearInterval(autoplayInterval); // Stop autoplay when manual interaction happens
-        }
-    
-        // Start autoplay when user doesn't interact
-        startAutoplay();
-    
-        // Reset autoplay on user interaction
-        sliderWrap.addEventListener('mousedown', stopAutoplay);
-        sliderWrap.addEventListener('touchstart', stopAutoplay);
-    
-        // Initialize the slider
-        updateSlider();
-    
-        // Recalculate slide size when the window is resized
-        window.addEventListener('resize', updateSlider);
-    
-        // Attach click events to navigation buttons
-        sliderParent.querySelector('#next-arrow').addEventListener('click', goToNextSlide);
-        sliderParent.querySelector('#previous-arrow').addEventListener('click', goToPrevSlide);
-      });
+ function accountSlider(sliders) {
+  sliders.forEach(config => {
+    let { className, slidesPerView, spaceBetween } = config;
+    const defaultSlidesPerView = slidesPerView || 2; // Default slidesPerView if not provided
+    const defaultSpaceBetween = spaceBetween || 20; // Default spaceBetween if not provided
+
+    const sliderParent = document.querySelector('.' + className);
+    if (!sliderParent) {
+      console.warn(`Slider with class ${className} does not exist on this page.`);
+      return; // Skip this slider if it doesn't exist
     }
-    
-    // Usage of the accountSlider function
-    accountSlider([
-      { className: 'slider', slidesPerView: 4, spaceBetween: 30 },
-      { className: 'slider-name-second', slidesPerView: 2, spaceBetween: 30 },
-      { className: 'slider-name-third', slidesPerView: 2, spaceBetween: 30 }
-    ]);
-    
+
+    const sliderWrap = sliderParent.querySelector('.slider-wrap');
+    const slideCards = sliderWrap.querySelectorAll('.slide-card');
+    let currentIndex = 0;
+    let slideWidth;
+    let isDragging = false; // To track dragging state
+    let startPosition = 0; // To store the position where dragging starts
+    let currentTranslate = 0; // Current translation value of the slider
+    let prevTranslate = 0; // Previous translate value (for calculating distance)
+
+    // Helper function to calculate the slide width and apply styles
+    function updateSlider() {
+      // Update slidesPerView based on window width (responsive design)
+      if (window.innerWidth >= 768 && window.innerWidth < 1024) {
+        slidesPerView = 2; // Display two slides on tablets
+      } else if (window.innerWidth <= 600) {
+        slidesPerView = 1; // Display one slide on mobile
+      }
+
+      // Calculate the width of the container
+      const containerWidth = sliderWrap.offsetWidth;
+
+      // Calculate the width of each slide based on the formula
+      slideWidth = (containerWidth / slidesPerView) - ((slidesPerView - 1) * defaultSpaceBetween / slidesPerView);
+
+      // Apply width and marginRight to each slide card
+      slideCards.forEach(card => {
+        card.style.width = slideWidth + 'px';
+        card.style.marginRight = defaultSpaceBetween + 'px';
+      });
+
+      // Update button states (next/previous)
+      updateButtonState();
+    }
+
+    // Function to move to the next slide
+    function goToNextSlide() {
+      currentIndex = (currentIndex + slidesPerView) % slideCards.length;
+      updateSliderPosition();
+    }
+
+    // Function to move to the previous slide
+    function goToPrevSlide() {
+      currentIndex = (currentIndex - slidesPerView + slideCards.length) % slideCards.length;
+      updateSliderPosition();
+    }
+
+    // Function to update the position of the slider based on current index
+    function updateSliderPosition() {
+      const translateValue = -currentIndex * (slideWidth + defaultSpaceBetween);
+      sliderWrap.style.transform = `translateX(${translateValue}px)`;
+      updateButtonState();
+    }
+
+    // Function to update the state of navigation buttons (enable/disable)
+    function updateButtonState() {
+      sliderParent.querySelector('#previous-arrow').disabled = currentIndex === 0;
+      sliderParent.querySelector('#next-arrow').disabled = currentIndex + slidesPerView >= slideCards.length;
+    }
+
+    // Add swipe-like behavior for dragging
+    function handleMouseDown(event) {
+      isDragging = true;
+      startPosition = event.clientX || event.touches[0].clientX; // Support for both mouse and touch
+      sliderWrap.style.transition = "none"; // Disable transition during dragging
+    }
+
+    function handleMouseMove(event) {
+      if (!isDragging) return;
+      const movePosition = event.clientX || event.touches[0].clientX;
+      const distance = movePosition - startPosition;
+      currentTranslate = prevTranslate + distance;
+      sliderWrap.style.transform = `translateX(${currentTranslate}px)`; // Move the slider
+    }
+
+    function handleMouseUp() {
+      if (!isDragging) return;
+      isDragging = false;
+      sliderWrap.style.transition = "transform 0.3s ease"; // Re-enable smooth transition after dragging
+      const movedBy = currentTranslate - prevTranslate;
+      if (movedBy > slideWidth / 2) {
+        currentIndex -= 1; // Move to previous slide
+      } else if (movedBy < -slideWidth / 2) {
+        currentIndex += 1; // Move to next slide
+      }
+      prevTranslate = currentTranslate; // Store the new translate position
+      updateSliderPosition();
+    }
+
+    // Add event listeners for dragging
+    sliderWrap.addEventListener('mousedown', handleMouseDown);
+    sliderWrap.addEventListener('mousemove', handleMouseMove);
+    sliderWrap.addEventListener('mouseup', handleMouseUp);
+    sliderWrap.addEventListener('mouseleave', handleMouseUp); // Ensure dragging ends if mouse leaves
+    sliderWrap.addEventListener('touchstart', handleMouseDown);
+    sliderWrap.addEventListener('touchmove', handleMouseMove);
+    sliderWrap.addEventListener('touchend', handleMouseUp);
+
+    // Add autoplay functionality (manually)
+    let autoplayInterval;
+    function startAutoplay() {
+      autoplayInterval = setInterval(goToNextSlide, 3000); // Move every 3 seconds
+    }
+
+    function stopAutoplay() {
+      clearInterval(autoplayInterval); // Stop autoplay when manual interaction happens
+    }
+
+    // Start autoplay when user doesn't interact
+    startAutoplay();
+
+    // Reset autoplay on user interaction
+    sliderWrap.addEventListener('mousedown', stopAutoplay);
+    sliderWrap.addEventListener('touchstart', stopAutoplay);
+
+    // Initialize the slider
+    updateSlider();
+
+    // Recalculate slide size when the window is resized
+    window.addEventListener('resize', updateSlider);
+
+    // Attach click events to navigation buttons
+    sliderParent.querySelector('#next-arrow').addEventListener('click', goToNextSlide);
+    sliderParent.querySelector('#previous-arrow').addEventListener('click', goToPrevSlide);
+  });
+}
+
+// Usage of the accountSlider function
+accountSlider([
+  { className: 'slider', slidesPerView: 4, spaceBetween: 30 },
+  { className: 'slider-name-second', slidesPerView: 2, spaceBetween: 30 },
+  { className: 'slider-name-third', slidesPerView: 2, spaceBetween: 30 }
+]);
     
           </script>
 
